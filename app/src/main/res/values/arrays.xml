@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <array name="difficulty_labels">
+        <item>@string/label_difficulty_easy</item>
+        <item>@string/label_difficulty_medium</item>
+        <item>@string/label_difficulty_hard</item>
+    </array>
+    <array name="difficulty_values">
+        <item>@string/value_easy</item>
+        <item>@string/value_medium</item>
+        <item>@string/value_hard</item>
+    </array>
+
+    <array name="pref_font_size_option_labels">
+        <item>@string/small_size_label</item>
+        <item>@string/medium_size_label</item>
+        <item>@string/large_size_label</item>
+    </array>
+    <array name="pref_font_size_option_values">
+        <item>@string/pref_small_size_value</item>
+        <item>@string/pref_medium_size_value</item>
+        <item>@string/pref_large_size_value</item>
+    </array>
+    <array name="pref_game_panel_labels">
+        <item>@string/pref_landscape_label</item>
+        <item>@string/pref_portrait_label</item>
+        <item>@string/pref_sensor_label</item>
+    </array>
+    <array name="pref_game_panel_values">
+        <item>@string/pref_landscape_value</item>
+        <item>@string/pref_portrait_value</item>
+        <item>@string/pref_sensor_value</item>
+    </array>
+    <!-- Label ordering must match values -->
+    <array name="pref_lan_option_labels">
+        <item>@string/english_label</item>
+        <item>@string/chinese_simplified_label</item>
+        <item>@string/chinese_traditional_label</item>
+    </array>
+    <array name="pref_lan_option_values">
+        <item>@string/pref_lan_english_value</item>
+        <item>@string/pref_lan_chinese_simplified_value</item>
+        <item>@string/pref_lan_chinese_traditional_value</item>
+    </array>
+
+    <array name="user_icon_drawables">
+        <item>@drawable/beef_icon</item>
+        <item>@drawable/road</item>
+        <item>@drawable/rabbit</item>
+        <item>@drawable/lightening</item>
+        <item>@drawable/beach</item>
+        <item>@drawable/castle</item>
+        <item>@drawable/haski</item>
+        <item>@drawable/key_merchant</item>
+        <item>@drawable/warrior</item>
+        <item>@drawable/crowns</item>
+    </array>
+</resources>

@@ -1,0 +1,748 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="abgel_38_1">You need to collect the five-color basement key to get access to the basement!</string>
+
+    <string name="about_autor">Developer</string>
+    <string name="about_game">About Game</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="alert_cancel_content">Canceled</string>
+    <string name="alert_cancel_title">Cancelled!</string>
+    <string name="alert_confirm_positive">OK</string>
+    <string name="alert_delete_content">Once deleted, won\'t be able to recover user data!</string>
+    <string name="alert_delete_title">Are you sure?</string>
+    <string name="alert_deleted_content">User data cleared!</string>
+    <string name="alert_deleted_positive">OK</string>
+    <string name="alert_deleted_title">Deleted!</string>
+    <string name="alert_false">No!</string>
+    <string name="alert_positive">Confirm!</string>
+
+    <string name="angel_11_1">Hello! There is lawn here.</string>
+    <string name="angel_11_2" translatable="true">Yes, this is a roof garden and balcony of the tower.</string>
+    <string name="angel_11_3" translatable="true">On some floors, going over the balcony can save much energy to get up to a higher floor!</string>
+    <string name="angel_11_4">Thanks!</string>
+    <string name="angel_16_1">The pickax can break through walls on some floors.</string>
+    <string name="angel_16_2">If you got stuck somewhere, have a try with the pickax!</string>
+    <string name="angel_32_1">What a large red dragon on this floor! You cannot open the steel doors if the red dragon is not cleared!</string>
+    <string name="angel_32_2">Try to touch the head of the red dragon to start battle!</string>
+    <string name="angel_36_1">The monster on 35 floor has an ice plate that can extinguish the fire on the floor.</string>
+    <string name="angel_3_1">These monsters on the floor have quite different attack and defense potentials.</string>
+    <string name="angel_3_2">Their energy are also various. Try to level up and increase you defense to challenge enemies with high attack.</string>
+    <string name="angel_9_1">The tower has checking point boss every 10 floors.</string>
+    <string name="angel_9_2">On this floor the boss is in the top left room.</string>
+    <string name="angel_diag">Angel: </string>
+    <string name="angel_floor0_content1">&#128077;&#128077;Brave warrior, welcome to the Tower of Evils game.</string>
+    <string name="angel_floor0_content2">The tower is the home of evils where the princess of your country has been prisoned in.</string>
+    <string name="angel_floor0_content3">Now the tower is right behind us. Enter the tower to start the game.</string>
+    <string name="angel_floor0_content4">In the game, you should remove the enemies strategically and defeat the final boss to rescue hostage.</string>
+
+    <string name="app_name">Tower of Evils</string>
+    <string name="app_title_input_author">New User</string>
+
+    <string name="apptitle_about_game">About Game</string>
+
+    <string name="attack_increase_10per">Attack points increased 10%!</string>
+    <string name="attack_text">Attack</string>
+
+    <string name="author_email" translatable="false">minxpan@gmail.com</string>
+
+    <string name="b_basement_key" translatable="false">blue_basement_key</string>
+    <string name="b_diamond" translatable="false">blue-diamond</string>
+    <string name="b_energy" translatable="false">blue_energy_plus</string>
+    <string name="b_key" translatable="false">blue-keys</string>
+    <string name="b_key_box" translatable="false">blue_key_box</string>
+
+    <string name="blank" translatable="false"/>
+
+    <string name="bless_100_energy">You got 100 points of energy!</string>
+    <string name="bless_20_coins">You got 20 coins!</string>
+    <string name="bless_3_attack">You got 3 points of attack!</string>
+    <string name="bless_3_defense">You got 3 points of defense!</string>
+
+    <string name="blessing_gift" translatable="false">new-year-blessing</string>
+    <string name="blessing_title">A small gift</string>
+
+    <string name="blood_sucking">(Blood Sucking!)</string>
+
+    <string name="blue_defense_pot" translatable="false">blue-defense-pot</string>
+    <string name="blue_diamond_content1">Blue diamond can increase your defense 3 points for each one. You have equipped</string>
+    <string name="blue_diamond_content2">blue diamonds.</string>
+    <string name="blue_key_content1">Blue keys can open blue doors. You have</string>
+    <string name="blue_key_content2">blue keys.</string>
+    <string name="blue_wizard_floor0_content">Hello! If you can defeat me, I can let you visit the tower basement behind me.</string>
+
+    <string name="bonus_invitation">, here is 50 game coin bonus for you! Click to start the game.</string>
+
+    <string name="book_of_exp" translatable="false">Book of experience</string>
+    <string name="book_of_wisdom" translatable="false">book-of-wisdom</string>
+    <string name="book_of_wisdom_content2">book of wisdom.</string>
+
+    <string name="boss_diag">BOSS: </string>
+
+    <string name="buy_r_key_4000">Do you want to buy 1 red key with 4000 coins?</string>
+
+    <string name="cannot_beat">You cannot win this enemy!</string>
+    <string name="cannot_defeat">You cannot defeat this enemy!</string>
+    <string name="cannot_open">You cannot open this gate.</string>
+
+    <string name="chaos_sword" translatable="false">chaos-sword</string>
+
+    <string name="chinese_simplified_label">Chinese(Simplified)</string>
+    <string name="chinese_traditional_label">Chinese(Traditional)</string>
+
+    <string name="clear_4_greenwidzard">Clear the four green wizards!</string>
+    <string name="clear_5_wizards">Clear the five wizards!</string>
+    <string name="clear_all_enemies">Clear all the enemies on this floor!</string>
+    <string name="clear_dragon_n_safe">Defeat the red dragon and the three safeguards!</string>
+    <string name="clear_red_dragon">Defeat the red dragon first!</string>
+    <string name="clear_safeguards">Clear the safeguards of this door!</string>
+    <string name="clear_safeguards_floor">Clear all the safeguards on this floor!</string>
+
+    <string name="coins" translatable="false">coins</string>
+    <string name="coins_content">Coins can be used to trade Energy, Attack, Defense in the store. You have coins :</string>
+    <string name="coins_text">Coins</string>
+
+    <string name="congratulations">Congratulations!</string>
+
+    <string name="contact_author">Contact Author</string>
+
+    <string name="cross" translatable="false">cross</string>
+
+    <string name="crown_image" translatable="false">Crown Image</string>
+
+    <string name="cyan_attack_pot" translatable="false">cyan-attack-pot</string>
+
+    <string name="daily_bonus_reminding">Tap here to accept daily bonus of 50 coins!</string>
+
+    <string name="defeat_3_gw">Defeat the three green wizards!</string>
+    <string name="defeat_4_pinkbats">Clear the four pink bats on the balcony!</string>
+    <string name="defeat_4_skeleton">Defeat four vampire skeleton!</string>
+    <string name="defeat_below_safe">Defeat the four safe guards below!</string>
+    <string name="defeat_five_knights">Defeat all the five knights in this room!</string>
+    <string name="defeat_the_bosses">Defeat all the boss on the floor!</string>
+    <string name="defeat_the_guards">Defeat the safeguards!</string>
+
+    <string name="defense_increase_10per">Defense points increased 10%!</string>
+    <string name="defense_text">Defense</string>
+
+    <string name="details">Details</string>
+
+    <string name="detonator" translatable="false">detonator</string>
+
+    <string name="diag_level_5">You are leveled up 5 grades!</string>
+    <string name="diag_level_7">You are leveled up 7 grades!</string>
+    <string name="diag_level_up_1">Congratulations! You are leveled up 1 grade!</string>
+
+    <string name="dialog_10_levels">You are level up 10 grades!</string>
+    <string name="dialog_insufficient_experience_380">You don\'t have 380 or more experiences!</string>
+    <string name="dialog_insufficient_experience_500">You don\'t have 500 or more experiences!</string>
+    <string name="dialog_insufficient_experience_700">You don\'t have 700 or more experiences!</string>
+
+    <string name="diamond_shield" translatable="false">diamond-shield</string>
+
+    <string name="difficulty">Difficulty:</string>
+    <string name="difficulty_in_list">Medium</string>
+    <string name="difficulty_info">3 levels</string>
+
+    <string name="disabled_snapshot">Widgets disabled</string>
+
+    <string name="divine_shield" translatable="false">divine-shield</string>
+
+    <string name="downstairs_wing" translatable="false">down_fly_wing</string>
+
+    <string name="dummy" translatable="false"><![CDATA[<N.A.>]]></string>
+
+    <string name="ea_32_1">Ahh, I was defeated…</string>
+    <string name="ea_37_1">The master of this tower has taken the princess to the basement.</string>
+    <string name="ea_37_2">The master is quite powerful, and you will be prisoned and killed.</string>
+    <string name="ea_37_3">Now get away from this tower…</string>
+    <string name="ea_37_4">Until I save the princess!</string>
+    <string name="ea_37_5">It is up to you. I hope you can defeat him, or the princess will be come his new wife!</string>
+    <string name="ea_37_6">Oh, that\'s why you dressed like the princess.</string>
+
+    <string name="eb_29_1">Where did you take the princess to?</string>
+    <string name="eb_29_2">I will let you know if you can beat me!</string>
+    <string name="eb_32_1">Hutu… Human…</string>
+    <string name="eb_37_1">Hi! Princess. How are you! I came to take you back to our country. Let\'s go</string>
+    <string name="eb_37_2">Sure! I am so grateful that you came.</string>
+    <string name="eb_37_3">Ahhh, you are not the princess!</string>
+    <string name="eb_37_4">Where is the princess?</string>
+    <string name="eb_37_5">How do you know I am not the princess?</string>
+    <string name="eb_37_6">The princess is very beautiful and young.</string>
+    <string name="eb_37_7">He He…</string>
+    <string name="eb_37_8">So who you are? Where is the princess?</string>
+    <string name="eb_37_9">I won\'t tell you!</string>
+    <string name="eb_40_1">How to put out the fire on some floors?</string>
+    <string name="eb_40_2">I have an Ice Plate that can extinguish the fire.</string>
+    <string name="eb_40_3">But I won\'t give to you unless you can defeat me!</string>
+    <string name="eb_40_4">OK. Let\'s go!</string>
+    <string name="eb_41_1">Brave Soldier, finally you come. I\'ve been waiting for you… I am marrying the princess.</string>
+    <string name="eb_41_2">No! The princess will not get married with you! I come to save the princess.</string>
+    <string name="eb_41_3">What? Show me your strength!</string>
+    <string name="eb_41_4">Fine…</string>
+    <string name="eb_41_5">Oh, No! Your power surprised me. OK, you win the game, but I will come back soon!</string>
+    <string name="eb_41_6">I have remove all the powers from you. Now you can get out!</string>
+
+    <string name="ef_29_1">The princess is on the top of the tower…</string>
+    <string name="ef_40_1">Hmmm… When did you become so strong?</string>
+    <string name="ef_40_2">Here is the ice plate. Good Luck!</string>
+
+    <string name="enable_snapshot">Enable Widgets for Game Panel</string>
+
+    <string name="enabled_snapshot">Widgets Enabled</string>
+
+    <string name="enemgy_unknown">UNKNOWN</string>
+
+    <string name="enemy_15_1">Hmm, the princess is here. Defeat me if you want to save her!</string>
+    <string name="enemy_archmage">Archmage</string>
+    <string name="enemy_archmage_i">Archmage II</string>
+    <string name="enemy_bad_angels">Bad Angels</string>
+    <string name="enemy_bat">Bat</string>
+    <string name="enemy_beast_guard">Beast Guard</string>
+    <string name="enemy_big_bat">Big Bat</string>
+    <string name="enemy_black_slime">Black Slime</string>
+    <string name="enemy_black_wizard_i">Black Wizard I</string>
+    <string name="enemy_black_wizard_ii">Black Wizard II</string>
+    <string name="enemy_black_wizard_iii">Black Wizard III</string>
+    <string name="enemy_blood_knight">Blood Knight</string>
+    <string name="enemy_blood_knight_ii">Blood Knight II</string>
+    <string name="enemy_blue_knight">Blue Knight</string>
+    <string name="enemy_butcher">Butcher</string>
+    <string name="enemy_dark_knight">Dark Knight</string>
+    <string name="enemy_evil_head">Evil Head</string>
+    <string name="enemy_evil_spirit_iii">Evil Spirit III</string>
+    <string name="enemy_evil_spirit_iv">Evil Spirit IV</string>
+    <string name="enemy_fake_princess">Fake Princess</string>
+    <string name="enemy_floor15_content">Ahh, safeguards! The warrior is strong! Take the princess to the top of the tower!</string>
+    <string name="enemy_gate_keeper_a">Gate-Keeper A</string>
+    <string name="enemy_gate_keeper_b">Gate-Keeper B</string>
+    <string name="enemy_gate_keeper_c">Gate-Keeper C</string>
+    <string name="enemy_ghost">Ghost</string>
+    <string name="enemy_ghost_soldier">Ghost Soldier</string>
+    <string name="enemy_ghost_soldier_ii">Ghost Soldier II</string>
+    <string name="enemy_ghost_wizard">Ghost Wizard</string>
+    <string name="enemy_giant_spider">Giant Spider</string>
+    <string name="enemy_giant_spider_diag">Giant Spider:</string>
+    <string name="enemy_golden_knight">Golden Knight</string>
+    <string name="enemy_green_slime">Green Slime</string>
+    <string name="enemy_green_soldier_i">Green Soldier I</string>
+    <string name="enemy_green_soldier_ii">Green Soldier II</string>
+    <string name="enemy_green_soldier_iii">Green Soldier III</string>
+    <string name="enemy_green_wizard_i">Green Wizard I</string>
+    <string name="enemy_green_wizard_ii">Green Wizard II</string>
+    <string name="enemy_green_zombie">Green Zombie</string>
+    <string name="enemy_green_zombie_ii">Green Zombie II</string>
+    <string name="enemy_grey_slime">Grey Slime</string>
+    <string name="enemy_invisible_man">Invisible Man</string>
+    <string name="enemy_iron_man">Iron Man</string>
+    <string name="enemy_knight">Knight</string>
+    <string name="enemy_knight_ii">Knight II</string>
+    <string name="enemy_list">enemy-list</string>
+    <string name="enemy_list_title">Enemy Information</string>
+    <string name="enemy_magic_sergeant">The Magic Sergeant</string>
+    <string name="enemy_magician_a">Magician A</string>
+    <string name="enemy_magician_b">Magician B</string>
+    <string name="enemy_marshall_i">Marshall I</string>
+    <string name="enemy_marshall_ii">Marshall II</string>
+    <string name="enemy_marshall_iii">Marshall III</string>
+    <string name="enemy_monkey_king">Monkey King</string>
+    <string name="enemy_pink_bat">Pink Bat</string>
+    <string name="enemy_pink_bat_ii">Pink Bat II</string>
+    <string name="enemy_pink_bat_iii">Pink Bat III</string>
+    <string name="enemy_pink_skeleton">Pink Skeleton</string>
+    <string name="enemy_priest">Priest</string>
+    <string name="enemy_red_dragon">Red Dragon</string>
+    <string name="enemy_red_eye_slime">Red Eye Slime</string>
+    <string name="enemy_red_eye_slime_ii">Red Eye Slime II</string>
+    <string name="enemy_red_slime">Red Slime</string>
+    <string name="enemy_red_wizard">Red Wizard</string>
+    <string name="enemy_robber">Robber</string>
+    <string name="enemy_rock">Rock</string>
+    <string name="enemy_skeleton_a">Skeleton A</string>
+    <string name="enemy_skeleton_b">Skeleton B</string>
+    <string name="enemy_skeleton_c">Skeleton C</string>
+    <string name="enemy_skeleton_master">Skeleton Master</string>
+    <string name="enemy_skeleton_monster">Skeleton Monster</string>
+    <string name="enemy_slime_lord">SlimeLord</string>
+    <string name="enemy_soldier">Soldier</string>
+    <string name="enemy_spirit_i">Evil Spirit I</string>
+    <string name="enemy_spirit_ii">Evil Spirit II</string>
+    <string name="enemy_superior_priest">Superior Priest</string>
+    <string name="enemy_swordsman">Swordsman</string>
+    <string name="enemy_vampire_bat">Vampire Bat</string>
+    <string name="enemy_warrior_ninja">Warrior Ninja</string>
+    <string name="enemy_wild_cat">Wild Cat</string>
+    <string name="enemy_yellow_wizard_i">Yellow Wizard I</string>
+    <string name="enemy_yellow_wizard_ii">yellow Wizard II</string>
+    <string name="enemy_zombie">Zombie</string>
+    <string name="enemy_zombie_knight">Zombie Knight</string>
+    <string name="enemy_zombie_knight_ii">Zombie Knight II</string>
+    <string name="enemy_zombie_skeleton">Zombie skeleton</string>
+    <string name="enemy_zonbie_ii">Zombie II</string>
+
+    <string name="energy_cost">Energy cost: %d</string>
+    <string name="energy_cost1"><![CDATA[Energy cost: > %d]]></string>
+    <string name="energy_increase_10per">Energy increased 10%!</string>
+    <string name="energy_text">Energy</string>
+
+    <string name="english_label">English</string>
+
+    <string name="error_basement_key">You don\'t have five-color basement keys!</string>
+    <string name="error_coin">Insufficient coins!</string>
+    <string name="error_conversion_ene2exp">Insufficient energy points</string>
+    <string name="error_empty">Empty user list. Input your name in the game to create one.</string>
+    <string name="error_enter_game">To enter the tower, talk with the angel first!</string>
+    <string name="error_existed_id">The user ID is already registered in the database!</string>
+    <string name="error_explosive">Cannot use explosive at the boundary of the map!</string>
+    <string name="error_extinguishing">Sorry! Cannot put out fire when you stay at the boundary of the map!</string>
+    <string name="error_flywing">Cannot use the flying wing here.</string>
+    <string name="error_insufficient_experience_100">You have less than 100 points of experiences!</string>
+    <string name="error_invalid_user_name">User name is not valid:</string>
+    <string name="error_key">You don\'t have keys!</string>
+    <string name="error_level_up">Level-up Failure! Insufficient experience or reach maximum level 999!</string>
+    <string name="error_maximum_level_reached_512">Sorry! I cannot help level upp to above 512 grades!</string>
+    <string name="error_maximum_level_reached_five">I cannot help upgrade to above 128 levels.</string>
+    <string name="error_maximum_level_reached_one">I cannot help you level up to more than 30 levels…</string>
+    <string name="error_maximum_level_reached_seven">I cannot help level up to above 256 grades…</string>
+    <string name="error_no_b_keys">You don\'t have any blue keys!</string>
+    <string name="error_no_blue_key">You don\'t have blue keys!</string>
+    <string name="error_no_green_key">You don\'t have green keys!</string>
+    <string name="error_no_red_key">You don\'t have red keys!</string>
+    <string name="error_no_yellow_key">You don\'t have yellow keys!</string>
+    <string name="error_pickax">Cannot use pickax to doors!</string>
+    <string name="error_scroll">Nothing on the scroll about this floor!</string>
+    <string name="error_spring_shoe">Cannot use spring shoe on this floor</string>
+
+    <string name="exp_3_1">Glad to meet you again! Do you have experience large than 100?</string>
+    <string name="exp_3_2">I can level your profile up for 1 stage with each 100 points of experience!</string>
+
+    <string name="experience_10">Hello! Do you want to level up 5 stage with 380 points of experience?</string>
+    <string name="experience_10_700">Do you want level up 10 stages with 700 points of experience?</string>
+    <string name="experience_6">Do you want to level up 1 stage with 100 points of experience?</string>
+    <string name="experience_7_500">Do you want level up 7 stages with 500 points of experience?</string>
+    <string name="experience_diag">"Trainer: "</string>
+    <string name="experience_floor0_content1">&#128522;&#128522;Hello! I am a trainer who can give you experience and let you reach a new level.</string>
+    <string name="experience_floor0_content2">Experience in this game can be obtained by defeating the enemies or from treasures.</string>
+    <string name="experience_floor0_content3">If you find me later, you should talk to me for experience.</string>
+    <string name="experience_incerease_10per">Experience increased 10%!</string>
+    <string name="experience_text">Experience</string>
+
+    <string name="fight">Fight!</string>
+
+    <string name="floor">floor</string>
+    <string name="floor_0">FLOOR 0</string>
+    <string name="floor_is">FLOOR: </string>
+    <string name="floor_text">Floor</string>
+
+    <string name="fly_wing">fly-wing</string>
+    <string name="fly_wing_content">You can fly to the floors you have unblocked with fly wing</string>
+    <string name="fly_wing_text">Fly Wing Jumping to…</string>
+
+    <string name="fps_error">Please input an integer number between 10 and 30!</string>
+
+    <string name="g_basement_key" translatable="false">green_basement_key</string>
+    <string name="g_diamond" translatable="false">green-diamond</string>
+    <string name="g_energy" translatable="false">green_energy_plus</string>
+    <string name="g_key" translatable="false">green-keys</string>
+    <string name="g_key_box" translatable="false">green_key_box</string>
+
+    <string name="game_end_intro">The princess was saved from the evil tower and escorted back to the Kingdom. Three months later, the Kingdom held a huge wedding ceremony for the marriage of the warrior and the princess…</string>
+    <string name="game_interface">Game Interface</string>
+    <string name="game_intro_text">Once upon a time, an old country lived an old king with her beautiful princess. Suddenly a lot of monsters came to the country, took the princess away and imprisoned in a tower. The king sent a lot of warriors to rescue, but they never went back. Finally, the king raised the warriors, saying if he brought the princess back, he would be marrying the princess. So, the story of this game begins. . .</string>
+    <string name="game_profile">Game Profiles</string>
+    <string name="game_rule">Control</string>
+    <string name="game_saved">Game Saved Successfully!</string>
+
+    <string name="get_10_points_attack">Get 10 points attack</string>
+    <string name="get_10_points_defense">Get 10 points defense</string>
+    <string name="get_150_points_experience">Get 150 points experience</string>
+    <string name="get_25_points_attack">Get 25 points attack</string>
+    <string name="get_25_points_defense">Get 25 points defense</string>
+    <string name="get_325_points_experience">Get 325 points experience</string>
+    <string name="get_3_points_attack">Get 3 points attack</string>
+    <string name="get_3_points_defense">Get 3 points defense</string>
+    <string name="get_50_points_experience">Get 50 points experience</string>
+    <string name="get_60_points_attack">Get 60 points attack</string>
+    <string name="get_60_points_defense">Get 60 points defense</string>
+    <string name="get_750_points_experience">Get 750 points experience</string>
+    <string name="get_bonus">Get the Bonus</string>
+    <string name="get_energy_12000">Get 12000 points of energy</string>
+    <string name="get_energy_2400">Get 2400 points energy</string>
+    <string name="get_energy_5500">Get 5500 points energy</string>
+    <string name="get_energy_800">Get 800 points energy</string>
+
+    <string name="giant_store_diaglogue">Hello! Which do you want to buy with 500 coins?</string>
+    <string name="giant_store_info_cannot_afford">You cannot buy it with less than 500 coins</string>
+
+    <string name="gift_popup">Got random gift</string>
+
+    <string name="good_luck">Good luck!</string>
+
+    <string name="green_diamond_content2">green diamonds.</string>
+    <string name="green_pot" translatable="false">green-experience-pot</string>
+
+    <string name="hello">"Hello! "</string>
+
+    <string name="ice_plate" translatable="false">ice-plate</string>
+
+    <string name="icon_of_shield" translatable="false">icon_of_shield</string>
+
+    <string name="image_picker_title">Pick an Icon</string>
+
+    <string name="in_battle">In Battle…</string>
+
+    <string name="info_attack_pot">Use the attack pot to increase your attack by 10%!</string>
+    <string name="info_b_basement_key">Got blue basement key!</string>
+    <string name="info_b_key_box">You got a blue box of keys!</string>
+    <string name="info_book_exp">You can use this book of experience to convert your energy into experience. 1000 points of energy to 10 experiences.</string>
+    <string name="info_conversion_ene2exp">Energy was converted into experience!</string>
+    <string name="info_cross">The cross can increase your defense by 10%!</string>
+    <string name="info_defense_pot">The blue pot of defense can increase defense by 10%!</string>
+    <string name="info_downstairs_wing">Use the downstairs wing to go down one floor!</string>
+    <string name="info_explosive">You got an explosive that can breaks walls</string>
+    <string name="info_g_basement_key">Got the green basement key!</string>
+    <string name="info_g_key_box">You got a green box of keys!</string>
+    <string name="info_g_pot_exp">Green pot of experience can increase your experience by 10%</string>
+    <string name="info_get_blue_diamond">Blue diamond, +3 Defense!</string>
+    <string name="info_get_blue_energy">Blue Energy, +500 Energy!</string>
+    <string name="info_get_blue_key">You got a blue key!</string>
+    <string name="info_get_book_of_wisdom">You got a book of wisdom!</string>
+    <string name="info_get_chaos_sword">You got chaos sword, +200 attack!</string>
+    <string name="info_get_detonator">The detonator can break down walls on the squares near you!</string>
+    <string name="info_get_diamond_shield">Diamond shield equipped, +100 defense!</string>
+    <string name="info_get_divine_shield">Divine shield equipped, +200 defense!</string>
+    <string name="info_get_fly_wing">You got the fly-wing which can transfer to a explored floor.</string>
+    <string name="info_get_green_diamond">Green diamond, +5 Defense!</string>
+    <string name="info_get_green_energy">Green Energy, +1000 Energy!</string>
+    <string name="info_get_green_key">You got a green key!</string>
+    <string name="info_get_iron_shield">Iron shield euipped, +70 defense!</string>
+    <string name="info_get_iron_sword">You got a iron sword, + 40 attack</string>
+    <string name="info_get_large_iron_sword">You got a large iron sword, + 100 attack</string>
+    <string name="info_get_large_wooden_sword">You got a large wooden sword, +70 attack</string>
+    <string name="info_get_leveled_up_1">Leveled up 1 stage!</string>
+    <string name="info_get_leveled_up_10">Leveled up 10 stages!</string>
+    <string name="info_get_leveled_up_7">Leveled up 7 stages!</string>
+    <string name="info_get_notebook">You got the notebook which keeps the store, NPC info</string>
+    <string name="info_get_red_diamond">Red Diamond, +3 Attack!</string>
+    <string name="info_get_red_energy">Red Energy, +200 Energy!</string>
+    <string name="info_get_red_key">You got a red key!</string>
+    <string name="info_get_skin_shield">Skin shield euipped, +20 defense!</string>
+    <string name="info_get_smile_coin">You got a smile coin worth of 100 coins. Click to use!</string>
+    <string name="info_get_wooden_shield">Wooden shield equipped, + 40 defense!</string>
+    <string name="info_get_wooden_sword">You got a wooden sword, + 20 attack!</string>
+    <string name="info_get_yellow_diamond">Yellow diamond, +5 Attack!</string>
+    <string name="info_get_yellow_energy">Yellow Energy, +2000 Energy!</string>
+    <string name="info_get_yellow_key">You got a yellow key!</string>
+    <string name="info_got_3_bkeys">You got 3 blue keys!</string>
+    <string name="info_got_3_ykeys">You got 3 yellow keys!</string>
+    <string name="info_got_key_box">You got a key box including 1 yellow, 1 red, and 1 blue keys!</string>
+    <string name="info_got_ybr_keys">You got 1 yellow key, 1 blue key, and 1 red key</string>
+    <string name="info_ice_plate">Ice plate cools down the flaming floors!</string>
+    <string name="info_map_editor" translatable="false">Tiled Map Editor</string>
+    <string name="info_old_scroll">An old scroll of secrets about the tower!</string>
+    <string name="info_p_pot_energy">Pink pot of energy can increase your energy by 10%!</string>
+    <string name="info_r_basement_key">Got the red basement key!</string>
+    <string name="info_spring_shoe">The spring shoe can transfer you into the closet on some floors!</string>
+    <string name="info_upstairs_wing">Press the upstairs flying wing to go up one floor!</string>
+    <string name="info_w_basement_key">Got the white basement key!</string>
+    <string name="info_warrior_ax_equip">Warrior Axe equipped and the attack is increased by 20%</string>
+    <string name="info_warrior_axe">Warrior Axe can increase attack by 20%!</string>
+    <string name="info_y_basement_key">Got the yellow basement key!</string>
+    <string name="info_y_key_box">You got a yellow box of keys!</string>
+
+    <string name="input_a_name">Please input a valid name for recording.</string>
+    <string name="input_new_name_message">Please input a new name to start game.</string>
+
+    <string name="intro_bokken">Wooden sword named Bokken, basic weapon.</string>
+    <string name="intro_new_year_blessing">You have a New Year Blessing gift.</string>
+    <string name="intro_pickax">The pickax can dig through walls on some floor in this tower!</string>
+
+    <string name="iron_shield">iron-shield</string>
+    <string name="iron_sword">iron-sword</string>
+
+    <string name="key_box">key-box</string>
+    <string name="key_box_content2">key box(s).</string>
+    <string name="key_merchant_10">Do you want to buy 1 blue key with 500 coins?</string>
+    <string name="key_merchant_39">Do you have blue keys? Can you sell one to me? I will pay 150 coins.</string>
+    <string name="key_merchant_6">Hello! Do you want to buy a yellow key with 200 coins?</string>
+    <string name="key_merchant_floor0_content">Hello! I am a merchant selling keys. If you have money, I can sell my keys to you.</string>
+    <string name="key_merchant_key_box_42_1">I have got a key box. Inside it are 1 yellow key, 1 blue key and 1 red key!</string>
+    <string name="key_merchant_key_box_42_2">Do you want to buy it with 4200 coins?</string>
+
+    <string name="label_difficulty">Difficulty</string>
+    <string name="label_difficulty_easy">Easy</string>
+    <string name="label_difficulty_hard">Hard</string>
+    <string name="label_difficulty_medium">Medium</string>
+    <string name="label_saving_slot">Saving Slots</string>
+
+    <string name="large_iron_sword">iron-sword-large</string>
+    <string name="large_pot_of_wisdom">pot-of-wisdom-large</string>
+    <string name="large_pot_of_wisdom_content2">large pot of wisdom.</string>
+    <string name="large_size_label">Large Size</string>
+    <string name="large_smile_coin">smile-coin-large</string>
+    <string name="large_smiley_coin_content2">large smile coins.</string>
+    <string name="large_store_cannot_afford">You cannot buy it with less than 125 coins.</string>
+    <string name="large_store_dialogue">Which do you want to buy with 125 coins?</string>
+    <string name="large_wooden_sword">Bokken-large</string>
+
+    <string name="level_is">LEVEL: </string>
+
+    <string name="load">Load</string>
+
+    <string name="loading_game">LOADING GAME</string>
+
+    <string name="lose_instruction">Click to quit the battle and continue game, you will lose 10% of coin and energy.</string>
+    <string name="lose_slogan">Lost!</string>
+
+    <string name="map_design">Map Design</string>
+
+    <string name="matrix_value" translatable="false">value</string>
+
+    <string name="me_dialog">Warrior: </string>
+
+    <string name="medium_size_label">Medium Size</string>
+
+    <string name="merchant_diag">Merchant: </string>
+
+    <string name="money_icon" translatable="false">money_icon</string>
+
+    <string name="new_game">Start New</string>
+
+    <string name="no_path_to_go">Cannot go there!</string>
+    <string name="no_smile_coin">You don\'t have any smile coins. Click OK to exit to game!</string>
+
+    <string name="note_no">No</string>
+    <string name="note_yes">Yes</string>
+
+    <string name="notebook" translatable="false">Notepad</string>
+    <string name="notebook_content"><![CDATA[<P><b><font color = #FF0000>Stores: </font></b><br><b><font color = #F2F200>GIANT_STORE: </font></b> Floor 24, 31     <br><b><font color = #F2F200>SUPER_STORE: </font></b> Floor 22, 33Left     <br><b><font color = #F2F200>LARGE_STORE: </font></b> Floor 5, 10     <br><b><font color = #F2F200>STORE: </font></b> Floor 2 </P><P><b><font color = #FF0000>Experience Trainer: </font></b><br><b><font color = #F2F200>Basic: </font></b> Floor 2, 6 (limit: <i><font color=#FF0000>30</font></i>)     <br><b><font color = #F2F200>Oridinary: </font></b> Floor 10 (limit: <i><font color=#FF0000>128</font></i>)     <br><b><font color = #F2F200>Advanced: </font></b> Floor 28 (limit: <i><font color=#FF0000>256</font></i>)     <br><b><font color = #F2F200>Super: </font></b> Floor 33Right (limit: <i><font color=#FF0000>512</font></i>)     <br><b><font color = #F2F200>Divine: </font></b> Floor 35, B2 (limit: <i><font color=#FF0000>999</font></i>)   </P>]]></string>
+
+    <string name="notification_title">Coin bonus for Tower of Evils Game</string>
+
+    <string name="npc_diag" translatable="false">NPC: </string>
+
+    <string name="ok" translatable="false">OK</string>
+
+    <string name="old_scroll" translatable="false">old-scroll</string>
+
+    <string name="pickax" translatable="false">pickax</string>
+
+    <string name="pink_energy_pot" translatable="false">pink energy pot</string>
+
+    <string name="plus_100_energy">+100 energy!</string>
+
+    <string name="pot_of_wisdom" translatable="false">pot-of-wisdom</string>
+    <string name="pot_of_wisdom_content2">pot of wisdom.</string>
+
+    <string name="pref_bonus_coin_key" translatable="false">pref_key_coin</string>
+    <string name="pref_fps_default" translatable="false">15</string>
+    <string name="pref_fps_key">fps_pref_key</string>
+    <string name="pref_fps_label">Frame per Seconds</string>
+    <string name="pref_game_panel_default" translatable="false">landscape</string>
+    <string name="pref_game_panel_key" translatable="false">preferred game view</string>
+    <string name="pref_game_panel_label">Gravity Direction</string>
+    <string name="pref_lan_chinese_simplified_value" translatable="false">zh</string>
+    <string name="pref_lan_chinese_traditional_value" translatable="false">hk</string>
+    <string name="pref_lan_english_value" translatable="false">en</string>
+    <string name="pref_lan_key">preferred language</string>
+    <string name="pref_landscape_label">Landscape</string>
+    <string name="pref_landscape_value">landscape</string>
+    <string name="pref_language_label">Language Preference</string>
+    <string name="pref_large_size_value" translatable="false">large-sized</string>
+    <string name="pref_medium_size_value" translatable="false">medium-sized</string>
+    <string name="pref_portrait_label">Portrait</string>
+    <string name="pref_portrait_value">portrait</string>
+    <string name="pref_sensor_label">Following Sensors</string>
+    <string name="pref_sensor_value">sensors</string>
+    <string name="pref_size_default">30sp</string>
+    <string name="pref_size_key">font-size</string>
+    <string name="pref_size_label">Font Size</string>
+    <string name="pref_small_size_value" translatable="false">small-sized</string>
+    <string name="pref_snapshot_key">pref_widget_key</string>
+    <string name="pref_user_bonus_key">pref_user_key</string>
+    <string name="pref_user_icon_key">pref_user_icon_key</string>
+    <string name="pref_user_icon_summary">Set an icon to your game profile.</string>
+
+    <string name="princess_diag">Princess:</string>
+
+    <string name="prisoner_12_1">Hi, are you here to rescue the princess?</string>
+    <string name="prisoner_12_2">Yes! Who are you?</string>
+    <string name="prisoner_12_3">I\'m a warrior the king sent to save the princess, but I was prisoned here.</string>
+    <string name="prisoner_12_4">Don\'t worry! You are safe now.</string>
+    <string name="prisoner_12_5">Thank you! I am so tired and going back to the country.</string>
+    <string name="prisoner_12_6">I have some weapons and keys for you.</string>
+    <string name="prisoner_12_7">The cross can increase you defense by 10%. Good luck with you!</string>
+    <string name="prisoner_26_1">Thank you for saving me! The princess was taken upstairs.</string>
+    <string name="prisoner_diag">Prisoned Warrior:</string>
+
+    <string name="quit">Quit</string>
+    <string name="quit_and_continue"><![CDATA[Quit battle>>>]]></string>
+
+    <string name="r_basement_key" translatable="false">red_basement_key</string>
+    <string name="r_diamond" translatable="false">red-diamond</string>
+    <string name="r_energy" translatable="false">red-energy-plus</string>
+    <string name="r_key" translatable="false">red-keys</string>
+
+    <string name="receive_coin_prompt">Subscript the Bonus</string>
+
+    <string name="record_time_is">Record time: </string>
+
+    <string name="red_32_1">Hutu…</string>
+    <string name="red_diamond_content1">Red diamonds can increase your attack 3 points for each one. You have equipped</string>
+    <string name="red_diamond_content2">red diamonds.</string>
+    <string name="red_dragon_diag">Red Dragon:</string>
+    <string name="red_key_content1">Red keys can open red doors. You have</string>
+    <string name="red_key_content2">red keys.</string>
+
+    <string name="refuse_coin_prompt">Cancel Bonus Notification</string>
+
+    <string name="resume">Resume</string>
+
+    <string name="rp_0">We are out of the Tower! Princess, let\'s go back to our country! The King missing you very much.</string>
+    <string name="rp_1">Great! Thank you so much!</string>
+    <string name="rp_41_1">Thank you for saving me! What we should do now? The underground water has closed the exit!</string>
+    <string name="rp_41_2">Don\'t worry! I saw the Evil Head fled away from that crystal. Let us touch on the crystal.</string>
+    <string name="rp_41_3">OK!</string>
+
+    <string name="saved">Saved game</string>
+
+    <string name="saving_slot_one">Saving Slot 1</string>
+    <string name="saving_slot_three">Saving Slot 3</string>
+    <string name="saving_slot_two">Saving Slot 2</string>
+
+    <string name="scroll_info_0">The tower has a 3-layer basement. To get into the basement, you need to open the crystal door with a five-color key and defeat the blue wizard guard!</string>
+    <string name="scroll_info_12">On some floors, there are multiple options to go downstairs or upstairs. The may lead to quite different positions at the place of next floor</string>
+    <string name="scroll_info_19">At the top of this tower, the giant spider has an ice plate that can extinguish the fire on the floor. Then you can get your sword out from the furnace!</string>
+    <string name="scroll_info_20">The four pots can increase your energy, coins, attack or defense by 10%. Try to use it when you have the maximum energy, experience, etc… to maximize the increase.</string>
+    <string name="scroll_info_25">The dark closet has a powerful axe that can increase your attack by 15%! How to get into the closet? Maybe using the Jumping Shoes!</string>
+    <string name="scroll_info_27">Did you see the two group of enemies in five? To open the steel doors, you don\'t need to kill the enemy in the center.</string>
+    <string name="scroll_info_37">The invisible man? He has the same value of attack points as your energy points! Try to battle with them when your energy is lower!</string>
+    <string name="scroll_info_40">The Giant Spider has attack points related to the difference between your attack and defense points! Make sure you have similar points of attack and defense!</string>
+    <string name="scroll_info_41">The princess is imprisoned on this floor. The enemies here are blood suckers and have higher attack points than your defense. To defeat the Evil Head, it is a good idea to increase your energy to the limit!</string>
+
+    <string name="sec_merchant_26_1">I have a red key, do you want to buy it for 2000 coins?</string>
+
+    <string name="secret_merchant_diag">Secret Merchant:</string>
+
+    <string name="skin_shield" translatable="false">skin-shield</string>
+
+    <string name="small_size_label">Small Size</string>
+    <string name="small_store_cannot_afford">You cannot buy it with less than 50 coins.</string>
+    <string name="small_store_dialogue">Hello！ Which do you want to do with 50 coins?</string>
+
+    <string name="smile_coin" translatable="false">smile-coin</string>
+    <string name="smile_coin_content2">smile coin &#128522;.</string>
+    <string name="smile_coin_text">Smile Coin</string>
+
+    <string name="snapshot_taken">Screenshot saved successfully!</string>
+
+    <string name="sold_one_b_key">Sold 1 blue key and got 150 coins</string>
+
+    <string name="spider_40_1">Hello! I am on the top floor of this tower!</string>
+
+    <string name="spring_shoes" translatable="false">spring-shoes</string>
+
+    <string name="sroll_info_21">The Black Wizard seems very hard to conquer?! They always have the same energy as you! So try to convert your energy into experience using the Book of Experience and reduce your energy before starting battle with them. But make sure you can resume your energy after passing through them!</string>
+
+    <string name="start_over">Start Over</string>
+
+    <string name="statistics">Statistics</string>
+
+    <string name="success_pickax">Used pickax to break through the wall</string>
+
+    <string name="super_store_cannot_afford">You cannot buy it with less than 250 coins!</string>
+    <string name="super_store_dialogue">Hello! What do you want to do with 250 coins?</string>
+
+    <string name="sword">sword</string>
+
+    <string name="tag_easy">Easy</string>
+    <string name="tag_hard">Hard</string>
+    <string name="tag_medium">Medium</string>
+
+    <string name="tap_to_skip"><![CDATA[Tap to skip >>>]]></string>
+    <string name="tap_to_start"><![CDATA[Tap to start >>>]]></string>
+
+    <string name="task_finished">Task Finished!</string>
+
+    <string name="tech_0_1">Good Luck! We will meet again in the following game.</string>
+    <string name="tech_3_1">These doors and walls cannot be opened if you don\'t have keys.</string>
+    <string name="tech_3_2">But some walls can be penetrated with explosives</string>
+
+    <string name="techinician_1">This tower has 35 floors. You can easily find keys at the lower floors, but try to save them for use in the higher floors!</string>
+
+    <string name="technician_19_1">Very nice swimming pool in this devil tower… Hmm…</string>
+    <string name="technician_19_2">Did you see the diamond sword in the furnace? You should cool down the ground to get closed to the sword.</string>
+    <string name="technician_21">The room was sealed by concrete walls. You can break through the walls by explosives!</string>
+    <string name="technician_34_1">Are you going upstairs to find the princess?</string>
+    <string name="technician_34_2">I saw the princess was taking downstairs.</string>
+    <string name="technician_34_3">But you should go to the top of the tower first.</string>
+    <string name="technician_6">When the walls break somewhere, there may be some hidden rooms!</string>
+    <string name="technician_9">The boss was not showing its true power on this floor. Take care!</string>
+    <string name="technician_diag">Techinician:</string>
+
+    <string name="title_activity_game_over">End of the Game</string>
+
+    <string name="torch_diag">Torch of Hope:</string>
+
+    <string name="total_floor_no" translatable="false">35</string>
+    <string name="total_floors">Total Floors</string>
+    <string name="total_score">Total Score:</string>
+    <string name="total_slot_no">3 slots</string>
+
+    <string name="transition_view_tag" translatable="false">transition-view</string>
+
+    <string name="unknow_object">UNKNOWN OBJECT</string>
+
+    <string name="upstairs_wing" translatable="false">upstairs_flying_wing</string>
+
+    <string name="use_smile_coin">pieces of smile coin! Do you want to use one?</string>
+
+    <string name="user">User</string>
+    <string name="user_portrait_icon" translatable="false">User Portrait Icon</string>
+    <string name="user_setup_ready">User data built up, starting game…</string>
+
+    <string name="value_easy" translatable="false">Easy</string>
+    <string name="value_hard" translatable="false">Hard</string>
+    <string name="value_medium" translatable="false">Medium</string>
+
+    <string name="w_basement_key" translatable="false">white_basement_key</string>
+
+    <string name="warn_balcony_barrier">This is the barrier for balcony</string>
+
+    <string name="warrior">Warrior</string>
+    <string name="warrior_axe" translatable="false">warrior_axe</string>
+    <string name="warrior_icon" translatable="false">warrior icon</string>
+
+    <string name="webdesigner_value" translatable="false">Google Web Designer</string>
+
+    <string name="webpage_design">Webpage</string>
+
+    <string name="welcome_page" translatable="false">WELCOME_PAGE</string>
+
+    <string name="win_slogan">You Win!</string>
+
+    <string name="wizard_blue_robe">Wizard Blue Robe</string>
+    <string name="wizard_blue_robe_diag">Blue Robe Wizard:</string>
+
+    <string name="wooden_shield" translatable="false">wooden-shield</string>
+    <string name="wooden_sword" translatable="false">Bokken</string>
+
+    <string name="xTouch" translatable="false">xTouch</string>
+
+    <string name="yTouch" translatable="false">yTouch</string>
+
+    <string name="y_basement_key" translatable="false">yellow_basement_key</string>
+    <string name="y_diamond" translatable="false">yellow-diamond</string>
+    <string name="y_energy" translatable="false">yellow-energy-plus</string>
+    <string name="y_key" translatable="false">yellow-keys</string>
+    <string name="y_key_box" translatable="false">yellow_key_box</string>
+
+    <string name="yellow_diamond_content2">yellow diamonds.</string>
+    <string name="yellow_key_content1">Yellow keys can open yellow doors. You have</string>
+    <string name="yellow_key_content2">yellow keys.</string>
+    <string name="yellow_key_icon" translatable="false">yellow key icon</string>
+
+    <string name="you_have">You have</string>
+    <string name="choose_a_difficulty">Choose a difficulty:</string>
+</resources>

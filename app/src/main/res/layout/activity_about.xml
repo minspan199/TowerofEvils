@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="10dp"
+    android:padding="10dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/colorPrimaryDark"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/about_author"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/fly_message_frame"
+        android:gravity="center"
+        android:text="Author"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="monospace" />
+
+    <WebView
+        android:id="@+id/about_author_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/about_author_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center" />
+    </WebView>
+
+    <TextView
+        android:id="@+id/about_game"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/fly_message_frame"
+        android:gravity="center"
+        android:text="Game"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="monospace" />
+
+    <WebView
+        android:id="@+id/about_game_page"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:layout_weight="0.25"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/about_game_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center" />
+
+    </WebView>
+
+    <TextView
+        android:id="@+id/game_rule"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:background="@drawable/fly_message_frame"
+        android:gravity="center"
+        android:text="@string/game_rule"
+        android:textSize="20sp"
+        android:textStyle="bold|italic"
+        android:typeface="monospace" />
+
+    <WebView
+        android:id="@+id/game_rule_page"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_weight="0.25"
+        android:visibility="visible">
+
+        <ProgressBar
+            android:id="@+id/game_rule_progress"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:foregroundGravity="center" />
+
+    </WebView>
+
+</LinearLayout>

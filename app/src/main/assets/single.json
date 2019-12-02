@@ -1,0 +1,39 @@
+{ "height":1,
+ "infinite":false,
+ "layers":[
+        {
+         "data":[202],
+         "height":1,
+         "id":1,
+         "name":"Tile Layer 1",
+         "opacity":1,
+         "type":"tilelayer",
+         "visible":true,
+         "width":1,
+         "x":0,
+         "y":0
+        }],
+ "nextlayerid":2,
+ "nextobjectid":1,
+ "orientation":"orthogonal",
+ "renderorder":"right-down",
+ "tiledversion":"1.2.4",
+ "tileheight":32,
+ "tilesets":[
+        {
+         "firstgid":1,
+         "source":"..\/..\/..\/..\/..\/..\/..\/Google Drive\/Android\/GameMaps\/MagicTower\/terrains.tsx"
+        }, 
+        {
+         "firstgid":46,
+         "source":"..\/..\/..\/..\/..\/..\/..\/Google Drive\/Android\/GameMaps\/MagicTower\/npcs.tsx"
+        }, 
+        {
+         "firstgid":102,
+         "source":"..\/..\/..\/..\/..\/..\/..\/Google Drive\/Android\/GameMaps\/MagicTower\/enemies.tsx"
+        }],
+ "tilewidth":32,
+ "type":"map",
+ "version":1.2,
+ "width":1
+}

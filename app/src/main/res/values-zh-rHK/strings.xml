@@ -1,0 +1,634 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <string name="abgel_38_1">妳需要集齊五種顏色的地下室鑰匙才能進入地下室！</string>
+
+    <string name="about_autor">遊戲開發</string>
+    <string name="about_game">關於遊戲</string>
+
+    <string name="action_settings">遊戲設置</string>
+
+    <string name="angel_11_1">仙子！這裏還有草地。</string>
+    <string name="angel_11_2" translatable="true">是的，魔塔有陽臺和花園。</string>
+    <string name="angel_11_3" translatable="true">有些樓層翻越陽臺可以省很多精力的！</string>
+    <string name="angel_11_4">謝謝！</string>
+    <string name="angel_16_1">在某些樓層，可以用鎬打穿墻壁！</string>
+    <string name="angel_16_2">如果妳卡住了，試試鎬。</string>
+    <string name="angel_32_1">這個樓層上有個大紅龍怪物擋住了出口，先清除大紅龍！</string>
+    <string name="angel_32_2">走到紅龍的頭部去開啟戰鬥！</string>
+    <string name="angel_36_1">35層的怪物有寒冰碟可以熄滅火焰。</string>
+    <string name="angel_3_1">怪物的攻擊防禦能力大相徑庭！</string>
+    <string name="angel_3_2">它們的生命力也不同，盡量升級提高防禦力以挑戰攻擊力高的怪物！</string>
+    <string name="angel_9_1">魔塔每10層有壹個小boss。</string>
+    <string name="angel_9_2">前10層的boss在左上角的屋子裏！</string>
+    <string name="angel_diag">仙子：</string>
+    <string name="angel_floor0_content1">勇敢的戰士，歡迎來到魔塔遊戲。</string>
+    <string name="angel_floor0_content2">魔塔是怪物囚禁公主的地方，也是怪物的邪惡之家。</string>
+    <string name="angel_floor0_content3">魔塔就在我們身後，進入塔開始遊戲。</string>
+    <string name="angel_floor0_content4">在遊戲中，妳應該策略性地消滅敵人並擊敗最終BOSS以拯救人質。</string>
+
+    <string name="app_name">魔塔</string>
+    <string name="app_title_input_author">新玩家</string>
+
+    <string name="apptitle_about_game">關於遊戲</string>
+
+    <string name="attack_increase_10per">攻擊增加了10%！</string>
+    <string name="attack_text">攻擊</string>
+
+    <string name="bless_100_energy">妳得到100點生命！</string>
+    <string name="bless_20_coins">得到20金幣！</string>
+    <string name="bless_3_attack">得到3點攻擊！</string>
+    <string name="bless_3_defense">得到3點防禦！</string>
+
+    <string name="blessing_title">壹個小禮物</string>
+
+    <string name="blood_sucking">（吸血！）</string>
+
+    <string name="blue_diamond_content1">藍色鉆石可以增加防禦力，每壹個增加3點防禦力。妳有裝備</string>
+    <string name="blue_diamond_content2">藍色鉆石。</string>
+    <string name="blue_key_content1">藍色鑰匙可以打開藍色的門。妳有</string>
+    <string name="blue_key_content2">藍色鑰匙。</string>
+    <string name="blue_wizard_floor0_content">妳好！妳能打敗我才可以進入魔塔地下室。</string>
+
+    <string name="bonus_invitation">，這是妳的金幣獎勵，點擊開啟遊戲。</string>
+
+    <string name="book_of_wisdom_content2">智慧之書。</string>
+
+    <string name="boss_diag">BOSS:</string>
+
+    <string name="buy_r_key_4000">妳想用4000金幣換壹個紅鑰匙嗎？</string>
+
+    <string name="cannot_beat">妳打不過這個怪物！</string>
+    <string name="cannot_defeat">妳打不過這個怪物！</string>
+    <string name="cannot_open">妳不能打開這個門！</string>
+
+    <string name="chinese_simplified_label">簡體中文</string>
+    <string name="chinese_traditional_label">繁體中文</string>
+
+    <string name="clear_4_greenwidzard">打敗4個綠色巫師！</string>
+    <string name="clear_5_wizards">擊敗五個巫師！</string>
+    <string name="clear_all_enemies">掃除這層所有的怪物！</string>
+    <string name="clear_dragon_n_safe">打敗紅龍和三個守衛！</string>
+    <string name="clear_red_dragon">先擊敗紅龍！</string>
+    <string name="clear_safeguards">清除這道門的門衛！</string>
+    <string name="clear_safeguards_floor">清除本層所有的守衛！</string>
+
+    <string name="coins_content">硬幣可用於在商店中交易能量，攻擊，防禦。妳有硬幣：</string>
+    <string name="coins_text">硬幣</string>
+
+    <string name="congratulations">恭喜！</string>
+
+    <string name="contact_author">聯系遊戲作者</string>
+
+    <string name="daily_bonus_reminding">點此接受每日獎勵！</string>
+
+    <string name="defeat_3_gw">打敗三個綠巫師！</string>
+    <string name="defeat_4_pinkbats">擊敗陽臺上的4只粉色蝙蝠。</string>
+    <string name="defeat_4_skeleton">擊敗4個吸血鬼骷髏。</string>
+    <string name="defeat_below_safe">打敗下面的4個守衛！</string>
+    <string name="defeat_five_knights">擊敗房間裏所有的五個騎士。</string>
+    <string name="defeat_the_bosses">擊敗本層所有boss</string>
+    <string name="defeat_the_guards">擊敗守衛！</string>
+
+    <string name="defense_increase_10per">防禦增加10%！</string>
+    <string name="defense_text">防禦</string>
+
+    <string name="details">詳細資料</string>
+
+    <string name="diag_level_5">成功升5級！</string>
+    <string name="diag_level_7">成功升7級！</string>
+    <string name="diag_level_up_1">成功升1級！</string>
+
+    <string name="dialog_10_levels">成功升10級！</string>
+    <string name="dialog_insufficient_experience_380">經驗小於380！</string>
+    <string name="dialog_insufficient_experience_500">經驗小於500！</string>
+    <string name="dialog_insufficient_experience_700">經驗小於700！</string>
+
+    <string name="difficulty">困難等級：</string>
+    <string name="difficulty_in_list">中等難度</string>
+    <string name="difficulty_info">3級</string>
+
+    <string name="disabled_snapshot">停用插件</string>
+
+    <string name="ea_32_1">啊！我被打敗了！</string>
+    <string name="ea_37_1">魔塔主人把公主帶到地下室了。</string>
+    <string name="ea_37_2">魔塔主人很強大的，妳會被拘禁或者殺掉！</string>
+    <string name="ea_37_3">現在妳趕快逃走吧。。</string>
+    <string name="ea_37_4">不救出公主我不會逃走的！</string>
+    <string name="ea_37_5">好吧！希望妳會打敗他，要不公主就會成為他的新娘了！</string>
+    <string name="ea_37_6">嗯，妳穿的和公主很相似啊！</string>
+
+    <string name="eb_29_1">妳把公主帶到哪裏了？</string>
+    <string name="eb_29_2">妳打得過我，就告訴妳！</string>
+    <string name="eb_32_1">哼~~人類~~</string>
+    <string name="eb_37_1">公主，妳還好嗎？我是來救妳回去的！我們走吧！</string>
+    <string name="eb_37_2">哦， 很感激妳來了。</string>
+    <string name="eb_37_3">啊？妳不是公主吧？</string>
+    <string name="eb_37_4">公主在哪裏？</string>
+    <string name="eb_37_5">妳怎麽知道我不是公主？</string>
+    <string name="eb_37_6">我知道公主很漂亮還很年輕！</string>
+    <string name="eb_37_7">呵呵~~</string>
+    <string name="eb_37_8">妳是誰呢？公主在哪？</string>
+    <string name="eb_37_9">我不告訴妳。</string>
+    <string name="eb_40_1">怎麽才能撲滅地板上的火？</string>
+    <string name="eb_40_2">我有壹個寒冰碟能滅火。</string>
+    <string name="eb_40_3">不過只有妳能打敗我，我才給妳。</string>
+    <string name="eb_40_4">好吧~動手吧！</string>
+    <string name="eb_41_1">勇士妳終於來了！我壹直等妳呢！我要和公主結婚了！</string>
+    <string name="eb_41_2">不可能，公主不會和妳結婚的，我來救公主出去的！</string>
+    <string name="eb_41_3">什麽？那我試試妳的能力！</string>
+    <string name="eb_41_4">好吧~</string>
+    <string name="eb_41_5">哦，不！妳的能力驚人。妳贏了，不過我還會回來教訓妳的！</string>
+    <string name="eb_41_6">我把妳的能力都廢了，妳現在可以走了！</string>
+
+    <string name="ef_29_1">公主在塔頂。</string>
+    <string name="ef_40_1">哼~妳什麽時候變得這麽強大？</string>
+    <string name="ef_40_2">寒冰碟給妳，祝妳好運！</string>
+
+    <string name="enable_snapshot">啟用遊戲小插件</string>
+
+    <string name="enabled_snapshot">啟用插件</string>
+
+    <string name="enemgy_unknown">未知怪物</string>
+
+    <string name="enemy_15_1">嗯，公主就在這，想救公主先打敗我！</string>
+    <string name="enemy_archmage">大法師</string>
+    <string name="enemy_archmage_i">國師</string>
+    <string name="enemy_bad_angels">墮落仙子</string>
+    <string name="enemy_bat">蝙蝠</string>
+    <string name="enemy_beast_guard">獸人守衛</string>
+    <string name="enemy_big_bat">大蝙蝠</string>
+    <string name="enemy_black_slime">黑色史萊姆</string>
+    <string name="enemy_black_wizard_i">黑衣初級巫師</string>
+    <string name="enemy_black_wizard_ii">黑衣中級巫師</string>
+    <string name="enemy_black_wizard_iii">黑衣高級巫師</string>
+    <string name="enemy_blood_knight">血刃騎士</string>
+    <string name="enemy_blood_knight_ii">高級血刃騎士</string>
+    <string name="enemy_blue_knight">藍騎士</string>
+    <string name="enemy_butcher">屠夫</string>
+    <string name="enemy_dark_knight">黑暗騎士</string>
+    <string name="enemy_evil_head">大魔王</string>
+    <string name="enemy_evil_spirit_iii">邪惡靈魂III</string>
+    <string name="enemy_evil_spirit_iv">邪惡靈魂IV</string>
+    <string name="enemy_fake_princess">假公主</string>
+    <string name="enemy_floor15_content">啊！！這個太強了！騎士們快把公主帶到塔頂！</string>
+    <string name="enemy_gate_keeper_a">高級衛兵</string>
+    <string name="enemy_gate_keeper_b">中級衛兵</string>
+    <string name="enemy_gate_keeper_c">初級衛兵</string>
+    <string name="enemy_ghost">鬼魂</string>
+    <string name="enemy_ghost_soldier">鬼戰士</string>
+    <string name="enemy_ghost_soldier_ii">鬼戰士II</string>
+    <string name="enemy_ghost_wizard">巫師鬼魂</string>
+    <string name="enemy_giant_spider">大蜘蛛</string>
+    <string name="enemy_giant_spider_diag">大蜘蛛：</string>
+    <string name="enemy_golden_knight">金騎士</string>
+    <string name="enemy_green_slime">綠色史萊姆</string>
+    <string name="enemy_green_soldier_i">初級綠人士兵</string>
+    <string name="enemy_green_soldier_ii">中級綠人士兵</string>
+    <string name="enemy_green_soldier_iii">高級綠人士兵</string>
+    <string name="enemy_green_wizard_i">綠衣初級巫師</string>
+    <string name="enemy_green_wizard_ii">綠衣高級巫師</string>
+    <string name="enemy_green_zombie">綠人僵屍</string>
+    <string name="enemy_green_zombie_ii">高級綠人僵屍</string>
+    <string name="enemy_grey_slime">灰色史萊姆</string>
+    <string name="enemy_invisible_man">隱形人</string>
+    <string name="enemy_iron_man">鋼鐵人</string>
+    <string name="enemy_knight">騎士</string>
+    <string name="enemy_knight_ii">騎士II</string>
+    <string name="enemy_list">enemy-list</string>
+    <string name="enemy_list_title">怪物信息</string>
+    <string name="enemy_magic_sergeant">魔法警衛</string>
+    <string name="enemy_magician_a">高級巫師</string>
+    <string name="enemy_magician_b">初級巫師</string>
+    <string name="enemy_marshall_i">初級元帥</string>
+    <string name="enemy_marshall_ii">中級元帥</string>
+    <string name="enemy_marshall_iii">高級元帥</string>
+    <string name="enemy_monkey_king">猴王</string>
+    <string name="enemy_pink_bat">粉蝙蝠</string>
+    <string name="enemy_pink_bat_ii">粉蝙蝠II</string>
+    <string name="enemy_pink_bat_iii">粉蝙蝠III</string>
+    <string name="enemy_pink_skeleton">粉色骷髏怪</string>
+    <string name="enemy_priest">初級法師</string>
+    <string name="enemy_red_dragon">大紅龍</string>
+    <string name="enemy_red_eye_slime">紅眼史萊姆</string>
+    <string name="enemy_red_eye_slime_ii">紅眼史萊姆II</string>
+    <string name="enemy_red_slime">紅色史萊姆</string>
+    <string name="enemy_red_wizard">紅衣巫師</string>
+    <string name="enemy_robber">強盜</string>
+    <string name="enemy_rock">石頭人</string>
+    <string name="enemy_skeleton_a">骷髏隊長</string>
+    <string name="enemy_skeleton_b">骷髏士兵</string>
+    <string name="enemy_skeleton_c">骷髏人</string>
+    <string name="enemy_skeleton_master">骷髏主人</string>
+    <string name="enemy_skeleton_monster">骷髏王</string>
+    <string name="enemy_slime_lord">史萊姆王</string>
+    <string name="enemy_soldier">士兵</string>
+    <string name="enemy_spirit_i">邪惡靈魂I</string>
+    <string name="enemy_spirit_ii">邪惡靈魂II</string>
+    <string name="enemy_superior_priest">高級法師</string>
+    <string name="enemy_swordsman">雙手劍士</string>
+    <string name="enemy_vampire_bat">吸血蝙蝠</string>
+    <string name="enemy_warrior_ninja">忍者勇士</string>
+    <string name="enemy_wild_cat">野貓</string>
+    <string name="enemy_yellow_wizard_i">黃衣初級巫師</string>
+    <string name="enemy_yellow_wizard_ii">黃衣中級巫師</string>
+    <string name="enemy_zombie">獸人</string>
+    <string name="enemy_zombie_knight">獸人武士</string>
+    <string name="enemy_zombie_knight_ii">獸人武士II</string>
+    <string name="enemy_zombie_skeleton">骷髏獸人</string>
+    <string name="enemy_zonbie_ii">獸人II</string>
+
+    <string name="energy_cost">需要消耗生命力: %d</string>
+    <string name="energy_cost1"><![CDATA[消耗生命: > %d]]></string>
+    <string name="energy_increase_10per">生命力增加10%！</string>
+    <string name="energy_text">生命力</string>
+
+    <string name="english_label">英語</string>
+
+    <string name="error_basement_key">妳還沒有五色地下室鑰匙！</string>
+    <string name="error_coin">金幣不足！</string>
+    <string name="error_conversion_ene2exp">體生命力不足1000</string>
+    <string name="error_empty">輸入玩家昵稱為空， 請重新輸入.</string>
+    <string name="error_enter_game">進入塔之前要和仙子對話！</string>
+    <string name="error_existed_id">玩家ID已經註冊了！</string>
+    <string name="error_explosive">抱歉！在地圖邊緣不能用炸藥！</string>
+    <string name="error_extinguishing">抱歉！站在地圖邊緣不能用寒冰蝶！</string>
+    <string name="error_flywing">這裏不能用飛行翼！</string>
+    <string name="error_insufficient_experience_100">妳的經驗小於100！</string>
+    <string name="error_invalid_user_name">此用戶名無效：</string>
+    <string name="error_key">妳還沒有鑰匙！</string>
+    <string name="error_level_up">升級失敗：經驗不足或者已經達到最高級999級！</string>
+    <string name="error_maximum_level_reached_512">我只能幫妳升級到512級！</string>
+    <string name="error_maximum_level_reached_five">我只能幫妳升級到128級！</string>
+    <string name="error_maximum_level_reached_one">我只能幫妳升級到30級！</string>
+    <string name="error_maximum_level_reached_seven">我只能幫妳升級到256級！</string>
+    <string name="error_no_b_keys">妳沒有藍鑰匙！</string>
+    <string name="error_no_blue_key">妳還沒有藍鑰匙！</string>
+    <string name="error_no_green_key">妳沒有綠鑰匙！</string>
+    <string name="error_no_red_key">妳還沒有紅鑰匙！</string>
+    <string name="error_no_yellow_key">妳還沒有黃鑰匙！</string>
+    <string name="error_pickax">對門不能用鎬！</string>
+    <string name="error_scroll">卷軸上沒有記錄這壹層。</string>
+    <string name="error_spring_shoe">本層無法用彈簧鞋</string>
+
+    <string name="exp_3_1">很高興再次見到妳！妳的經驗大於100嗎？</string>
+    <string name="exp_3_2">我可以幫妳升級，每100點經驗可以升1級！</string>
+
+    <string name="experience_10">妳想用380點經驗升五級嗎？</string>
+    <string name="experience_10_700">妳想用700點經驗升10級嗎？</string>
+    <string name="experience_6">妳想用100點經驗升壹級嗎？</string>
+    <string name="experience_7_500">妳想用500點經驗升7級嗎？</string>
+    <string name="experience_diag">經驗師：</string>
+    <string name="experience_floor0_content1">妳好！我是壹名能夠為您提供經驗並讓您立即達到新水平的培訓師。</string>
+    <string name="experience_floor0_content2">在此遊戲中，通過擊敗敵人可以獲得經驗。</string>
+    <string name="experience_floor0_content3">妳可以在以後的樓層找到我升級。</string>
+    <string name="experience_incerease_10per">經驗增加10%！</string>
+    <string name="experience_text">經驗</string>
+
+    <string name="fight">攻擊！</string>
+
+    <string name="floor">floor</string>
+    <string name="floor_0">第0層</string>
+    <string name="floor_is">第</string>
+    <string name="floor_text">樓層</string>
+
+    <string name="fly_wing">fly-wing</string>
+    <string name="fly_wing_content">用飛行之翼，您可以跳到解鎖的樓層上。</string>
+    <string name="fly_wing_text">跳轉到樓層</string>
+
+    <string name="fps_error">請輸入10到30之間的整數!</string>
+
+    <string name="game_end_intro">公主被勇士從魔塔裏救了出來， 並護送回國。三個月後，王國為勇士和公主舉行了盛大的婚禮...</string>
+    <string name="game_interface">遊戲界面</string>
+    <string name="game_intro_text">很久以前，在壹個幸福的國度住著壹個老國王，他有壹個漂亮的公主。突然有壹天來了很多怪物，它們搶走了公主並囚禁在壹個魔塔之中。 國王派了很多勇士去營救，但是都壹去不回。最後國王下詔募集勇士，如果誰把公主安全帶回來就封他為駙馬。 於是，這個遊戲的劇情就開始了。。。</string>
+    <string name="game_profile">遊戲資料</string>
+    <string name="game_rule">遊戲玩法</string>
+    <string name="game_saved">遊戲成功保存！</string>
+
+    <string name="get_10_points_attack">10點攻擊</string>
+    <string name="get_10_points_defense">10點防禦</string>
+    <string name="get_150_points_experience">150點經驗</string>
+    <string name="get_25_points_attack">25點攻擊</string>
+    <string name="get_25_points_defense">25點防禦</string>
+    <string name="get_325_points_experience">325點經驗</string>
+    <string name="get_3_points_attack">3點攻擊</string>
+    <string name="get_3_points_defense">3點防禦</string>
+    <string name="get_50_points_experience">50點經驗</string>
+    <string name="get_60_points_attack">60點攻擊</string>
+    <string name="get_60_points_defense">60點防禦</string>
+    <string name="get_750_points_experience">750點經驗</string>
+    <string name="get_bonus">領取金幣</string>
+    <string name="get_energy_12000">12000點生命</string>
+    <string name="get_energy_2400">2400點生命</string>
+    <string name="get_energy_5500">5500點生命</string>
+    <string name="get_energy_800">800點生命</string>
+
+    <string name="giant_store_diaglogue">妳想用500金幣買什麽？</string>
+    <string name="giant_store_info_cannot_afford">金幣小於500，不能購買！</string>
+
+    <string name="gift_popup">得到壹個隨機禮物</string>
+
+    <string name="good_luck">遊戲愉快！</string>
+
+    <string name="green_diamond_content2">綠鉆石。</string>
+
+    <string name="hello">"妳好! "</string>
+
+    <string name="image_picker_title">選擇壹個頭像</string>
+
+    <string name="in_battle">戰鬥中…</string>
+
+    <string name="info_attack_pot">使用攻擊水壺提升10%攻擊！</string>
+    <string name="info_b_basement_key">得到藍色地下室鑰匙！</string>
+    <string name="info_b_key_box">得到壹個藍鑰匙盒子！</string>
+    <string name="info_book_exp">妳可以用經驗之書把多余的生命力轉化為經驗。1000生命可以轉化為10點經驗。</string>
+    <string name="info_conversion_ene2exp">生命力成功轉換成經驗。</string>
+    <string name="info_cross">十字架可以提升10%防禦！</string>
+    <string name="info_defense_pot">藍色防禦水壺可以提升10%防禦！</string>
+    <string name="info_downstairs_wing">使用下樓飛行翼下降壹層。</string>
+    <string name="info_explosive">妳得到了壹包炸藥，可以炸通墻壁！</string>
+    <string name="info_g_basement_key">得到綠色地下室鑰匙！</string>
+    <string name="info_g_key_box">得到壹個綠鑰匙盒子！</string>
+    <string name="info_g_pot_exp">綠色經驗水壺可以提高10%經驗！</string>
+    <string name="info_get_blue_diamond">藍鉆石，防禦+3！</string>
+    <string name="info_get_blue_energy">藍色營養液，生命力+500！</string>
+    <string name="info_get_blue_key">妳得到了壹個藍鑰匙！</string>
+    <string name="info_get_book_of_wisdom">妳得到了智慧之書。</string>
+    <string name="info_get_chaos_sword">裝備神劍，攻擊+200！</string>
+    <string name="info_get_detonator">炸藥可以炸毀妳周邊的墻壁！</string>
+    <string name="info_get_diamond_shield">裝備鉆石盾，防禦+100！</string>
+    <string name="info_get_divine_shield">裝備神盾，防禦+200！</string>
+    <string name="info_get_fly_wing">妳得到了飛行翼，可以跳到已經到過的樓層。</string>
+    <string name="info_get_green_diamond">綠鉆石，防禦+5</string>
+    <string name="info_get_green_energy">綠色營養液，生命力+1000！</string>
+    <string name="info_get_green_key">得到壹個綠鑰匙</string>
+    <string name="info_get_iron_shield">裝備鐵盾，防禦+70！</string>
+    <string name="info_get_iron_sword">裝備鐵劍，攻擊+40！</string>
+    <string name="info_get_large_iron_sword">裝備大鐵劍，攻擊+100！</string>
+    <string name="info_get_large_wooden_sword">裝備大木劍，攻擊+70！</string>
+    <string name="info_get_leveled_up_1">提升壹級</string>
+    <string name="info_get_leveled_up_10">提升10級</string>
+    <string name="info_get_leveled_up_7">提升7級</string>
+    <string name="info_get_notebook">妳得到了壹個記事本，可以記錄商店、NPC信息。</string>
+    <string name="info_get_red_diamond">紅鉆石，攻擊+3！</string>
+    <string name="info_get_red_energy">紅色營養液，生命力+200！</string>
+    <string name="info_get_red_key">妳得到了壹個紅鑰匙！</string>
+    <string name="info_get_skin_shield">裝備皮盾，防禦+20！</string>
+    <string name="info_get_smile_coin">妳得到了壹個笑臉幣，使用可換100金幣。</string>
+    <string name="info_get_wooden_shield">裝備木盾，防禦+40.</string>
+    <string name="info_get_wooden_sword">裝備木劍，攻擊+20.</string>
+    <string name="info_get_yellow_diamond">黃鉆石，攻擊+5！</string>
+    <string name="info_get_yellow_energy">黃色營養液，生命力+2000！</string>
+    <string name="info_get_yellow_key">妳獲得了壹個黃鑰匙！</string>
+    <string name="info_got_3_bkeys">妳獲得了3個藍鑰匙！</string>
+    <string name="info_got_3_ykeys">妳獲得了3個黃鑰匙！</string>
+    <string name="info_got_key_box">妳得到了壹個鑰匙盒子，包含藍色、黃色、紅色鑰匙各壹個！</string>
+    <string name="info_got_ybr_keys">妳得到了紅黃藍鑰匙各1個！</string>
+    <string name="info_ice_plate">寒冰碟可以撲滅火焰！</string>
+    <string name="info_old_scroll">古舊卷軸記載著魔塔的秘密！</string>
+    <string name="info_p_pot_energy">粉色能量水壺能提高10%生命力！</string>
+    <string name="info_r_basement_key">得到藍色地下室鑰匙！</string>
+    <string name="info_spring_shoe">在有的樓層，彈簧鞋可以幫妳跳入密室</string>
+    <string name="info_upstairs_wing">點擊上升之翼跳到上壹層。</string>
+    <string name="info_w_basement_key">得到白色地下室鑰匙！</string>
+    <string name="info_warrior_ax_equip">裝備勇士斧增加20%攻擊！</string>
+    <string name="info_warrior_axe">裝備勇士斧可以增加20%攻擊！</string>
+    <string name="info_y_basement_key">得到黃色地下室鑰匙！</string>
+    <string name="info_y_key_box">妳獲得了壹個黃鑰匙盒子！</string>
+
+    <string name="input_a_name">請輸入壹個有效昵稱</string>
+    <string name="input_new_name_message">請輸入新的昵稱開啟遊戲</string>
+
+    <string name="intro_bokken">木劍是最基本的攻擊裝備</string>
+    <string name="intro_new_year_blessing">妳有壹個新年福袋</string>
+    <string name="intro_pickax">鎬可以用來鑿穿墻壁</string>
+
+    <string name="iron_shield">iron-shield</string>
+    <string name="iron_sword">iron-sword</string>
+
+    <string name="key_box">key-box</string>
+    <string name="key_box_content2">鑰匙盒子。</string>
+    <string name="key_merchant_10">妳想花500個金幣買壹個藍鑰匙嗎？</string>
+    <string name="key_merchant_39">妳有藍鑰匙嗎？我想花150金幣買壹個。</string>
+    <string name="key_merchant_6">妳想花200個金幣買壹個黃鑰匙嗎？</string>
+    <string name="key_merchant_floor0_content">妳好！我是賣鑰匙的商人。如果妳有錢，我可以賣給妳鑰匙。</string>
+    <string name="key_merchant_key_box_42_1">我有壹個鑰匙盒子，裏面有黃藍紅鑰匙各壹個。</string>
+    <string name="key_merchant_key_box_42_2">妳想花4200金幣買下來嗎？</string>
+
+    <string name="label_difficulty">難易程度</string>
+    <string name="label_difficulty_easy">簡單</string>
+    <string name="label_difficulty_hard">困難</string>
+    <string name="label_difficulty_medium">中等</string>
+    <string name="label_saving_slot">存檔位置</string>
+
+    <string name="large_iron_sword">iron-sword-large</string>
+    <string name="large_pot_of_wisdom">pot-of-wisdom-large</string>
+    <string name="large_pot_of_wisdom_content2">大智慧水壺。</string>
+    <string name="large_size_label">大號字體</string>
+    <string name="large_smile_coin">smile-coin-large</string>
+    <string name="large_smiley_coin_content2">大笑臉幣。</string>
+    <string name="large_store_cannot_afford">金幣小於125，不能購買！</string>
+    <string name="large_store_dialogue">用125金幣想買哪壹個？</string>
+    <string name="large_wooden_sword">Bokken-large</string>
+
+    <string name="level_is">"等級： "</string>
+
+    <string name="load">加載遊戲</string>
+
+    <string name="loading_game">加載遊戲</string>
+
+    <string name="lose_instruction">點擊退出戰鬥， 戰鬥損失10%金幣和生命力。</string>
+    <string name="lose_slogan">戰鬥失敗！</string>
+
+    <string name="map_design">地圖設計</string>
+
+    <string name="me_dialog">勇士：</string>
+
+    <string name="medium_size_label">中等字體</string>
+
+    <string name="merchant_diag">商人：</string>
+
+    <string name="new_game">新的遊戲</string>
+
+    <string name="no_path_to_go">不能去那！</string>
+    <string name="no_smile_coin">妳沒有笑臉幣，點擊返回遊戲！</string>
+
+    <string name="note_no">否</string>
+    <string name="note_yes">是的</string>
+
+    <string name="notebook_content"><![CDATA[<P><b><font color = #FF0000>商店: </font></b><br><b><font color = #F2F200>巨型商場: </font></b> Floor 24, 31     <br><b><font color = #F2F200>超級商店: </font></b> Floor 22, 33Left     <br><b><font color = #F2F200>大商店: </font></b> Floor 5, 10     <br><b><font color = #F2F200>小商店: </font></b> Floor 2 </P><P><b><font color = #FF0000>經驗: </font></b><br><b><font color = #F2F200>初級: </font></b> Floor 2, 6 (limit: <i><font color=#FF0000>30</font></i>)     <br><b><font color = #F2F200>普通: </font></b> Floor 10 (limit: <i><font color=#FF0000>128</font></i>)     <br><b><font color = #F2F200>進階: </font></b> Floor 28 (limit: <i><font color=#FF0000>256</font></i>)     <br><b><font color = #F2F200>高級: </font></b> Floor 33Right (limit: <i><font color=#FF0000>512</font></i>)     <br><b><font color = #F2F200>頂級: </font></b> Floor 35, B2 (limit: <i><font color=#FF0000>999</font></i>)   </P>]]></string>
+
+    <string name="notification_title">魔塔遊戲金幣獎勵</string>
+
+    <string name="plus_100_energy">生命力+100！</string>
+
+    <string name="pot_of_wisdom_content2">智慧水壺。</string>
+
+    <string name="pref_fps_key">fps_pref</string>
+    <string name="pref_fps_label">幀率</string>
+    <string name="pref_game_panel_label">重力方向</string>
+    <string name="pref_lan_key">preferred language</string>
+    <string name="pref_landscape_label">橫屏</string>
+    <string name="pref_landscape_value">landscape</string>
+    <string name="pref_language_label">語言偏好</string>
+    <string name="pref_portrait_label">豎屏</string>
+    <string name="pref_portrait_value">portrait</string>
+    <string name="pref_sensor_label">跟隨傳感器</string>
+    <string name="pref_sensor_value">sensors</string>
+    <string name="pref_size_default">30sp</string>
+    <string name="pref_size_key">font-size</string>
+    <string name="pref_size_label">字體大小</string>
+    <string name="pref_snapshot_key">pref_widget_key</string>
+    <string name="pref_user_bonus_key">pref_user_key</string>
+    <string name="pref_user_icon_key">pref_user_icon_key</string>
+    <string name="pref_user_icon_summary">選擇您的資料圖片</string>
+
+    <string name="princess_diag">公主：</string>
+
+    <string name="prisoner_12_1">妳好，妳來救公主嗎？</string>
+    <string name="prisoner_12_2">是的！妳是誰？</string>
+    <string name="prisoner_12_3">我是以前國王派來救公主的，但我不小心被囚禁在這了。</string>
+    <string name="prisoner_12_4">別擔心！妳現在安全了！</string>
+    <string name="prisoner_12_5">謝謝！。</string>
+    <string name="prisoner_12_6">我有壹些武器和鑰匙給妳吧。</string>
+    <string name="prisoner_12_7">這個十字架可以提升10%的防禦。祝妳好運！</string>
+    <string name="prisoner_26_1">謝謝妳救了我！公主被帶到樓上了！</string>
+    <string name="prisoner_diag">被囚禁的勇士：</string>
+
+    <string name="quit">退出遊戲</string>
+    <string name="quit_and_continue"><![CDATA[退出戰鬥>>>]]></string>
+
+    <string name="receive_coin_prompt">接收金幣獎勵</string>
+
+    <string name="record_time_is">"存檔時間： "</string>
+
+    <string name="red_32_1">呼呼~~</string>
+    <string name="red_diamond_content1">紅色鉆石可以增加攻擊，每個鉆石增加3點攻擊力。妳有裝備</string>
+    <string name="red_diamond_content2">紅色鉆石。</string>
+    <string name="red_dragon_diag">紅龍：</string>
+    <string name="red_key_content1">紅色鑰匙可以打開紅色的門。妳有</string>
+    <string name="red_key_content2">紅色鑰匙。</string>
+
+    <string name="refuse_coin_prompt">取消金幣獎勵</string>
+
+    <string name="resume">繼續遊戲</string>
+
+    <string name="rp_0">公主，我們從塔裏出來了！我們回國吧，國王很想妳！</string>
+    <string name="rp_1">太好了！謝謝妳！</string>
+    <string name="rp_41_1">謝謝妳救了我，我們現在該怎麽辦？地下水封死出路了。</string>
+    <string name="rp_41_2">不要著急！我看到大魔王從水晶石那邊逃了。我們摸摸水晶石試壹試。</string>
+    <string name="rp_41_3">好！</string>
+
+    <string name="saved">保存遊戲</string>
+
+    <string name="saving_slot_one">存檔壹</string>
+    <string name="saving_slot_three">存檔三</string>
+    <string name="saving_slot_two">存檔二</string>
+
+    <string name="scroll_info_0">魔塔有壹個3層的地下室。妳需要壹個五色地下室鑰匙打開水晶門以進入地下室！</string>
+    <string name="scroll_info_12">有的樓層有個樓梯可供選擇，它們可能通向相鄰樓層的不同房間。</string>
+    <string name="scroll_info_19">在魔塔頂層，大紅蜘蛛怪物有壹個裝備“寒冰碟”可以用來熄滅火焰。妳可以得到寒冰蝶在進入熔爐取出寶劍武器！</string>
+    <string name="scroll_info_20">4種顏色的水壺可以分別增加10%的攻擊，防禦，生命力，或者經驗。盡量在值最大的時候使用！</string>
+    <string name="scroll_info_25">黑暗密室裏有壹個強大的利斧，可以增加15%的攻擊。可以用彈簧鞋進入密室。</string>
+    <string name="scroll_info_27">妳看到中間的兩組5個怪物圍成的圓圈嗎？要打開鐵門，不能和中間的怪物交戰！</string>
+    <string name="scroll_info_37">隱形人？他的攻擊力就是妳的生命力，妳要在妳生命比較低的時候進攻他們！</string>
+    <string name="scroll_info_40">大蜘蛛的攻擊力的計算方法是妳的防禦力和攻擊力的差值！戰鬥前確保妳有相似的攻擊和防禦！</string>
+    <string name="scroll_info_41">公主囚禁在這壹層。這裏的怪物大都會吸血，而且攻擊力比妳的防禦力要高。對付最終BOSS大魔王，妳應該盡量提升生命力！</string>
+
+    <string name="sec_merchant_26_1">我有壹個紅鑰匙，妳想花2000金幣買嗎？</string>
+
+    <string name="secret_merchant_diag">神秘商人：</string>
+
+    <string name="small_size_label">小號字體</string>
+    <string name="small_store_cannot_afford">金幣小於50，不能購買！</string>
+    <string name="small_store_dialogue">Hello！ 妳想用50金幣買什麽？</string>
+
+    <string name="smile_coin_content2">笑臉幣。</string>
+    <string name="smile_coin_text">笑臉幣</string>
+
+    <string name="snapshot_taken">截圖保存成功！</string>
+
+    <string name="sold_one_b_key">賣出1個藍鑰匙，得到150金幣！</string>
+
+    <string name="spider_40_1">Hello！我們在塔頂上！</string>
+
+    <string name="sroll_info_21">黑衣巫師很難打敗？！它們的生命和妳壹樣，所以用經驗之書先把生命轉化為經驗。</string>
+
+    <string name="start_over">重新開始</string>
+
+    <string name="statistics">遊戲統計</string>
+
+    <string name="success_pickax">使用鎬鑿穿墻壁</string>
+
+    <string name="super_store_cannot_afford">金幣小於250不能購買！</string>
+    <string name="super_store_dialogue">Hello！妳想用250金幣買什麽？</string>
+
+    <string name="sword">劍</string>
+
+    <string name="tag_easy">簡單</string>
+    <string name="tag_hard">困難</string>
+    <string name="tag_medium">中等</string>
+
+    <string name="tap_to_skip"><![CDATA[點擊跳過 >>>]]></string>
+    <string name="tap_to_start"><![CDATA[點擊開始 >>>]]></string>
+
+    <string name="task_finished">任務完成！</string>
+
+    <string name="tech_0_1">遊戲愉快！我們在以後的遊戲中會再見的！</string>
+    <string name="tech_3_1">沒有鑰匙的話，這裏的門和墻不能打開！</string>
+    <string name="tech_3_2">妳要是有炸藥的話，有些墻是可以炸開的！</string>
+
+    <string name="techinician_1">這個塔共有35層。妳在低層時很容易找到鑰匙，但高層時鑰匙會變少的！</string>
+
+    <string name="technician_19_1">這個邪惡的塔還有這麽好的遊泳池！</string>
+    <string name="technician_19_2">妳看到熔爐裏的鉆石寶劍了嗎？妳應該想辦法滅火然後接近寶劍！</string>
+    <string name="technician_21">這個房間被墻封死了，可以用炸藥炸開！</string>
+    <string name="technician_34_1">妳要去樓上找公主嗎？</string>
+    <string name="technician_34_2">我看到公主被帶到樓下了！</string>
+    <string name="technician_34_3">但最好還是去樓上看看。</string>
+    <string name="technician_6">有時候墻在邊緣會消失，那裏可能有壹些隱藏的房間。</string>
+    <string name="technician_9">這層的BOSS還沒有顯示出實際能力，要小心啊！</string>
+    <string name="technician_diag">技工：</string>
+
+    <string name="title_activity_game_over">遊戲結局</string>
+
+    <string name="torch_diag">希望火炬：</string>
+
+    <string name="total_floors">樓層總數</string>
+    <string name="total_score">總分：</string>
+    <string name="total_slot_no">3個</string>
+
+    <string name="unknow_object">未知物品</string>
+
+    <string name="use_smile_coin">個笑臉幣！想用壹個嗎？</string>
+
+    <string name="user">用戶</string>
+    <string name="user_setup_ready">遊戲資料已建立，開啟遊戲中…</string>
+
+    <string name="warn_balcony_barrier">這是陽臺護欄。</string>
+
+    <string name="warrior">勇士</string>
+
+    <string name="webpage_design">網頁設計</string>
+
+    <string name="win_slogan">戰鬥勝利！</string>
+
+    <string name="wizard_blue_robe">藍袍巫師</string>
+    <string name="wizard_blue_robe_diag">藍袍巫師：</string>
+
+    <string name="yellow_diamond_content2">黃色鉆石。</string>
+    <string name="yellow_key_content1">黃色鑰匙可以打開黃色的門。妳有</string>
+    <string name="yellow_key_content2">黃色鉆石。</string>
+
+    <string name="you_have">妳有</string>
+    <string name="alert_cancel_content">操作已取消</string>
+    <string name="alert_cancel_title">取消</string>
+    <string name="alert_confirm_positive">確認</string>
+    <string name="alert_delete_content">資料壹旦刪除無法恢復！</string>
+    <string name="alert_delete_title">確定刪除檔案嗎？</string>
+    <string name="alert_deleted_content">存檔信息已清除！</string>
+    <string name="alert_deleted_positive">確認</string>
+    <string name="alert_deleted_title">刪除成功！</string>
+    <string name="alert_false">取消</string>
+    <string name="alert_positive">確認</string>
+    <string name="choose_a_difficulty">請選擇難度：</string>
+</resources>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="http://schemas.android.com/apk/res-auto">
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="orange_light">#FF4500</color>
+    <color name="white">#FFFF</color>
+
+    <color name="black_overlay">#66000000</color>
+
+    <color name="sample_red">#ff4444</color>
+    <color name="colorBackground">#1FE71844</color>
+
+    <color name="material_blue_700">#1976D2</color>
+    <color name="material_green_700">#388E3C</color>
+    <color name="material_grey_400">#BDBDBD</color>
+    <color name="material_grey_500">#9E9E9E</color>
+    <color name="material_light_black">#000000</color>
+    <color name="material_light_green_accent_700">#64DD17</color>
+    <color name="material_red_400">#EF5350</color>
+    <color name="material_red_700">#D32F2F</color>
+    <color name="material_red_900">#B71C1C</color>
+    <color name="material_red_accent_700">#D50000</color>
+    <color name="material_yellow_700">#FBC02D</color>
+    <color name="material_yellow_accent_700">#FFD600</color>
+    <color name="dark_blue">#051BA8</color>
+</resources>

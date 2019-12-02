@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/material_light_black"
+            android:layout_gravity="center">
+            <TextView
+                android:id="@+id/user_name_detail_info"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="20dp"
+                android:transitionName="user-icon-transition"
+                android:layout_marginEnd="20dp"
+                android:gravity="center"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="User name"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+                android:textColor="@color/material_yellow_accent_700"
+                android:textStyle="bold" />
+        </HorizontalScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/user_detail_view_holder"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/textview_background"
+            tools:layout_editor_absoluteX="16dp"
+            tools:layout_editor_absoluteY="40dp">
+
+
+            <Button
+                android:id="@+id/resume_old_game"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:background="@xml/buttonshape"
+                android:gravity="center"
+                android:onClick="resumeOldGame"
+                android:shadowColor="#051BA8"
+                android:shadowDx="18"
+                android:shadowDy="-9"
+                android:shadowRadius="4"
+                android:text="@string/resume"
+                android:textColor="#D6FBFF"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                android:transitionName="resume-button-transition"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintHorizontal_bias="0.491"
+                app:layout_constraintStart_toStartOf="@+id/guideline8"
+                app:layout_constraintTop_toTopOf="@+id/tableLayout" />
+
+            <Button
+                android:id="@+id/start_new_game"
+                android:layout_width="180dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="24dp"
+                android:background="@xml/buttonshape"
+                android:gravity="center"
+                android:onClick="startNewGame"
+                android:shadowColor="#051BA8"
+                android:shadowDx="18"
+                android:shadowDy="-9"
+                android:shadowRadius="4"
+                android:text="@string/start_over"
+                android:textColor="#D6FBFF"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                app:layout_constraintEnd_toStartOf="@+id/guideline8"
+                app:layout_constraintHorizontal_bias="0.677"
+                app:layout_constraintStart_toStartOf="@+id/guideline8"
+                app:layout_constraintTop_toBottomOf="@+id/resume_old_game" />
+
+            <ImageView
+                android:id="@+id/user_portrait"
+                android:layout_width="@dimen/user_detail_image_view_size"
+                android:layout_height="@dimen/user_detail_image_view_size"
+                android:layout_marginStart="10dp"
+                android:contentDescription="user portrait"
+                android:src="@drawable/warrior"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TableLayout
+                android:id="@+id/tableLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@xml/table_view_background"
+                android:gravity="center"
+                android:theme="@style/Theme.Design.Light"
+                app:layout_constraintEnd_toEndOf="@+id/user_detail_treasure_layout"
+                app:layout_constraintStart_toStartOf="@+id/user_detail_treasure_layout"
+                app:layout_constraintTop_toBottomOf="@+id/user_detail_info_saved">
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/table_layout_padding_small"
+                    android:paddingTop="@dimen/table_layout_padding_small"
+                    android:paddingRight="@dimen/table_layout_padding_small"
+                    android:paddingBottom="@dimen/table_layout_padding_small">
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        app:srcCompat="@drawable/magic_tower_small_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/floor_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_floor"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:text="Layer"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        android:src="@drawable/ic_attach_money_yellow_a700_48dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/coins_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_deposit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="@string/coins"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/table_layout_padding_small"
+                    android:paddingTop="@dimen/table_layout_padding_small"
+                    android:paddingRight="@dimen/table_layout_padding_small"
+                    android:paddingBottom="@dimen/table_layout_padding_small">
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        app:srcCompat="@drawable/energy" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/energy_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_energy"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:text="Energy"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        app:srcCompat="@drawable/ninja" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/experience_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_experience"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:text="Experience"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:paddingLeft="@dimen/table_layout_padding_small"
+                    android:paddingTop="@dimen/table_layout_padding_small"
+                    android:paddingRight="@dimen/table_layout_padding_small"
+                    android:paddingBottom="@dimen/table_layout_padding_small">
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        app:srcCompat="@drawable/sword" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/attack_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_attack"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="Attack"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                    <ImageView
+                        android:layout_width="@dimen/user_details_small_icon"
+                        android:layout_height="@dimen/user_details_small_icon"
+                        app:srcCompat="@drawable/shield" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/defense_text"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:textColor="#FFFF" />
+
+                    <TextView
+                        android:id="@+id/user_detail_info_defense"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/detail_view_text_grids_margin"
+                        android:textSize="@dimen/detail_view_grids_text_size"
+                        android:gravity="center"
+                        android:text="Defense"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Light.Widget.PopupMenu.Small"
+                        android:textColor="@color/colorPrimary"
+                        android:textStyle="bold" />
+
+                </TableRow>
+
+            </TableLayout>
+
+            <TextView
+                android:id="@+id/user_detail_info_saved"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                android:text="@string/saved"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/user_detail_info_record_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Record time"
+                android:textAppearance="@style/TextAppearance.AppCompat.Caption"
+                android:textColor="@color/material_light_black"
+                android:textStyle="bold"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.michael.pan.eviltower.views.GameViewNotification
+                android:id="@+id/gameViewNotification2"
+                android:layout_width="0dp"
+                android:layout_height="51dp"
+                android:background="@drawable/dialog_frame"
+                android:visibility="gone"
+                app:layout_constraintBottom_toTopOf="@+id/guideline7"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline8"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.9" />
+
+            <include
+                android:id="@+id/user_detail_treasure_layout"
+                layout="@layout/user_treasure_layout"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="40dp"
+                android:layout_marginStart="60dp"
+                android:layout_marginEnd="80dp"
+                app:layout_constraintBottom_toTopOf="@id/user_detail_info_record_time"
+                app:layout_constraintEnd_toStartOf="@+id/resume_old_game"
+                app:layout_constraintStart_toEndOf="@+id/user_portrait"
+                app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+            <TextView
+                android:id="@+id/difficulty_tag_detail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Difficulty: Easy"
+                android:transitionName="difficulty-text-transition"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/user_portrait"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                app:layout_constraintHorizontal_bias="0.392"
+                app:layout_constraintStart_toStartOf="@+id/user_portrait"
+                app:layout_constraintTop_toBottomOf="@+id/user_portrait" />
+
+            <TextView
+                android:id="@+id/popup_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fly_message_frame"
+                android:foregroundGravity="center"
+                android:gravity="center"
+                android:text="Popup Message"
+                android:layout_margin="@dimen/detail_view_text_grids_margin"
+                android:textSize="@dimen/detail_view_grids_text_size"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <com.michael.pan.eviltower.views.LoadingScreenView
+            android:id="@+id/loading_screen_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/texture_background"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+</layout>

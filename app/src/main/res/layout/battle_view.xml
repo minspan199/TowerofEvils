@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="bottom">
+
+    <com.michael.pan.eviltower.views.BattleView
+        android:id="@+id/battle_field"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp" />
+
+    <TextView
+        android:id="@+id/game_view_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="14sp"
+        android:background="@drawable/dialog_frame"
+        android:paddingStart="15dp"
+        android:paddingTop="15dp"
+        android:paddingEnd="15dp"
+        android:paddingBottom="15dp"
+        android:layout_marginTop="40dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/lose_instruction"
+        android:textColor="@color/white"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/skip_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:textSize="14sp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/material_yellow_accent_700"
+        android:background="@android:color/transparent"
+        android:text="@string/tap_to_skip" />
+    <Button
+        android:id="@+id/quit_game_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:textSize="14sp"
+        android:visibility="invisible"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="90dp"
+        android:layout_marginEnd="10dp"
+        android:textColor="@color/material_yellow_accent_700"
+        android:background="@android:color/transparent"
+        android:text="@string/quit_and_continue" />
+
+</FrameLayout>

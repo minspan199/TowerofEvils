@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/mota_welcome_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/welcome_page"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/background1"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/game_title"
+        style="@style/Widget.AppCompat.PopupWindow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/tusj"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/material_yellow_accent_700"
+        android:textSize="40sp"
+        app:layout_constraintBottom_toTopOf="@+id/guideline5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/mota_welcome_image" />
+
+    <Button
+        android:id="@+id/settings"
+        style="@style/Widget.AppCompat.PopupWindow"
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:adjustViewBounds="true"
+        android:background="@drawable/settings"
+        android:contentDescription="@string/action_settings"
+        android:fontFamily="@font/tusj"
+        android:onClick="settings"
+        android:padding="0dp"
+        android:scaleType="fitCenter"
+        android:text="@string/action_settings"
+        android:textSize="14sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/game_control"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:scaleType="fitCenter"
+        android:weightSum="3"
+        app:layout_constraintBottom_toTopOf="@+id/guideline4"
+        app:layout_constraintEnd_toStartOf="@+id/guideline16"
+        app:layout_constraintStart_toStartOf="@+id/guideline15"
+        app:layout_constraintTop_toTopOf="@+id/guideline5">
+
+        <Button
+            android:id="@+id/new_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="@string/new_game"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/load_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:gravity="center"
+            android:text="@string/load"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/quit_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:gravity="center"
+            android:text="@string/quit"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="20sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.7" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.35" />
+
+    <Button
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@drawable/question_mark"
+        android:onClick="about_info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline15"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/guideline4" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

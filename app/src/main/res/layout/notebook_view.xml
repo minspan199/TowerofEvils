@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/dialog_frame">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/notebook_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="30dp"
+            android:textStyle="bold|italic"
+            android:textColor="@android:color/holo_red_dark"
+            android:textSize="20sp"
+            android:layout_weight="0.9"
+            android:gravity="center"
+            android:scrollbars="vertical" />
+
+        <Button
+            android:id="@+id/notebook_close"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:background="@drawable/close"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/notebook_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:textColor="@color/material_yellow_accent_700"
+        android:layout_marginBottom="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:scrollbars="vertical" />
+
+    <GridView
+        android:id="@+id/notebook_grid_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="60dp"
+        android:layout_gravity="center"
+        android:scrollbarAlwaysDrawVerticalTrack="true"
+        android:numColumns="3"
+        android:gravity="center"
+        android:stretchMode="columnWidth" />
+
+    <Button
+        android:id="@+id/notebook_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="2dp"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/tusj"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="@string/note_yes"
+        android:textSize="12sp" />
+
+</LinearLayout>

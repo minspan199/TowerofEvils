@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/game_interface">
+        <ListPreference
+            android:defaultValue="@string/pref_small_size_value"
+            android:entries="@array/pref_font_size_option_labels"
+            android:entryValues="@array/pref_font_size_option_values"
+            android:icon="@drawable/ic_format_size_48dp"
+            android:key="@string/pref_size_key"
+            android:title="@string/pref_size_label" />
+
+        <ListPreference
+            android:defaultValue="@string/pref_lan_english_value"
+            android:entries="@array/pref_lan_option_labels"
+            android:entryValues="@array/pref_lan_option_values"
+            android:key="@string/pref_lan_key"
+            android:title="@string/pref_language_label"
+            android:icon="@drawable/ic_translate_48dp"/>
+
+        <EditTextPreference
+            android:defaultValue="@string/pref_fps_default"
+            android:key="@string/pref_fps_key"
+            android:title="@string/pref_fps_label"
+            android:icon="@drawable/ic_timeline_blue_700_48dp"/>
+
+        <ListPreference
+            android:defaultValue="@string/pref_game_panel_default"
+            android:entries="@array/pref_game_panel_labels"
+            android:entryValues="@array/pref_game_panel_values"
+            android:key="@string/pref_game_panel_key"
+            app:title="@string/pref_game_panel_label"
+            android:icon="@drawable/ic_view_gravity_48dp"/>
+        </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/game_profile">
+        <Preference
+            android:enabled="true"
+            android:icon="@drawable/ic_face_48dp"
+            android:key="@string/pref_user_icon_key"
+            android:summary="@string/pref_user_icon_summary"
+            android:fragment="com.michael.pan.eviltower.fragments.UserIconFragment"
+            android:selectable="true"/>
+        <CheckBoxPreference
+            android:enabled="true"
+            android:defaultValue="false"
+            android:icon="@drawable/ic_favorite_border_blue_700_48dp"
+            app:isPreferenceVisible="false"
+            android:key="@string/pref_bonus_coin_key"
+            android:summaryOn="@string/receive_coin_prompt"
+            android:summaryOff="@string/refuse_coin_prompt"/>
+        <CheckBoxPreference
+            android:enabled="true"
+            android:defaultValue="true"
+            android:icon="@drawable/ic_widgets_blue_700_48dp"
+            android:key="@string/pref_snapshot_key"
+            android:summary="@string/enable_snapshot"
+            android:summaryOff="@string/disabled_snapshot"
+            android:summaryOn="@string/enabled_snapshot"/>
+        <Preference
+            android:enabled="true"
+            android:selectable="true"
+            android:icon="@drawable/ic_question_answer_blue_700_48dp"
+            app:isPreferenceVisible="false"
+            android:key="@string/pref_user_bonus_key" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

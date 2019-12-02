@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/dialog_frame"
+    android:paddingBottom="20dp"
+    android:paddingTop="20dp"
+    android:paddingEnd="20dp"
+    android:paddingStart="20dp">
+
+    <TextView
+        android:id="@+id/error_message"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:gravity="center"
+        android:padding="16dp"
+        android:text="@string/error_empty"
+        android:textColor="@color/material_yellow_accent_700"
+        android:textSize="20sp"
+        android:visibility="visible" />
+
+    <com.michael.pan.eviltower.views.EditTextView
+        android:id="@+id/text_input_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/white"
+        android:hint="Nickname"
+        android:textColorHighlight="@color/black_overlay"
+        android:textColorHint="@color/material_grey_400"
+        android:textColor="@color/material_light_black" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/material_red_400"
+        android:text="@string/choose_a_difficulty" />
+
+    <Spinner
+        android:id="@+id/difficulty_settings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@color/blue_btn_bg_color"
+        android:entries="@array/difficulty_labels" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/button_image"
+        android:onClick="createNewUser"
+        android:text="@string/alert_confirm_positive"
+        android:textColor="@color/material_light_black" />
+
+</LinearLayout>

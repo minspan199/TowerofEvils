@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<resources>
+    <dimen name="game_activity_small_size">18dp</dimen>
+    <dimen name="game_activity_text">12sp</dimen>
+
+    <dimen name="standard_60">60dp</dimen>
+    <dimen name="standard_0">0dp</dimen>
+    <dimen name="table_layout_padding_small">10dp</dimen>
+
+    <dimen name="user_details_small_icon">25sp</dimen>
+    <dimen name="detail_view_grids_text_size">12sp</dimen>
+    <dimen name="detail_view_text_grids_margin">1dp</dimen>
+    <dimen name="user_detail_image_view_size">200dp</dimen>
+    <dimen name="user_info_icon_size">90dp</dimen>
+</resources>

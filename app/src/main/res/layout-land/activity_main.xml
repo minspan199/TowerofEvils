@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".activities.MainActivity">
+
+    <ImageView
+        android:id="@+id/mota_welcome_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:contentDescription="@string/welcome_page"
+        android:foregroundGravity="center"
+        android:scaleType="fitXY"
+        android:src="@drawable/background1" />
+
+    <TextView
+        android:id="@+id/game_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/main_page_button_group"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:fontFamily="@font/tusj"
+        android:foregroundGravity="center"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:textColor="@color/material_yellow_accent_700"
+        android:textSize="60sp" />
+
+    <Button
+        android:id="@+id/settings"
+        android:layout_width="wrap_content"
+        android:layout_height="80dp"
+        android:background="@drawable/settings"
+        android:contentDescription="@string/action_settings"
+        android:fontFamily="@font/tusj"
+        android:onClick="settings"
+        android:layout_below="@id/main_page_button_group"
+        android:text="@string/action_settings"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:textSize="25sp" />
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/main_page_button_group"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="30dp"
+        android:background="@drawable/game_control"
+        android:gravity="end"
+        android:orientation="vertical"
+        android:weightSum="3">
+
+        <Button
+            android:id="@+id/new_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:gravity="center"
+            android:text="@string/new_game"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/load_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:gravity="center"
+            android:text="@string/load"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+
+        <Button
+            android:id="@+id/quit_button"
+            style="@style/Widget.AppCompat.PopupWindow"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:background="@android:color/transparent"
+            android:fontFamily="@font/tusj"
+            android:gravity="center"
+            android:text="@string/quit"
+            android:textColor="@color/material_yellow_accent_700"
+            android:textSize="30sp"
+            android:textStyle="bold|italic"
+            android:visibility="visible" />
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="100dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/question_mark"
+        android:onClick="about_info" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+
+</RelativeLayout>
