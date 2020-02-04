@@ -42,9 +42,10 @@ import static com.michael.pan.eviltower.utilities.JSONUtil.getUserDataJson;
 public class GameOverActivity extends FragmentActivity implements DatabaseUpdateTask.onTaskExecuted {
 
 	AutoScrollViewPager viewPager;
-//	private static final int AUTO_SCROLL_THRESHOLD_IN_MILLI = 1000;
+	//	private static final int AUTO_SCROLL_THRESHOLD_IN_MILLI = 1000;
 	private boolean revisit = false;
 	String extras;
+
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -79,7 +80,8 @@ public class GameOverActivity extends FragmentActivity implements DatabaseUpdate
 	}
 
 	@Override
-	public void onBackPressed() {}
+	public void onBackPressed() {
+	}
 
 	public void quitGame(View view) {//onClick
 		if (revisit) {

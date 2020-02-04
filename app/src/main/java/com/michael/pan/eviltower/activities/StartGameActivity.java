@@ -132,7 +132,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 	Bundle extras;
 	public static JSONObject treasuresJSON;
 	private JSONObject userDataJson;
-//	private static final String TAG = "StartGameActivity";
+	//	private static final String TAG = "StartGameActivity";
 	private UserTreasureGridViewAdapter mAdapter;
 	public static GameView gameView;
 	SnapshotView snapshotView;
@@ -151,10 +151,11 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 	public static GameLiveDataViewModel gameLiveData;
 	private String fpsPreference, gameViewPreference;
 	public static boolean isFabOpen = false;
-//	private static boolean isActivityAlive = false;
+	//	private static boolean isActivityAlive = false;
 	private SharedPreferences preferences;
 	private TypedArray userIconDrawables;
 	private int numOfColGridView;
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -175,11 +176,15 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		gameViewPreference = preferences.getString(getString(R.string.pref_game_panel_key), getString(R.string.pref_game_panel_default));
 		lanPref = preferences.getString(getString(R.string.pref_lan_key), getString(R.string.pref_lan_english_value));
 
-		if (gameViewPreference.equals(getString(R.string.pref_landscape_value))) setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-		else if (gameViewPreference.equals(getString(R.string.pref_portrait_value))) setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
-		else if (gameViewPreference.equals(getString(R.string.pref_sensor_value))) setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
+		if (gameViewPreference.equals(getString(R.string.pref_landscape_value)))
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+		else if (gameViewPreference.equals(getString(R.string.pref_portrait_value)))
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
+		else if (gameViewPreference.equals(getString(R.string.pref_sensor_value)))
+			setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR);
 
-		if (!preferences.getBoolean(getString(R.string.pref_snapshot_key), true)) activityStartGameBinding.userInfoLayout.actionScreenshot.hide();
+		if (!preferences.getBoolean(getString(R.string.pref_snapshot_key), true))
+			activityStartGameBinding.userInfoLayout.actionScreenshot.hide();
 
 		extras = getIntent().getExtras();
 		resolveExtraDataSets();
@@ -200,9 +205,12 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 			activityStartGameBinding.userInfoLayout.yKeyCounts.setText(o.get(INDEX_Y_KEY_LIVEDATA).toString());
 			activityStartGameBinding.userInfoLayout.levelTextView.setText(o.get(INDEX_LEVEL_LIVEDATA).toString() + "/999");
 			activityStartGameBinding.userInfoLayout.experienceTextView.setText(o.get(INDEX_EXPERIENCE_LIVEDATA).toString());
-			if (lanPref.equals(getString(R.string.pref_lan_chinese_simplified_value))) activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorNameZhCn[o.get(INDEX_FLOOR_LIVEDATA)]));
-			else if (lanPref.equals(getString(R.string.pref_lan_chinese_traditional_value))) activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorNameZhHk[o.get(INDEX_FLOOR_LIVEDATA)]));
-			else activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorName[o.get(INDEX_FLOOR_LIVEDATA)]));
+			if (lanPref.equals(getString(R.string.pref_lan_chinese_simplified_value)))
+				activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorNameZhCn[o.get(INDEX_FLOOR_LIVEDATA)]));
+			else if (lanPref.equals(getString(R.string.pref_lan_chinese_traditional_value)))
+				activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorNameZhHk[o.get(INDEX_FLOOR_LIVEDATA)]));
+			else
+				activityStartGameBinding.floorTextView.setText(String.format(Locale.US, "%s%s", getString(R.string.floor_is), floorName[o.get(INDEX_FLOOR_LIVEDATA)]));
 
 //			System.out.println(lanPref);
 //			if (o.get(INDEX_FLOOR_LIVEDATA) > gameLiveData.getMaxFloor()) gameLiveData.setMaxFloor(o.get(INDEX_FLOOR_LIVEDATA));
@@ -232,7 +240,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 
 	private void setUserInfo() {
 		activityStartGameBinding.userNameInGame.setText(String.format("%s(%s)", userName, difficultyTag));
-		switch (difficultyTag){
+		switch (difficultyTag) {
 			case TAG_DIFFICULTY_EASY:
 				activityStartGameBinding.userNameInGame.setTextColor(getResources().getColor(R.color.material_light_green_accent_700));
 				break;
@@ -293,7 +301,8 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		//Loading JSON data from extras below		bundle.putString(EXTRA_MAP_JSON_STRING, mapDaraJsonString);
 		userName = extras.getString(COLUMN_NAME);
 		userId = extras.getString(COLUMN_ID);
-		if (extras.containsKey(EXTRA_DIFFICULTY)) difficultyTag = extras.getString(EXTRA_DIFFICULTY);
+		if (extras.containsKey(EXTRA_DIFFICULTY))
+			difficultyTag = extras.getString(EXTRA_DIFFICULTY);
 		else difficultyTag = TAG_DIFFICULTY_MEDIUM;
 		userTreasures = extras.getString(EXTRA_TREASURE_JSON_STRING);
 		userData = extras.getString(EXTRA_USER_DATA_JSON_STRING);
@@ -303,10 +312,12 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 			treasuresJSON = new JSONObject(userTreasures);
 			userDataJson = new JSONObject(userData);
 //			JSONObject userMapDataJSON = new JSONObject(userMapData);
-			if (userDataJson.getString(COLUMN_FLY_WING_DATA).equals("EMPTY")) flyWingData = new JSONArray();
+			if (userDataJson.getString(COLUMN_FLY_WING_DATA).equals("EMPTY"))
+				flyWingData = new JSONArray();
 			else flyWingData = new JSONArray(userDataJson.getString(COLUMN_FLY_WING_DATA));
 //			System.out.println(userDataJson.toString()+">>>>>>>>>>>>>>>>>>>>>");
-			if (userDataJson.has(COLUMN_DIFFICULTY)) difficultyTag = userDataJson.getString(COLUMN_DIFFICULTY);
+			if (userDataJson.has(COLUMN_DIFFICULTY))
+				difficultyTag = userDataJson.getString(COLUMN_DIFFICULTY);
 			// if there is definition of difficulty in the database, overwrite difficulty!
 		} catch (JSONException e) {
 			e.printStackTrace();
@@ -367,7 +378,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		extras.putString(EXTRAS_EVENT_TYPE, s);
 		extras.putInt(EvilTowerContract.TAG_FLOOR, floor);
 		extras.putString(EXTRA_LAN_SETTINGS, lanPref);
-		switch (s){
+		switch (s) {
 			case STATUS_LOADING:
 			case STATES_UPSTAIRS:
 			case STATES_DOWNSTAIRS:
@@ -376,7 +387,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 				fragmentManager.beginTransaction().replace(R.id.transition_view_holder, transitionFragment, getString(R.string.transition_view_tag)).commit();
 				gameView.setDrawMap(false);
 				activityStartGameBinding.gameViewHolder.setVisibility(View.GONE);
-				if (floor != currentFloor){
+				if (floor != currentFloor) {
 					currentFloor = floor;
 					gameView.setFloor(currentFloor);
 					updateFloorData();
@@ -411,7 +422,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		extras.putInt(getString(R.string.matrix_value), matrixValue);
 		extras.putInt(COLUMN_USER_ICON, gameLiveData.getIcon());
 //		System.out.println(extras.getInt(getString(R.string.matrix_value)));
-		switch (s){
+		switch (s) {
 			case STATES_NPC_EVENT:
 				new NPC(getApplicationContext(), fragmentManager, activityStartGameBinding, extras);
 				activityStartGameBinding.messageViewHolder.setVisibility(View.VISIBLE);
@@ -437,8 +448,8 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 	@Override
 	protected void onStop() {
 		//new DatabaseUpdateTask(this, this).execute(userId, "update");
-				//gameView.gameThread.setRunning(false);
-				//gameView.gameThread.interrupt();
+		//gameView.gameThread.setRunning(false);
+		//gameView.gameThread.interrupt();
 //		isActivityAlive = false;
 		super.onStop();
 	}
@@ -510,11 +521,11 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		else showFabMenu();
 	}
 
-	private void showFabMenu(){//onclick
+	private void showFabMenu() {//onclick
 		AnimUtil.fabOpeningAnimation(this, activityStartGameBinding.userInfoLayout);
 	}
 
-	private void closeFabMenu(){//onclick
+	private void closeFabMenu() {//onclick
 		AnimUtil.fabClosingAnimation(this, activityStartGameBinding.userInfoLayout);
 	}
 
@@ -539,28 +550,34 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		listPopupWindow.setAnchorView(anchorView);
 		ListPopupWindowAdapter listPopupWindowAdapter = new ListPopupWindowAdapter(this, dataSummary, position -> {
 			listPopupWindow.dismiss();
-			if (fap.equals(TAG_SAVE_GAME)){
-				switch (position){
+			if (fap.equals(TAG_SAVE_GAME)) {
+				switch (position) {
 					case 0:
-						if (!dataSummary[0].equals("No Data")) new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_PRIMARY);
-						else new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_PRIMARY, userName);
+						if (!dataSummary[0].equals("No Data"))
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_PRIMARY);
+						else
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_PRIMARY, userName);
 						break;
 					case 1:
-						if (!dataSummary[1].equals("No Data")) new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_SECONDARY);
-						else new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_SECONDARY, userName);
+						if (!dataSummary[1].equals("No Data"))
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_SECONDARY);
+						else
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_SECONDARY, userName);
 						break;
 					case 2:
-						if (!dataSummary[2].equals("No Data")) new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_THIRD);
-						else new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_THIRD, userName);
+						if (!dataSummary[2].equals("No Data"))
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_UPDATE, LOCATION_THIRD);
+						else
+							new DatabaseUpdateTask(StartGameActivity.this, StartGameActivity.this).execute(userId, TAG_SAVE_USER_DATA, LOCATION_THIRD, userName);
 						break;
 					default:
 						break;
 				}
-			} else if (fap.equals(TAG_RELOAD_GAME)){
+			} else if (fap.equals(TAG_RELOAD_GAME)) {
 				Intent intent = new Intent(StartGameActivity.this, UserDetailActivity.class);
 				intent.putExtra(EvilTowerContract.TAG_START_GAME, true);
 				intent.putExtra(COLUMN_ID, Integer.parseInt(userId));
-				switch (position){
+				switch (position) {
 					case 0:
 						intent.putExtra(EvilTowerContract.EXTRA_SAVING_SLOT, LOCATION_PRIMARY);
 						break;
@@ -584,18 +601,23 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 
 	@Override
 	public void onClick(View v) {
-		if (v.getId() == activityStartGameBinding.userInfoLayout.actionOpenList.getId()) toggleFabList(v);
-		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionSave.getId()) saveGame(v);
-		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionReload.getId()) reloadGame(v);
-		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionScreenshot.getId()) takeSnapshot(v);
+		if (v.getId() == activityStartGameBinding.userInfoLayout.actionOpenList.getId())
+			toggleFabList(v);
+		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionSave.getId())
+			saveGame(v);
+		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionReload.getId())
+			reloadGame(v);
+		else if (v.getId() == activityStartGameBinding.userInfoLayout.actionScreenshot.getId())
+			takeSnapshot(v);
 	}
 
-	static class LoadSavedDataSummary extends DatabaseQueryTask{
+	static class LoadSavedDataSummary extends DatabaseQueryTask {
 
 		public int count = 0;
 		String userDataJsonString, userFloor, userLevel;
 		String savingSlot;
 		JSONObject json;
+
 		LoadSavedDataSummary(Context context, String savingSlot) {
 			super(context);
 			this.savingSlot = savingSlot;
@@ -604,7 +626,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		@Override
 		protected void onPostExecute(Cursor cursor) {
 			super.onPostExecute(cursor);
-			switch (savingSlot){
+			switch (savingSlot) {
 				case PRIMARY_TABLE_NAME:
 					dataSummary[0] = "No Data";
 					if (cursor != null && cursor.getCount() != 0) {
@@ -691,7 +713,7 @@ public class StartGameActivity extends AppCompatActivity implements GameView.upd
 		jsonExtras.put(COLUMN_ENERGY, gameLiveData.getEnergy());
 		jsonExtras.put(COLUMN_LEVEL, gameLiveData.getLevel());
 		jsonExtras.put(COLUMN_DIFFICULTY, gameLiveData.difficulty);
-		int score = (int) ((gameLiveData.getAttack()*1.2f + gameLiveData.getEnergy()*0.5f + gameLiveData.getDefense()*1f)*gameLiveData.getLevel()/100f);
+		int score = (int) ((gameLiveData.getAttack() * 1.2f + gameLiveData.getEnergy() * 0.5f + gameLiveData.getDefense() * 1f) * gameLiveData.getLevel() / 100f);
 		jsonExtras.put(EXTRA_SCORE, score);
 		intent.putExtra(EXTRA_GAME_FINISHED, jsonExtras.toString());
 //		ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) context, pairs);

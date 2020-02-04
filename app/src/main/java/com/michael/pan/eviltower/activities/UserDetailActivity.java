@@ -97,28 +97,32 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 		numOfColGridView = getResources().getInteger(R.integer.grid_column_count);
 		startGame = getIntent().getBooleanExtra(EvilTowerContract.TAG_START_GAME, false);
 		ifNew = getIntent().getBooleanExtra(EvilTowerContract.IF_NEW_USER, false);
-		if (startGame) LoadingScreen();// if starting the game, then show the loading screen directly!
+		if (startGame)
+			LoadingScreen();// if starting the game, then show the loading screen directly!
 		else LoadingDetails();
 
-		if (getIntent().hasExtra(EXTRA_DIFFICULTY)) difficulty = getIntent().getStringExtra(EXTRA_DIFFICULTY);
+		if (getIntent().hasExtra(EXTRA_DIFFICULTY))
+			difficulty = getIntent().getStringExtra(EXTRA_DIFFICULTY);
 		if (difficulty == null) difficulty = TAG_DIFFICULTY_MEDIUM;
-		System.out.println("difficulty: "+difficulty);
-		System.out.println("getIntent().hasExtra(EXTRA_DIFFICULTY):"+getIntent().hasExtra(EXTRA_DIFFICULTY));
-		if (ifNew) FancyToast.makeText(this, getString(R.string.user_setup_ready), FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false);
+		System.out.println("difficulty: " + difficulty);
+		System.out.println("getIntent().hasExtra(EXTRA_DIFFICULTY):" + getIntent().hasExtra(EXTRA_DIFFICULTY));
+		if (ifNew)
+			FancyToast.makeText(this, getString(R.string.user_setup_ready), FancyToast.LENGTH_LONG, FancyToast.SUCCESS, false);
 
-		if (getIntent().hasExtra(EXTRA_SAVING_SLOT)) savingSlot = getIntent().getStringExtra(EXTRA_SAVING_SLOT);
+		if (getIntent().hasExtra(EXTRA_SAVING_SLOT))
+			savingSlot = getIntent().getStringExtra(EXTRA_SAVING_SLOT);
 		else savingSlot = LOCATION_PRIMARY;
 
-		switch (savingSlot){
-				case LOCATION_SECONDARY:
-					uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 1);
-					break;
-				case LOCATION_THIRD:
-					uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 2);
-					break;
-				default:
-					uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 0);
-					break;
+		switch (savingSlot) {
+			case LOCATION_SECONDARY:
+				uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 1);
+				break;
+			case LOCATION_THIRD:
+				uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 2);
+				break;
+			default:
+				uriForUserClicked = EvilTowerContract.EvilTowerEntry.buildUriByUserId(String.valueOf(id), 0);
+				break;
 		}
 
 		adapter = new UserTreasureGridViewAdapter(this);
@@ -128,7 +132,7 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 			String key = adapter.getItem(position);
 			String value = "0";
 			try {
-				 value = treasures.getString(key);
+				value = treasures.getString(key);
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -174,7 +178,7 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 			resolveData(data);
 		}
 //		else Log.i(TAG, "Number of items has been loaded: " + data.getCount());
-		if (startGame){//a branch that start the game activity right after loading.
+		if (startGame) {//a branch that start the game activity right after loading.
 			startGame = false;
 //			Log.i(TAG, "Loading finished, starting new game now.");
 //			Log.i(TAG, "User items loaded: " + treasureList);
@@ -249,7 +253,7 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 			activityUserDetailsBinding.userDetailTreasureLayout.treasureGridView.setAdapter(adapter);
 		}
 
-		if (userDataJson != null){
+		if (userDataJson != null) {
 			try {
 				userEnergy = userDataJson.getString(COLUMN_ENERGY);
 				userAttack = userDataJson.getString(COLUMN_ATTACK);
@@ -258,7 +262,8 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 				userDefense = userDataJson.getString(COLUMN_DEFENSE);
 				userExperience = userDataJson.getString(COLUMN_EXPERIENCE);
 				userIcon = userDataJson.getString(COLUMN_USER_ICON);
-				if (userDataJson.has(COLUMN_DIFFICULTY)) difficulty = userDataJson.getString(COLUMN_DIFFICULTY);
+				if (userDataJson.has(COLUMN_DIFFICULTY))
+					difficulty = userDataJson.getString(COLUMN_DIFFICULTY);
 				//overwrite difficulty from the extras.
 			} catch (JSONException e) {
 				e.printStackTrace();
@@ -358,7 +363,8 @@ public class UserDetailActivity extends AppCompatActivity implements LoaderManag
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		if (LoaderManager.getInstance(this).hasRunningLoaders()) LoaderManager.getInstance(this).destroyLoader(ID_USER_DETAIL_LOADER);
+		if (LoaderManager.getInstance(this).hasRunningLoaders())
+			LoaderManager.getInstance(this).destroyLoader(ID_USER_DETAIL_LOADER);
 		if (databaseUpdateAsyncTask != null) databaseUpdateAsyncTask.cancel(true);
 	}
 

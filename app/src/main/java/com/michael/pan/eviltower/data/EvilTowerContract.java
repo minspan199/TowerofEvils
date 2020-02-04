@@ -116,7 +116,7 @@ public class EvilTowerContract {
 	public static final String DIFFICULTY_TEXT_TRANSITION = "difficulty-text-transition";
 	public static final String USER_NAME_TRANSITION = "user-name-transition";
 
-	public static final class EvilTowerEntry implements BaseColumns{
+	public static final class EvilTowerEntry implements BaseColumns {
 
 		public static final Uri CONTENT_URI = BASE_CONTENT_URI.buildUpon().appendPath(PATH).build();
 		//Insert Property Step 1
@@ -168,11 +168,11 @@ public class EvilTowerContract {
 		public static final int INDEX_DEFENSE_LIVEDATA = 1;
 		public static final int INDEX_FLOOR_LIVEDATA = 2;
 		public static final int INDEX_ENERGY_LIVEDATA = 3;
-		public static final int	INDEX_EXPERIENCE_LIVEDATA = 4;
+		public static final int INDEX_EXPERIENCE_LIVEDATA = 4;
 		public static final int INDEX_POSITION_X_LIVEDATA = 5;
 		public static final int INDEX_POSITION_Y_LIVEDATA = 6;
 		public static final int INDEX_LEVEL_LIVEDATA = 7;
-		public static final int	INDEX_R_KEY_LIVEDATA = 8;
+		public static final int INDEX_R_KEY_LIVEDATA = 8;
 		public static final int INDEX_B_KEY_LIVEDATA = 9;
 		public static final int INDEX_Y_KEY_LIVEDATA = 10;
 		public static final int INDEX_G_KEY_LIVEDATA = 11;
@@ -202,23 +202,23 @@ public class EvilTowerContract {
 		public static final String STATES_TREASURE_EVENT = "treasures";
 		public static final String STATES_SPECIAL_DOOR_EVENT = "special-door";
 
-		public static final String[] floorName = new String[]{"0","1","2","3","4","5","6","7","8","9","10",
-			"11","12","13","14","15","16","17","18","19","20",
-			"21","22","23","24","25","26","27","28","29","30",
-			"30 Balcony", "31","32","33","33R","34","34 Left Closet",
-			"34 South Balcony","35", "35 North Balcony", "B3","B2","B1"
+		public static final String[] floorName = new String[]{"0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10",
+			"11", "12", "13", "14", "15", "16", "17", "18", "19", "20",
+			"21", "22", "23", "24", "25", "26", "27", "28", "29", "30",
+			"30 Balcony", "31", "32", "33", "33R", "34", "34 Left Closet",
+			"34 South Balcony", "35", "35 North Balcony", "B3", "B2", "B1"
 		};
-		public static final String[] floorNameZhCn = new String[]{"0层","1层","2层","3层","4层","5层","6层","7层","8层","9层","10层",
-			"11层","12层","13层","14层","15层","16层","17层","18层","19层","20层",
-			"21层","22层","23层","24层","25层","26层","27层","28层","29层","30层",
-			"30层阳台", "31层","32层","33层","33层右侧","34层","34层左侧",
-			"34层南阳台","35层", "35层北阳台", "附3层","附2层","附1层"
+		public static final String[] floorNameZhCn = new String[]{"0层", "1层", "2层", "3层", "4层", "5层", "6层", "7层", "8层", "9层", "10层",
+			"11层", "12层", "13层", "14层", "15层", "16层", "17层", "18层", "19层", "20层",
+			"21层", "22层", "23层", "24层", "25层", "26层", "27层", "28层", "29层", "30层",
+			"30层阳台", "31层", "32层", "33层", "33层右侧", "34层", "34层左侧",
+			"34层南阳台", "35层", "35层北阳台", "附3层", "附2层", "附1层"
 		};
-		public static final String[] floorNameZhHk = new String[]{"0樓","1樓","2樓","3樓","4樓","5樓","6樓","7樓","8樓","9樓","10樓",
-			"11樓","12樓","13樓","14樓","15樓","16樓","17樓","18樓","19樓","20樓",
-			"21樓","22樓","23樓","24樓","25樓","26樓","27樓","28樓","29樓","30樓",
-			"30樓陽臺", "31樓","32樓","33樓","33樓右側","34樓","34樓左側",
-			"34樓南陽臺","35樓", "35樓北陽臺", "負3樓","負2樓","負1樓"
+		public static final String[] floorNameZhHk = new String[]{"0樓", "1樓", "2樓", "3樓", "4樓", "5樓", "6樓", "7樓", "8樓", "9樓", "10樓",
+			"11樓", "12樓", "13樓", "14樓", "15樓", "16樓", "17樓", "18樓", "19樓", "20樓",
+			"21樓", "22樓", "23樓", "24樓", "25樓", "26樓", "27樓", "28樓", "29樓", "30樓",
+			"30樓陽臺", "31樓", "32樓", "33樓", "33樓右側", "34樓", "34樓左側",
+			"34樓南陽臺", "35樓", "35樓北陽臺", "負3樓", "負2樓", "負1樓"
 		};
 
 		public static final Integer[] scrollInfo4Floors = new Integer[]{0, 12, 19, 20, 21, 25, 27, 37, 40, 41};
@@ -238,16 +238,16 @@ public class EvilTowerContract {
 			COLUMN_USERDATA_JSON, COLUMN_TREASURES_JSON, COLUMN_MAP_JSON};
 		//Insert Property Step 3
 		public static final int INDEX_ID_IN_DATABASE = 0;
-/*
+		/*
 
-		public static final int INDEX_USER_ATTACK = findIndexOfStringArray(COLUMN_ATTACK);
-		public static final int INDEX_USER_DEFENSE = findIndexOfStringArray(COLUMN_DEFENSE);
-		public static final int INDEX_USER_ENERGY = findIndexOfStringArray(COLUMN_ENERGY);
-		public static final int INDEX_USER_FLOOR = findIndexOfStringArray(COLUMN_FLOOR);
-		public static final int INDEX_USER_POSITION_X = findIndexOfStringArray(COLUMN_POSITION_X);
-		public static final int INDEX_USER_POSITION_Y = findIndexOfStringArray(COLUMN_POSITION_Y);
-		public static final int INDEX_USER_EXPERIENCE = findIndexOfStringArray(COLUMN_EXPERIENCE);
-*/
+				public static final int INDEX_USER_ATTACK = findIndexOfStringArray(COLUMN_ATTACK);
+				public static final int INDEX_USER_DEFENSE = findIndexOfStringArray(COLUMN_DEFENSE);
+				public static final int INDEX_USER_ENERGY = findIndexOfStringArray(COLUMN_ENERGY);
+				public static final int INDEX_USER_FLOOR = findIndexOfStringArray(COLUMN_FLOOR);
+				public static final int INDEX_USER_POSITION_X = findIndexOfStringArray(COLUMN_POSITION_X);
+				public static final int INDEX_USER_POSITION_Y = findIndexOfStringArray(COLUMN_POSITION_Y);
+				public static final int INDEX_USER_EXPERIENCE = findIndexOfStringArray(COLUMN_EXPERIENCE);
+		*/
 		public static final int INDEX_RECORD_TIME = findIndexOfStringArray(COLUMN_UPDATE_TIME);
 		public static final int INDEX_USER_LEVEL = findIndexOfStringArray(COLUMN_LEVEL);
 		public static final int INDEX_USER_ID = findIndexOfStringArray(COLUMN_ID);
@@ -260,9 +260,9 @@ public class EvilTowerContract {
 
 		//Insert Property Step 4
 
-		static String getDefaultValues(Context context, String s){
+		static String getDefaultValues(Context context, String s) {
 			String s1;
-			switch (s){
+			switch (s) {
 				case COLUMN_LEVEL:
 					s1 = "0";
 					break;
@@ -285,8 +285,8 @@ public class EvilTowerContract {
 			return s1;
 		}
 
-		public static Uri buildUriByUserId(String id, int code){
-			switch (code){
+		public static Uri buildUriByUserId(String id, int code) {
+			switch (code) {
 				case 0:
 					return CONTENT_URI.buildUpon().appendPath(PATH_PRIMARY).appendPath(id).build();
 				case 1:

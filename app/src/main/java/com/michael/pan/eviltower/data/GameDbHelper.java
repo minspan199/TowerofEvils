@@ -27,6 +27,7 @@ import static com.michael.pan.eviltower.data.EvilTowerContract.EvilTowerEntry.TH
 public class GameDbHelper extends SQLiteOpenHelper {
 	public static final String DATABASE_NAME = "tower_of_evil.db";
 	public static final int DATABASE_VERSION = 8;
+
 	public GameDbHelper(@Nullable Context context) {
 		super(context, DATABASE_NAME, null, DATABASE_VERSION);
 	}
@@ -39,8 +40,8 @@ public class GameDbHelper extends SQLiteOpenHelper {
 		//Insert Property Step 5
 
 		final String SQL_CREATE_PRIMARY_TABLE = "CREATE TABLE " + PRIMARY_TABLE_NAME + " (" +
-			_ID               + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-			COLUMN_NAME     + " TEXT NOT NULL, "  +
+			_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+			COLUMN_NAME + " TEXT NOT NULL, " +
 			COLUMN_ID + " TEXT NOT NULL, " +
 			COLUMN_LEVEL + " TEXT NOT NULL, " +
 			COLUMN_UPDATE_TIME + " TEXT NOT NULL, " +
@@ -50,8 +51,8 @@ public class GameDbHelper extends SQLiteOpenHelper {
 			" UNIQUE (" + COLUMN_ID + ") ON CONFLICT REPLACE);";
 
 		final String SQL_CREATE_SECONDARY_TABLE = "CREATE TABLE " + SECONDARY_TABLE_NAME + " (" +
-			_ID               + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-			COLUMN_NAME     + " TEXT NOT NULL, "  +
+			_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+			COLUMN_NAME + " TEXT NOT NULL, " +
 			COLUMN_ID + " TEXT NOT NULL, " +
 			COLUMN_LEVEL + " TEXT NOT NULL, " +
 			COLUMN_UPDATE_TIME + " TEXT NOT NULL, " +
@@ -61,8 +62,8 @@ public class GameDbHelper extends SQLiteOpenHelper {
 			" UNIQUE (" + COLUMN_ID + ") ON CONFLICT REPLACE);";
 
 		final String SQL_CREATE_THIRD_TABLE = "CREATE TABLE " + THIRD_TABLE_NAME + " (" +
-			_ID               + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
-			COLUMN_NAME     + " TEXT NOT NULL, "  +
+			_ID + " INTEGER PRIMARY KEY AUTOINCREMENT, " +
+			COLUMN_NAME + " TEXT NOT NULL, " +
 			COLUMN_ID + " TEXT NOT NULL, " +
 			COLUMN_LEVEL + " TEXT NOT NULL, " +
 			COLUMN_UPDATE_TIME + " TEXT NOT NULL, " +

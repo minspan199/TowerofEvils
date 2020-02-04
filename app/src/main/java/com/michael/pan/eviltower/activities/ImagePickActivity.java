@@ -28,7 +28,7 @@ import static com.michael.pan.eviltower.data.EvilTowerContract.EvilTowerEntry.EX
 import static com.michael.pan.eviltower.data.EvilTowerContract.EvilTowerEntry.EXTRA_USER_ID;
 import static com.michael.pan.eviltower.data.EvilTowerContract.EvilTowerEntry.EXTRA_USER_NAME;
 
-public class ImagePickActivity extends AppCompatActivity implements IconGridAdapter.onIconClicked, DatabaseUpdateTask.onTaskExecuted{
+public class ImagePickActivity extends AppCompatActivity implements IconGridAdapter.onIconClicked, DatabaseUpdateTask.onTaskExecuted {
 
 	private IconGridAdapter iconAdapter;
 	private GridView gridView;
@@ -49,7 +49,7 @@ public class ImagePickActivity extends AppCompatActivity implements IconGridAdap
 		TypedArray userIconDrawables = getResources().obtainTypedArray(R.array.user_icon_drawables);
 		iconAdapter = new IconGridAdapter(this, this, userIconDrawables);
 		data = new ArrayList<>();
-		for (int i = 0; i< 11; i++) data.add(i);
+		for (int i = 0; i < 11; i++) data.add(i);
 		iconAdapter.swapData(data);
 		gridView = findViewById(R.id.user_icon_grid_view);
 		gridView.setAdapter(iconAdapter);

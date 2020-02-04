@@ -44,11 +44,12 @@ public class DbMaintenance {
 		Uri uriPrimary = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 0);
 		Uri uriSecondary = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 1);
 		Uri uriThird = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 2);
-		context.getContentResolver().delete(uriPrimary,null,null);
-		context.getContentResolver().delete(uriSecondary,null,null);
-		context.getContentResolver().delete(uriThird,null,null);
+		context.getContentResolver().delete(uriPrimary, null, null);
+		context.getContentResolver().delete(uriSecondary, null, null);
+		context.getContentResolver().delete(uriThird, null, null);
 //		Log.i("DbMaintenance: ", "Data deleted for user ID:" + userId);
 	}
+
 	public static void updateDatabase(Context context, String[] args, final boolean rollingBack) {
 
 		String userId = args[0], updatingSlot = args[2];
@@ -56,7 +57,7 @@ public class DbMaintenance {
 		Uri uriPrimary = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 0);
 		Uri uriSecondary = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 1);
 		Uri uriThird = EvilTowerContract.EvilTowerEntry.buildUriByUserId(userId, 2);
-		if (rollingBack){
+		if (rollingBack) {
 			values = getDefaultContentValues(context);
 //			Log.i("DnMaintenance: ", "rolling back to original state!");
 			context.getContentResolver().delete(uriSecondary, COLUMN_ID + " = " + userId, null);
@@ -65,12 +66,12 @@ public class DbMaintenance {
 			try {
 				values = getContentValuesFromCurrentData(context);
 				//System.out.println("this received is :"+values.get(COLUMN_TREASURES_JSON));
-				} catch (JSONException e) {
+			} catch (JSONException e) {
 				e.printStackTrace();
 			}
 		}
 		//new String[]{COLUMN_ID, COLUMN_NAME, COLUMN_LEVEL}, COLUMN_STATUS);
-		switch (updatingSlot){
+		switch (updatingSlot) {
 			case LOCATION_PRIMARY:
 				context.getContentResolver().update(uriPrimary, values, COLUMN_ID + " = " + userId, null);
 				break;
@@ -127,7 +128,7 @@ public class DbMaintenance {
 		}
 		values.put(COLUMN_NAME, strings[3]);
 		values.put(COLUMN_ID, strings[0]);
-		switch (strings[2]){
+		switch (strings[2]) {
 			case LOCATION_PRIMARY:
 				context.getContentResolver().insert(uriPrimary, values);
 				break;
@@ -140,7 +141,7 @@ public class DbMaintenance {
 		}
 	}
 
-	public static void insertNewUser(Context context, String id, ContentValues contentValues){
+	public static void insertNewUser(Context context, String id, ContentValues contentValues) {
 		context.getContentResolver().insert(buildUriByUserId(id, 0), contentValues);
 	}
 }

@@ -21,6 +21,7 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 	ProgressBar authorPb, gamePb, rulePb;
 	boolean toggle = true;
 	int lastClicked;
+
 	@Override
 	protected void onCreate(@Nullable Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -58,10 +59,10 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 
 	@Override
 	public void onClick(View v) {
-		switch (v.getId()){
+		switch (v.getId()) {
 			case R.id.about_author:
 				if (lastClicked != R.id.about_author) toggle = true;
-				if (toggle){
+				if (toggle) {
 					aboutAuthor.setVisibility(View.VISIBLE);
 					aboutGame.setVisibility(View.GONE);
 					gameRule.setVisibility(View.GONE);
@@ -83,13 +84,13 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 				break;
 			case R.id.about_game:
 				if (lastClicked != R.id.about_game) toggle = true;
-				if (toggle){
+				if (toggle) {
 					aboutGame.setVisibility(View.VISIBLE);
 					aboutAuthor.setVisibility(View.GONE);
 					gameRule.setVisibility(View.GONE);
 					aboutGame.loadUrl(EvilTowerContract.URL_ABOUT_GAME_HTML);
 					aboutGame.requestFocus();
-					aboutGame.setWebViewClient(new WebViewClient(){
+					aboutGame.setWebViewClient(new WebViewClient() {
 						@Override
 						public void onPageFinished(WebView view, String url) {
 							gamePb.setVisibility(View.GONE);
@@ -106,13 +107,13 @@ public class AboutActivity extends AppCompatActivity implements View.OnClickList
 				break;
 			case R.id.game_rule:
 				if (lastClicked != R.id.game_rule) toggle = true;
-				if (toggle){
+				if (toggle) {
 					gameRule.setVisibility(View.VISIBLE);
 					aboutGame.setVisibility(View.GONE);
 					aboutAuthor.setVisibility(View.GONE);
 					gameRule.loadUrl(EvilTowerContract.URL_GAME_RULES_HTML);
 					gameRule.requestFocus();
-					gameRule.setWebViewClient(new WebViewClient(){
+					gameRule.setWebViewClient(new WebViewClient() {
 						@Override
 						public void onPageFinished(WebView view, String url) {
 							rulePb.setVisibility(View.GONE);

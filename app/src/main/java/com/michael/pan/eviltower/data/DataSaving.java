@@ -39,7 +39,7 @@ public class DataSaving {
 		return formatter.format(Long.parseLong(dateInMilliseconds));
 	}
 
-	public static String getCurrentDate(){
+	public static String getCurrentDate() {
 		String pattern = "HH:mm:ss MM-dd-yyyy";
 		return new SimpleDateFormat(pattern, Locale.US).format(new Date());
 	}
@@ -58,18 +58,18 @@ public class DataSaving {
 		return values;
 	}
 
-	public static void saveBonusPreferences(Context context){
+	public static void saveBonusPreferences(Context context) {
 		SharedPreferences preferences = PreferenceManager.getDefaultSharedPreferences(context);
 		String s = preferences.getString(context.getString(R.string.pref_user_bonus_key), "[]");
 		JSONArray jsonArray = new JSONArray();
-		if (!s.equals("[]")){
+		if (!s.equals("[]")) {
 			try {
 				jsonArray = new JSONArray(s);
 				for (int i = 0; i < jsonArray.length(); i++) {
 					JSONObject json = jsonArray.getJSONObject(i);
 					String id = json.getString(COLUMN_ID);
 					boolean sent = json.getBoolean(HAVE_SENT_NOTIFICATION);
-					if (id.equals(warrior.userId) && !sent){
+					if (id.equals(warrior.userId) && !sent) {
 //						System.out.println(warrior.userId + ":okoooo");
 						json.put(HAVE_SENT_NOTIFICATION, true);
 						jsonArray.put(i, json);

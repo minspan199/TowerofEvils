@@ -33,41 +33,41 @@ import com.michael.pan.eviltower.services.LocaleManager;
 
 public class SettingsActivity extends AppCompatActivity implements PreferenceFragmentCompat.OnPreferenceStartFragmentCallback {
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
-        getSupportFragmentManager().beginTransaction().replace(R.id.activity_settings, new SettingsFragment()).commit();
-        ActionBar actionBar = this.getSupportActionBar();
-        // Set the action bar back button to look like an up button
-        if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
-    }
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.activity_settings);
+		getSupportFragmentManager().beginTransaction().replace(R.id.activity_settings, new SettingsFragment()).commit();
+		ActionBar actionBar = this.getSupportActionBar();
+		// Set the action bar back button to look like an up button
+		if (actionBar != null) actionBar.setDisplayHomeAsUpEnabled(true);
+	}
 
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        // When the home button is pressed, take the user back to the VisualizerActivity
-        if (id == android.R.id.home) {
-            NavUtils.navigateUpFromSameTask(this);
-        }
-        return super.onOptionsItemSelected(item);
-    }
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		int id = item.getItemId();
+		// When the home button is pressed, take the user back to the VisualizerActivity
+		if (id == android.R.id.home) {
+			NavUtils.navigateUpFromSameTask(this);
+		}
+		return super.onOptionsItemSelected(item);
+	}
 
-    @Override
-    protected void attachBaseContext(Context newBase) {
-        super.attachBaseContext(LocaleManager.setLocale(newBase));
-    }
+	@Override
+	protected void attachBaseContext(Context newBase) {
+		super.attachBaseContext(LocaleManager.setLocale(newBase));
+	}
 
-    @Override
-    public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) {
-        // Instantiate the new Fragment
-        final Bundle args = pref.getExtras();
-        final Fragment fragment = getSupportFragmentManager().getFragmentFactory().instantiate(getClassLoader(), pref.getFragment());
-        fragment.setArguments(args);
-        fragment.setTargetFragment(caller, 0);
-        // Replace the existing Fragment with the new Fragment
-        getSupportFragmentManager().beginTransaction().replace(R.id.activity_settings, fragment).addToBackStack("main").commit();
-        return true;
-    }
+	@Override
+	public boolean onPreferenceStartFragment(PreferenceFragmentCompat caller, Preference pref) {
+		// Instantiate the new Fragment
+		final Bundle args = pref.getExtras();
+		final Fragment fragment = getSupportFragmentManager().getFragmentFactory().instantiate(getClassLoader(), pref.getFragment());
+		fragment.setArguments(args);
+		fragment.setTargetFragment(caller, 0);
+		// Replace the existing Fragment with the new Fragment
+		getSupportFragmentManager().beginTransaction().replace(R.id.activity_settings, fragment).addToBackStack("main").commit();
+		return true;
+	}
 
 }

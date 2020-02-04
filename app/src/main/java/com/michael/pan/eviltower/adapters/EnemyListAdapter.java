@@ -18,11 +18,12 @@ import java.util.ArrayList;
 import static com.michael.pan.eviltower.activities.StartGameActivity.gameLiveData;
 import static com.michael.pan.eviltower.activities.StartGameActivity.gameView;
 
-public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.EnemyListViewHolder>{
+public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.EnemyListViewHolder> {
 
 	private Context context;
 	private ArrayList<Enemy.EnemyEntry> enemyList;
 	private int index;
+
 	public EnemyListAdapter(Context context) {
 		this.context = context;
 //		this.run();
@@ -43,17 +44,19 @@ public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.Enem
 		holder.defense.setText(String.valueOf(enemy.defense));
 		holder.attack.setText(String.valueOf(enemy.attack));
 		holder.energy.setText(String.valueOf(enemy.energy));
-		holder.icon.setImageBitmap(gameView.enemies[index % 2][(enemy.type - 1 - 101)/2]);
+		holder.icon.setImageBitmap(gameView.enemies[index % 2][(enemy.type - 1 - 101) / 2]);
 		int cost = getEnergyCost(enemy);
 		if (enemy.vampire) holder.bloodSucking.setVisibility(View.VISIBLE);
 		else holder.bloodSucking.setVisibility(View.GONE);
-		if (cost == -1){
+		if (cost == -1) {
 			holder.description.setTextColor(context.getResources().getColor(R.color.orange_light));
 			holder.description.setText(context.getString(R.string.cannot_defeat));
-		}else {
+		} else {
 			holder.description.setTextColor(context.getResources().getColor(R.color.design_default_color_primary));
-			if (enemy.vampire) holder.description.setText(String.format(context.getString(R.string.energy_cost1), cost));
-			else holder.description.setText(String.format(context.getString(R.string.energy_cost), cost));
+			if (enemy.vampire)
+				holder.description.setText(String.format(context.getString(R.string.energy_cost1), cost));
+			else
+				holder.description.setText(String.format(context.getString(R.string.energy_cost), cost));
 		}
 	}
 
@@ -65,11 +68,11 @@ public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.Enem
 		int warriorAttack = gameLiveData.getAttack();
 		int warriorEnergy = gameLiveData.getEnergy();
 		int warriorDefense = gameLiveData.getDefense();
-		while(inBattle){
-			if (gamerFirst){
+		while (inBattle) {
+			if (gamerFirst) {
 				enemyEnergy -= (warriorAttack > enemyDefense) ? (warriorAttack - enemyDefense) : 1;
 				gamerFirst = false;
-			}else {
+			} else {
 				warriorEnergy -= (enemyAttack > warriorDefense) ? (enemyAttack - warriorDefense) : 1;
 				gamerFirst = true;
 			}
@@ -81,7 +84,7 @@ public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.Enem
 
 	@Override
 	public int getItemCount() {
-		if (enemyList == null)return 0;
+		if (enemyList == null) return 0;
 		else return enemyList.size();
 	}
 
@@ -101,7 +104,7 @@ public class EnemyListAdapter extends RecyclerView.Adapter<EnemyListAdapter.Enem
 //		}
 //	}
 
-	class EnemyListViewHolder extends RecyclerView.ViewHolder{
+	class EnemyListViewHolder extends RecyclerView.ViewHolder {
 
 		TextView name, energy, attack, defense, description, bloodSucking;
 		ImageView icon;

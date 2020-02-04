@@ -23,7 +23,7 @@ public class ListPopupWindowAdapter extends BaseAdapter {
 	public String tag;
 	private String[] savingSlots = new String[]{"Saving Slot 1", "Saving Slot 2", "Saving Slot 3"};
 
-	public ListPopupWindowAdapter(Activity activity, String[] dataSource, @NonNull OnClickButtonListener clickButtonListener){
+	public ListPopupWindowAdapter(Activity activity, String[] dataSource, @NonNull OnClickButtonListener clickButtonListener) {
 		this.mActivity = activity;
 		this.mDataSource = dataSource;
 		layoutInflater = mActivity.getLayoutInflater();
@@ -49,17 +49,18 @@ public class ListPopupWindowAdapter extends BaseAdapter {
 	@Override
 	public View getView(final int position, View view, ViewGroup parent) {
 		ViewHolder holder;
-		if(view == null){
+		if (view == null) {
 			holder = new ViewHolder();
 			view = layoutInflater.inflate(R.layout.item_list_popup_window, null);
 			holder.tvTitle = view.findViewById(R.id.popup_menu_title);
 			holder.tvContent = view.findViewById(R.id.popup_menu_content);
 			holder.icon = view.findViewById(R.id.popup_menu_icon);
 			holder.icon.setOnClickListener(v -> clickButtonListener.onClickButton(position));
-			if (tag.equals(TAG_SAVE_GAME)){
-				if (!getItem(position).equals("No Data")) holder.icon.setImageResource(R.drawable.ic_save_blue_700_48dp);
+			if (tag.equals(TAG_SAVE_GAME)) {
+				if (!getItem(position).equals("No Data"))
+					holder.icon.setImageResource(R.drawable.ic_save_blue_700_48dp);
 				else holder.icon.setImageResource(R.drawable.ic_save_grey_400_48dp);
-			} else if (tag.equals(TAG_RELOAD_GAME)){
+			} else if (tag.equals(TAG_RELOAD_GAME)) {
 				if (!getItem(position).equals("No Data")) {
 					holder.icon.setClickable(true);
 					holder.icon.setImageResource(R.drawable.ic_cloud_download_green_700_48dp);
@@ -69,7 +70,7 @@ public class ListPopupWindowAdapter extends BaseAdapter {
 				}
 			}
 			view.setTag(holder);
-		}else{
+		} else {
 			holder = (ViewHolder) view.getTag();
 		}
 		// bind data
@@ -80,13 +81,13 @@ public class ListPopupWindowAdapter extends BaseAdapter {
 		return view;
 	}
 
-	private class ViewHolder{
+	private class ViewHolder {
 		private TextView tvTitle, tvContent;
 		private ImageView icon;
 	}
 
 	// interface to return callback to activity
-	public interface OnClickButtonListener{
+	public interface OnClickButtonListener {
 		void onClickButton(int position);
 	}
 }

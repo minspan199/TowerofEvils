@@ -21,6 +21,7 @@ public class FloorSelectorAdapter extends BaseAdapter {
 	public JSONArray flyWingData;
 	private LayoutInflater inflater;
 	private JSONObject jsonObject;
+
 	public FloorSelectorAdapter(Context context) {
 		inflater = LayoutInflater.from(context);
 	}
@@ -61,9 +62,9 @@ public class FloorSelectorAdapter extends BaseAdapter {
 
 	public void setFlyWingData(JSONArray jsonArray) {
 		flyWingData = new JSONArray();
-		for (int i = 0; i< jsonArray.length(); i++){
+		for (int i = 0; i < jsonArray.length(); i++) {
 			try {
-				if (jsonArray.getJSONObject(i) != null){
+				if (jsonArray.getJSONObject(i) != null) {
 					flyWingData.put(jsonArray.getJSONObject(i));
 				}
 			} catch (JSONException e) {

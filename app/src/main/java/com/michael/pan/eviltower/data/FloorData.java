@@ -34,15 +34,14 @@ public class FloorData {
 		for (int m = 0; m < yCount; m++) {
 			for (int n = 0; n < xCount; n++) {
 				//Background encoding
-				if (layer00 != null && layer00[m][n] != 0){
+				if (layer00 != null && layer00[m][n] != 0) {
 					if (backgroundList.contains(String.valueOf(layer00[m][n]))) {
 						mergedLayer[m][n] = 0;
-					} else if (pitfallList.contains(String.valueOf(layer00[m][n]))){
+					} else if (pitfallList.contains(String.valueOf(layer00[m][n]))) {
 						mergedLayer[m][n] = 1;
-					} else if (doorList.contains(String.valueOf(layer00[m][n]))){
+					} else if (doorList.contains(String.valueOf(layer00[m][n]))) {
 						mergedLayer[m][n] = 2;
-					}
-					else {
+					} else {
 						mergedLayer[m][n] = 10;
 					}
 				}

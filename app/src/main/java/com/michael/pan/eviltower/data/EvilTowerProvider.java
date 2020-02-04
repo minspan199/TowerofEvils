@@ -31,6 +31,7 @@ public class EvilTowerProvider extends ContentProvider {
 	private static final int CODE_ALL_USER_LIST = 287;
 	private static final UriMatcher matcher = buildUriMatcher();
 	private final String TAG = "EvilTowerProvider: ";
+
 	private static UriMatcher buildUriMatcher() {
 		final UriMatcher matcher = new UriMatcher(UriMatcher.NO_MATCH);
 		matcher.addURI(CONTENT_AUTHORITY, PATH + "/" + PATH_PRIMARY + "/#", CODE_USER_PRIMARY);
@@ -56,15 +57,15 @@ public class EvilTowerProvider extends ContentProvider {
 //		System.out.println("Querying database: "+uri.toString());
 		switch (matcher.match(uri)) {
 			case CODE_USER_PRIMARY:
-				cursor = dbHelper.getReadableDatabase().query(PRIMARY_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments,null,null, sortOrder);
+				cursor = dbHelper.getReadableDatabase().query(PRIMARY_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments, null, null, sortOrder);
 //				Log.i(TAG, "a. The Uri is querying first item :" + uri.toString());
 				break;
 			case CODE_USER_SECONDARY:
-				cursor = dbHelper.getReadableDatabase().query(SECONDARY_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments,null,null, sortOrder);
+				cursor = dbHelper.getReadableDatabase().query(SECONDARY_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments, null, null, sortOrder);
 //				Log.i(TAG, "b. The Uri is querying second item :" + uri.toString());
 				break;
 			case CODE_USER_THIRD:
-				cursor = dbHelper.getReadableDatabase().query(THIRD_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments,null,null, sortOrder);
+				cursor = dbHelper.getReadableDatabase().query(THIRD_TABLE_NAME, projection, COLUMN_ID + " = ? ", selectionArguments, null, null, sortOrder);
 //				Log.i(TAG, "c. The Uri is querying third item :" + uri.toString());
 				break;
 			case CODE_ALL_USER_LIST:
@@ -100,14 +101,18 @@ public class EvilTowerProvider extends ContentProvider {
 //		System.out.println("Inserting database: "+uri.toString());
 		db.beginTransaction();
 		int rowsInserted = 0;
-		switch (matcher.match(uri)){
+		switch (matcher.match(uri)) {
 			case CODE_USER_SECONDARY:
 				try {
 					long _id = db.insert(SECONDARY_TABLE_NAME, null, values);
-					if (_id != -1) {rowsInserted++;}
+					if (_id != -1) {
+						rowsInserted++;
+					}
 					db.setTransactionSuccessful();
-				} finally {db.endTransaction();}
-				if (rowsInserted > 0){
+				} finally {
+					db.endTransaction();
+				}
+				if (rowsInserted > 0) {
 					getContext().getContentResolver().notifyChange(uri, null);
 //					Log.i(getContext().getPackageName(), "Inserted Uri: " + uri.toString());
 					return uri;
@@ -116,10 +121,14 @@ public class EvilTowerProvider extends ContentProvider {
 			case CODE_USER_THIRD:
 				try {
 					long _id = db.insert(THIRD_TABLE_NAME, null, values);
-					if (_id != -1) {rowsInserted++;}
+					if (_id != -1) {
+						rowsInserted++;
+					}
 					db.setTransactionSuccessful();
-				} finally {db.endTransaction();}
-				if (rowsInserted > 0){
+				} finally {
+					db.endTransaction();
+				}
+				if (rowsInserted > 0) {
 					getContext().getContentResolver().notifyChange(uri, null);
 //					Log.i(getContext().getPackageName(), "Inserted Uri: " + uri.toString());
 					return uri;
@@ -128,10 +137,14 @@ public class EvilTowerProvider extends ContentProvider {
 			case CODE_USER_PRIMARY:
 				try {
 					long _id = db.insert(PRIMARY_TABLE_NAME, null, values);
-					if (_id != -1) {rowsInserted++;}
+					if (_id != -1) {
+						rowsInserted++;
+					}
 					db.setTransactionSuccessful();
-				} finally {db.endTransaction();}
-				if (rowsInserted > 0){
+				} finally {
+					db.endTransaction();
+				}
+				if (rowsInserted > 0) {
 					getContext().getContentResolver().notifyChange(uri, null);
 //					Log.i(getContext().getPackageName(), "Inserted Uri: " + uri.toString());
 					return uri;
@@ -148,7 +161,7 @@ public class EvilTowerProvider extends ContentProvider {
 		final SQLiteDatabase db = dbHelper.getWritableDatabase();
 		String[] selectionArguments = {uri.getLastPathSegment()};
 		int count = 0;
-		switch (matcher.match(uri)){
+		switch (matcher.match(uri)) {
 			case CODE_USER_PRIMARY:
 				count = db.delete(PRIMARY_TABLE_NAME, COLUMN_ID + " = ?", selectionArguments);
 				getContext().getContentResolver().notifyChange(uri, null);

@@ -24,7 +24,7 @@ public class IconGridAdapter extends BaseAdapter {
 	private TypedArray userIconDrawables;
 	onIconClicked onIconClicked;
 
-	public interface onIconClicked{
+	public interface onIconClicked {
 		void iconClicked(int userId);
 	}
 
@@ -61,6 +61,7 @@ public class IconGridAdapter extends BaseAdapter {
 		icon.setOnClickListener(view1 -> onIconClicked.iconClicked(i));
 		return view;
 	}
+
 	public void swapData(ArrayList<Integer> data) {
 		dataList = data;
 		notifyDataSetChanged();

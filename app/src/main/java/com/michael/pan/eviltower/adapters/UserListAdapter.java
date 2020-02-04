@@ -50,11 +50,12 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 	private TypedArray userIconDrawables;
 	public GameViewHolder holder;
 	private List<Integer> positionIdList;
-	public interface GameListOnClickListener{
+
+	public interface GameListOnClickListener {
 		void onClick(int id, String data, String instruction);
 	}
 
-	public UserListAdapter(Context context, GameListOnClickListener listener, TypedArray userIconDrawables){
+	public UserListAdapter(Context context, GameListOnClickListener listener, TypedArray userIconDrawables) {
 		mContext = context;
 		mListClickListener = listener;
 		this.userIconDrawables = userIconDrawables;
@@ -85,9 +86,11 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 			userDataJson = new JSONObject(userData);
 			userIcon = userDataJson.getString(COLUMN_USER_ICON);
 			//in database the tag is COLUMN_DIFFICULTY, in the intent extras it is EXTRA_DIFFICULTY
-			if (userDataJson.has(COLUMN_DIFFICULTY)) difficultyTag = userDataJson.getString(COLUMN_DIFFICULTY);
+			if (userDataJson.has(COLUMN_DIFFICULTY))
+				difficultyTag = userDataJson.getString(COLUMN_DIFFICULTY);
 			else difficultyTag = TAG_UNKNOWN;
-			if (!userDataJson.has(COLUMN_COMPLETION)) userDataJson.put(COLUMN_COMPLETION, TAG_EMPTY);
+			if (!userDataJson.has(COLUMN_COMPLETION))
+				userDataJson.put(COLUMN_COMPLETION, TAG_EMPTY);
 			if (!userDataJson.getString(COLUMN_COMPLETION).equals(TAG_EMPTY)) {
 				holder.resume.setVisibility(View.GONE);
 				holder.details.setVisibility(View.GONE);
@@ -128,7 +131,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 		return mCursor.getCount();
 	}
 
-	public void swapCursor(Cursor newCursor, List<Integer> positionIdList){
+	public void swapCursor(Cursor newCursor, List<Integer> positionIdList) {
 		mCursor = newCursor;
 		int count = mCursor.getCount();
 		this.positionIdList = positionIdList;
@@ -138,13 +141,13 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 
 	private void setUserIdList(int n) {
 		idList = new ArrayList<>();
-		for (int i = 0; i < n; i++){
+		for (int i = 0; i < n; i++) {
 			mCursor.moveToPosition(positionIdList.get(i));
 			idList.add(String.valueOf(mCursor.getInt(INDEX_USER_ID)));
 		}
 	}
 
-	public class GameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener{
+	public class GameViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
 		public Button resume;
 		Button delete;
@@ -157,6 +160,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 		public ImageView userIcon;
 		ImageView crown;
 		int idOfCOLUMN_ID;
+
 		GameViewHolder(@NonNull View itemView) {
 			super(itemView);
 			userNameInList = itemView.findViewById(R.id.user_name_in_list);
@@ -176,7 +180,7 @@ public class UserListAdapter extends RecyclerView.Adapter<UserListAdapter.GameVi
 
 		@Override
 		public void onClick(View v) {
-			switch (v.getId()){
+			switch (v.getId()) {
 				case R.id.game_list_resume_button:
 					mListClickListener.onClick(idOfCOLUMN_ID, null, TAG_RESUME);
 					break;

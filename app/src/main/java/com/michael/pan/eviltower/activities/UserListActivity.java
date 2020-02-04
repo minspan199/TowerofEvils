@@ -64,7 +64,7 @@ import static com.michael.pan.eviltower.data.EvilTowerContract.TAG_START_GAME;
 import static com.michael.pan.eviltower.data.EvilTowerContract.USER_ICON_TRANSITION;
 import static com.michael.pan.eviltower.data.EvilTowerContract.USER_NAME_TRANSITION;
 
-public class UserListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, UserListAdapter.GameListOnClickListener, DatabaseUpdateTask.onTaskExecuted, DatabaseUpdateTask.onNewUserCreated{
+public class UserListActivity extends AppCompatActivity implements LoaderManager.LoaderCallbacks<Cursor>, UserListAdapter.GameListOnClickListener, DatabaseUpdateTask.onTaskExecuted, DatabaseUpdateTask.onNewUserCreated {
 
 	private UserListAdapter mAdapter;
 	private RecyclerView mRecyclerView;
@@ -79,7 +79,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 	public List<Integer> positionIdList = new ArrayList<>();//An index layer for swiping and removing of ItouchHelper.
 	Spinner difficultySettings;//using findviewbyid will cause null context error??!!
 	String difficultyTag;
-//	ArrayList<Integer> userIconDrawables;
+	//	ArrayList<Integer> userIconDrawables;
 	AsyncTask<String, Void, Integer> insertUser;
 	private int numOfColumn;
 
@@ -126,7 +126,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 				String sortOrder = COLUMN_ID + " ASC";
 //				content://com.michael.pan.MagicTower/magic_tower
 //				Log.i(TAG, CONTENT_URI.toString());
-				return new CursorLoader(this, buildUriByUserId(null, -1), USER_LOADER_PROJECTION, null,null, sortOrder);
+				return new CursorLoader(this, buildUriByUserId(null, -1), USER_LOADER_PROJECTION, null, null, sortOrder);
 			default:
 				throw new RuntimeException("Loader Not Implemented: " + id);
 		}
@@ -149,7 +149,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 				if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
 					positionIdList = IntStream.rangeClosed(0, count - 1).boxed().collect(Collectors.toList());
 				} else {
-					for (int i = 0; i < count; i++){
+					for (int i = 0; i < count; i++) {
 						positionIdList.add(i);
 					}
 				}
@@ -157,7 +157,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 				mAdapter.swapCursor(data, positionIdList); // push the cursor to the RecyclerView Adapter
 				showUserLists();
 				UserListTouchHelper touchHelper = new UserListTouchHelper(ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT |
-					ItemTouchHelper.DOWN | ItemTouchHelper.UP,ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT,
+					ItemTouchHelper.DOWN | ItemTouchHelper.UP, ItemTouchHelper.LEFT | ItemTouchHelper.RIGHT,
 					positionIdList, mAdapter);
 				new ItemTouchHelper(touchHelper).attachToRecyclerView(mRecyclerView);
 //			Log.i(TAG, "Number of items has been loaded: " + data.getCount());
@@ -178,11 +178,12 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 		emptyDatabaseMessage.setVisibility(View.GONE);
 	}
 
-	private void showErrorMessage(String s){
+	private void showErrorMessage(String s) {
 		mRecyclerView.setVisibility(View.INVISIBLE);
 		emptyDatabaseMessage.setVisibility(View.VISIBLE);
 		if (s.equals(TAG_EMPTY_LIST)) inputBoxMessage.setText(getString(R.string.error_empty));
-		else if (s.equals(TAG_NEW_USER)) inputBoxMessage.setText(getString(R.string.input_new_name_message));
+		else if (s.equals(TAG_NEW_USER))
+			inputBoxMessage.setText(getString(R.string.input_new_name_message));
 	}
 
 	@Override
@@ -193,7 +194,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 	@Override
 	public Resources.Theme getTheme() {
 		Resources.Theme theme = super.getTheme();
-		if(createNew) theme.applyStyle(R.style.MyAlertDialogStyle, true);
+		if (createNew) theme.applyStyle(R.style.MyAlertDialogStyle, true);
 		return theme;
 	}
 
@@ -204,7 +205,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 
 	@Override
 	public void onClick(int id, String data, String instruction) {//adapter call backs
-		switch (instruction){
+		switch (instruction) {
 			case TAG_RESUME:
 				startGame(id, true);
 				break;
@@ -226,8 +227,8 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 							.changeAlertType(SweetAlertDialog.ERROR_TYPE);
 					})
 					.setConfirmClickListener(sDialog -> {
-							new DatabaseUpdateTask(this, this).execute(String.valueOf(id), TAG_DELETE);
-							sDialog.setTitleText(getString(R.string.alert_deleted_title))
+						new DatabaseUpdateTask(this, this).execute(String.valueOf(id), TAG_DELETE);
+						sDialog.setTitleText(getString(R.string.alert_deleted_title))
 							.setContentText(getString(R.string.alert_deleted_content))
 							.setConfirmText(getString(R.string.alert_deleted_positive))
 							.showCancelButton(false)
@@ -250,19 +251,19 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 		}
 	}
 
-	private void startGame(int userId, boolean isStartingGame){
+	private void startGame(int userId, boolean isStartingGame) {
 		Intent intent = new Intent(UserListActivity.this, UserDetailActivity.class);
 		intent.putExtra(TAG_START_GAME, isStartingGame);
 		intent.putExtra(COLUMN_ID, userId);
 		intent.putExtra(EvilTowerContract.EXTRA_DIFFICULTY, difficultyTag);
 		intent.putExtra(EvilTowerContract.IF_NEW_USER, true);
 		if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP) {
-			if (!isStartingGame ){
+			if (!isStartingGame) {
 				ActivityOptions options = ActivityOptions.makeSceneTransitionAnimation(this,
 					Pair.create(mAdapter.holder.userIcon, USER_ICON_TRANSITION),
 					Pair.create(mAdapter.holder.userNameInList, USER_NAME_TRANSITION),
 					Pair.create(mAdapter.holder.difficulty, DIFFICULTY_TEXT_TRANSITION));
-				startActivity(intent,options.toBundle());
+				startActivity(intent, options.toBundle());
 			} else startActivity(intent);
 		} else startActivity(intent);
 		finish();
@@ -275,21 +276,21 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 		difficultyTag = mItemValues[spinnerPosition];
 		final String newUserName = newUser.getText().toString();
 //		System.out.println(newUserName);
-		if (!newUserName.equals("")){
-			try{
-			String newName = newUser.getText().toString();
-			int newId = GameUtil.getIdfromName(newName);
-			if (mAdapter.idList.contains(String.valueOf(newId)))  {
-				FancyToast.makeText(this, getString(R.string.error_existed_id), FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
-				return;
-			}
-			ContentValues values = DbMaintenance.getDefaultContentValues(this, newId, newUserName);
-			insertUser = new DatabaseUpdateTask(this, values, (DatabaseUpdateTask.onNewUserCreated) this).execute(String.valueOf(newId), TAG_INSERT_NEW_USER);
+		if (!newUserName.equals("")) {
+			try {
+				String newName = newUser.getText().toString();
+				int newId = GameUtil.getIdfromName(newName);
+				if (mAdapter.idList.contains(String.valueOf(newId))) {
+					FancyToast.makeText(this, getString(R.string.error_existed_id), FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
+					return;
+				}
+				ContentValues values = DbMaintenance.getDefaultContentValues(this, newId, newUserName);
+				insertUser = new DatabaseUpdateTask(this, values, (DatabaseUpdateTask.onNewUserCreated) this).execute(String.valueOf(newId), TAG_INSERT_NEW_USER);
 //			Log.i(TAG, "New user ID:" + newId);
-			}catch (Exception e){
+			} catch (Exception e) {
 				FancyToast.makeText(this, getString(R.string.error_invalid_user_name) + e.getMessage(), FancyToast.LENGTH_LONG, FancyToast.ERROR, false).show();
 			}
-		}else {
+		} else {
 			FancyToast.makeText(this, getString(R.string.input_a_name), FancyToast.LENGTH_LONG, FancyToast.WARNING, false).show();
 		}
 	}
@@ -297,7 +298,7 @@ public class UserListActivity extends AppCompatActivity implements LoaderManager
 	@Override
 	protected void onDestroy() {
 		super.onDestroy();
-		if (insertUser != null)insertUser.cancel(true);
+		if (insertUser != null) insertUser.cancel(true);
 		LoaderManager.getInstance(this).destroyLoader(ID_USER_LIST_LOADER);
 	}
 

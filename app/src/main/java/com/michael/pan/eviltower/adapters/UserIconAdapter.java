@@ -33,7 +33,7 @@ public class UserIconAdapter extends BaseAdapter {
 	private onIconClicked onIconClicked;
 	private TypedArray userIconDrawables;
 
-	public interface onIconClicked{
+	public interface onIconClicked {
 		void clicked(String[] strings);
 	}
 
@@ -78,7 +78,7 @@ public class UserIconAdapter extends BaseAdapter {
 		} catch (JSONException e) {
 			e.printStackTrace();
 		}
-		System.out.println("position:"+i+"icon id:"+iconId);
+		System.out.println("position:" + i + "icon id:" + iconId);
 		Glide.with(mContext).load(userIconDrawables.getResourceId(Integer.parseInt(iconId), 0)).into(icon);
 //		icon.setImageBitmap(ImageUtil.getUserIcon(mContext, Integer.parseInt(iconId)));
 		name.setText(userName);

@@ -36,7 +36,7 @@ public class UserTreasureGridViewAdapter extends BaseAdapter {
 		if (data == null) treasures = null;
 		else {
 			try {
-				UserTreasureGridViewAdapter.treasures = new JSONObject(getTreasuresFromJSON(mContext,"TREASURES", data));
+				UserTreasureGridViewAdapter.treasures = new JSONObject(getTreasuresFromJSON(mContext, "TREASURES", data));
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
