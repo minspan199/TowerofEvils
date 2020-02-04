@@ -28,7 +28,7 @@ public class MapData {
 	public MapData(Context context, String jsonString) {
 
 		dataInArrays = new ArrayList<>();
-		if (jsonString == null){
+		if (jsonString == null) {
 			try {
 				InputStream is = context.getAssets().open("MagicTowerOriginal.json");
 				int size = is.available();
@@ -79,7 +79,7 @@ public class MapData {
 
 	private void loadMapData() {
 		int layerCount = jsonArray.length();
-		for (int ind = 0;ind< layerCount;ind++){
+		for (int ind = 0; ind < layerCount; ind++) {
 			int[][] layer00 = null, layer01 = null, layer02 = null, layer03 = null;
 			try {
 				JSONObject layerData = this.getFloor(ind);
@@ -119,8 +119,8 @@ public class MapData {
 	}
 
 	private int[][] get2DArray(int[] data) {
-		int [][] twoDArray = new int[yCount][xCount];
-		for (int i = 0; i<yCount;i++) {
+		int[][] twoDArray = new int[yCount][xCount];
+		for (int i = 0; i < yCount; i++) {
 			if (xCount >= 0) System.arraycopy(data, i * xCount, twoDArray[i], 0, xCount);
 //			for (int j = 0; j<xCount;j++){
 //				twoDArray[i][j] = data[i*xCount+j];
@@ -132,7 +132,7 @@ public class MapData {
 	private int[] getIntFromJsonArray(JSONArray data) {
 		int[] intArray = new int[data.length()];
 		try {
-			for (int i = 0; i < data.length(); i++){
+			for (int i = 0; i < data.length(); i++) {
 				intArray[i] = data.getInt(i);
 			}
 		} catch (JSONException e) {

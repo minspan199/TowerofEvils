@@ -94,7 +94,7 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 					gameView.setFloor(floor + 1);
 					warrior.setX(13);
 					warrior.setY(3);
-				} else if (floor == 35){
+				} else if (floor == 35) {
 					gameView.setFloor(floor - 1);
 					warrior.setX(14);
 					warrior.setY(5);
@@ -160,7 +160,7 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 
 	private String getNpcType(int type) {
 
-		switch (type){
+		switch (type) {
 			case 46:
 				return EvilTowerContract.TAG_EXPERIENCE;
 			case 47:
@@ -184,7 +184,8 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 				return EvilTowerContract.TAG_PRISONER;
 			case 64:
 			case 65:
-				if (gameView.floor == 22 || gameView.floor == 35) return EvilTowerContract.TAG_SUPER_STORE;
+				if (gameView.floor == 22 || gameView.floor == 35)
+					return EvilTowerContract.TAG_SUPER_STORE;
 				else if (gameView.floor == 32) return EvilTowerContract.TAG_GIANT_STORE;
 				else return EvilTowerContract.TAG_LARGE_STORE;
 			case 66:
@@ -225,7 +226,8 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 				return EvilTowerContract.TAG_GOING_LEFT;
 			case 390:
 				return EvilTowerContract.TAG_GOING_UP;
-			default:return EvilTowerContract.TAG_UNKNOWN;
+			default:
+				return EvilTowerContract.TAG_UNKNOWN;
 		}
 	}
 
@@ -272,7 +274,7 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 				break;
 			case EvilTowerContract.TAG_GOT_KEY_BOX:
 				AnimUtil.sendFlyMessage(view, context.getString(R.string.info_got_key_box));
-				if (floor == 42){
+				if (floor == 42) {
 					gameView.layer01[yTouch][xTouch] = 0;
 					gameView.update();
 				}
@@ -347,7 +349,7 @@ public class NPC implements DialogViewFragment.OnDialogViewClickedListener, Stor
 		jsonExtras.put(COLUMN_ENERGY, gameLiveData.getEnergy());
 		jsonExtras.put(COLUMN_LEVEL, gameLiveData.getLevel());
 		jsonExtras.put(COLUMN_DIFFICULTY, gameLiveData.difficulty);
-		int score = (int) ((gameLiveData.getAttack()*1.2f + gameLiveData.getEnergy()*0.5f + gameLiveData.getDefense()*1f)*gameLiveData.getLevel()/100f);
+		int score = (int) ((gameLiveData.getAttack() * 1.2f + gameLiveData.getEnergy() * 0.5f + gameLiveData.getDefense() * 1f) * gameLiveData.getLevel() / 100f);
 		jsonExtras.put(EXTRA_SCORE, score);
 		intent.putExtra(EXTRA_GAME_FINISHED, jsonExtras.toString());
 //		ActivityOptionsCompat transitionActivityOptions = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) context, pairs);

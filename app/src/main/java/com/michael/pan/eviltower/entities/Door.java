@@ -33,7 +33,7 @@ public class Door {
 	private int anInt = 7;
 	private Bitmap[][] bitmap;
 
-	public Door(Context context, Bundle extras, TextView textField, boolean ifOpen){
+	public Door(Context context, Bundle extras, TextView textField, boolean ifOpen) {
 		x = extras.getInt(context.getString(R.string.xTouch));
 		y = extras.getInt(context.getString(R.string.yTouch));
 		floor = extras.getInt(context.getString(R.string.floor));
@@ -41,7 +41,7 @@ public class Door {
 		this.ifOpen = ifOpen;
 		gameView.doorAnimating = true;
 		bitmap = ImageUtil.splitBitmap(BitmapFactory.decodeResource(context.getResources(), R.drawable.animates), 4, 27);
-		switch (this.matrixValue){
+		switch (this.matrixValue) {
 			case 26:
 				type = 5;// yellow door
 				canOpen = gameLiveData.getyKey() > 0;
@@ -80,12 +80,12 @@ public class Door {
 				trigger(context);
 				break;
 		}
-		if (!specialDoor){//if the door is an ordinary door that may need to fire fly message to the game screen.
-			if (canOpen && Open(context)){
+		if (!specialDoor) {//if the door is an ordinary door that may need to fire fly message to the game screen.
+			if (canOpen && Open(context)) {
 				anInt = 0;//set a new start point for animation.'
 				gameView.layer00[y][x] = getBackgroundCode(floor);
 				gameView.update();
-			}else{
+			} else {
 				AnimUtil.sendFlyMessage(textField, showHelp(context));//show text that keys are needed to open the door
 				gameView.doorAnimating = false;
 			}
@@ -95,8 +95,10 @@ public class Door {
 	private void sendErrorMes(Context context, TextView view) {
 		switch (floor) {
 			case 0:
-				if (x == 6 && y == 6) AnimUtil.sendFlyMessage(view, context.getString(R.string.error_enter_game));
-				else if (x == 10 && y == 3) AnimUtil.sendFlyMessage(view, context.getString(R.string.error_basement_key));
+				if (x == 6 && y == 6)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.error_enter_game));
+				else if (x == 10 && y == 3)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.error_basement_key));
 				break;
 			case 6:
 			case 12:
@@ -113,59 +115,79 @@ public class Door {
 				AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
 				break;
 			case 19:
-				if ((x == 10 && y == 3) || (x == 4 && y == 6)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
-				else if ((x == 11 || x == 12) && y == 5) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
-				else AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
+				if ((x == 10 && y == 3) || (x == 4 && y == 6))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				else if ((x == 11 || x == 12) && y == 5)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
+				else
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
 				break;
 			case 23:
-				if ((x == 10 && y == 5)||(x == 10 && y == 4)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
-				else AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
+				if ((x == 10 && y == 5) || (x == 10 && y == 4))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				else
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
 				break;
 			case 24:
-				if (x == 8 && y == 7) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
-				else if (x == 11 && y == 6) AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_4_pinkbats));
-				else AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
+				if (x == 8 && y == 7)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				else if (x == 11 && y == 6)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_4_pinkbats));
+				else
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.warn_balcony_barrier));
 				break;
 			case 26:
 				AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_3_gw));
 				break;
 			case 27:
-				if (gameView.layer02[3][5] == 0 || gameView.layer02[3][10] == 0) AnimUtil.sendFlyMessage(view, context.getString(R.string.cannot_open));
-				else if (x == 7 && y == 3) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_4_greenwidzard));
-				else if ((x == 10 && y == 7) || (x == 11 && y == 7)) AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_4_skeleton));
+				if (gameView.layer02[3][5] == 0 || gameView.layer02[3][10] == 0)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.cannot_open));
+				else if (x == 7 && y == 3)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_4_greenwidzard));
+				else if ((x == 10 && y == 7) || (x == 11 && y == 7))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_4_skeleton));
 				break;
 			case 29:
 				AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_the_bosses));
 				break;
 			case 30:
-				if ((x == 2 || x == 3 || x == 4 || x == 5) && y == 8) AnimUtil.sendFlyMessage(view,context.getString(R.string.defeat_below_safe));
-				else if (x == 1 && (y == 10 || y == 11)) AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_the_guards));
+				if ((x == 2 || x == 3 || x == 4 || x == 5) && y == 8)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_below_safe));
+				else if (x == 1 && (y == 10 || y == 11))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.defeat_the_guards));
 				break;
 			case 31:
-				if ((x == 3 && (y == 4 || y == 5 || y == 6)) || (y == 4 && (x == 4 || x == 5))) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
+				if ((x == 3 && (y == 4 || y == 5 || y == 6)) || (y == 4 && (x == 4 || x == 5)))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
 				break;
 			case 32:
-				if (x == 7 && y == 1) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_red_dragon));
+				if (x == 7 && y == 1)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_red_dragon));
 				else AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_dragon_n_safe));
 				break;
 			case 33:
-				if (x == 3 && y == 5) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
-				else if ((x == 9 && y == 1) || (x == 9 && y == 2) || (x == 9 && y == 3)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_5_wizards));
+				if (x == 3 && y == 5)
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				else if ((x == 9 && y == 1) || (x == 9 && y == 2) || (x == 9 && y == 3))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_5_wizards));
 				else AnimUtil.sendFlyMessage(view, context.getString(R.string.cannot_open));
 				break;
 			case 34:
-				if ((x == 11 && y == 10) || (x == 12 && y == 9) || (x == 11 && y == 8)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				if ((x == 11 && y == 10) || (x == 12 && y == 9) || (x == 11 && y == 8))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
 				break;
 			case 36:
-				if ((x == 1 && y == 3) || (x == 6 && y == 9)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
+				if ((x == 1 && y == 3) || (x == 6 && y == 9))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards));
 				break;
 			case 37:
-				if ((x == 11 && y == 10) || (x == 11 && y == 8) || (x == 1 && y == 11)) AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
+				if ((x == 11 && y == 10) || (x == 11 && y == 8) || (x == 1 && y == 11))
+					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_all_enemies));
 				break;
 			case 40:
-				if (((x == 5 || x == 6 || x == 7 || x == 8|| x == 9 || x == 10 || x == 11) && y == 5) || ((x == 5 || x == 11) && (y == 6 || y == 7 || y == 8))) {
+				if (((x == 5 || x == 6 || x == 7 || x == 8 || x == 9 || x == 10 || x == 11) && y == 5) || ((x == 5 || x == 11) && (y == 6 || y == 7 || y == 8))) {
 					AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards_floor));
-				}else AnimUtil.sendFlyMessage(view, context.getString(R.string.cannot_open));
+				} else AnimUtil.sendFlyMessage(view, context.getString(R.string.cannot_open));
 				break;
 			case 41:
 				AnimUtil.sendFlyMessage(view, context.getString(R.string.clear_safeguards_floor));
@@ -175,97 +197,135 @@ public class Door {
 
 	private boolean canOpen(Context context) {
 //		System.out.println("floor"+floor+"x"+x+"y"+y);
-		switch (floor){
+		switch (floor) {
 			case 0:
 				if (x == 7 && y == 7) return gameView.layer01[7][7] == 53;
 				else if (x == 10 && y == 3) return checkBasementKeys(context);
 				break;
 			case 6:
-				if (x == 1 && y == 2) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);//enemy
-				else if (x == 3 && y == 9) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y+1][x+1]==0);
+				if (x == 1 && y == 2)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);//enemy
+				else if (x == 3 && y == 9)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
 				break;
 			case 11:
-				if (x == 2 && y == 3) return (gameView.layer02[y][x+1] == 0 && gameView.layer02[3][5]==0 && gameView.layer02[5][5]==0 && gameView.layer02[5][3]==0 && gameView.layer02[4][4]==0);
+				if (x == 2 && y == 3)
+					return (gameView.layer02[y][x + 1] == 0 && gameView.layer02[3][5] == 0 && gameView.layer02[5][5] == 0 && gameView.layer02[5][3] == 0 && gameView.layer02[4][4] == 0);
 				break;
 			case 12:
-				if (x == 7 && y == 2) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if (x == 5 && y == 2) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if ( x == 7 && y == 9) return (gameView.layer02[y-1][x-1] == 0 && gameView.layer02[y+1][x-1]==0);
+				if (x == 7 && y == 2)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 5 && y == 2)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 7 && y == 9)
+					return (gameView.layer02[y - 1][x - 1] == 0 && gameView.layer02[y + 1][x - 1] == 0);
 				break;
-			case 15:if (x == 5 && y == 6) return (gameView.layer02[y-1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else return (gameView.layer02[2][3] == 0 && gameView.layer02[4][3]==0);
+			case 15:
+				if (x == 5 && y == 6)
+					return (gameView.layer02[y - 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else return (gameView.layer02[2][3] == 0 && gameView.layer02[4][3] == 0);
 			case 17:
 				if (x == 11 && y == 3 || x == 12 && y == 3) return ifAllZero(gameView.layer02);
 				else return true;
 			case 18:
-				if (x == 10 && y == 3) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if (x == 8 && y == 3) return (gameView.layer02[y-1][x-1] == 0 && gameView.layer02[y+1][x-1]==0);
-				else if (x == 3 && y == 6) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if (x == 3 && y == 4) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if (x == 3 && y == 2) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);
+				if (x == 10 && y == 3)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 8 && y == 3)
+					return (gameView.layer02[y - 1][x - 1] == 0 && gameView.layer02[y + 1][x - 1] == 0);
+				else if (x == 3 && y == 6)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 3 && y == 4)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 3 && y == 2)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
 				else return true;
 			case 19:
-				if (x == 10 && y == 3) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y+1][x+1]==0);
-				else if (x == 4 && y == 6) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y+1][x+1]==0);
+				if (x == 10 && y == 3)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
+				else if (x == 4 && y == 6)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y + 1][x + 1] == 0);
 				else if ((x == 11 || x == 12) && y == 5) return ifAllZero(gameView.layer02);
 				break;
 			case 20:
-				if (x == 10 && y == 4) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y-1][x-1]==0);
-				else if (x == 4 && y == 4) return (gameView.layer02[y-1][x+1] == 0 && gameView.layer02[y-1][x-1]==0);
+				if (x == 10 && y == 4)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y - 1][x - 1] == 0);
+				else if (x == 4 && y == 4)
+					return (gameView.layer02[y - 1][x + 1] == 0 && gameView.layer02[y - 1][x - 1] == 0);
 				break;
 			case 21:
-				if (x == 10 && y == 9) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y-1][x-1]==0);
-				else if (x == 7 && y == 2) return (gameView.layer02[1][6] == 0 && gameView.layer02[3][6] == 0);
+				if (x == 10 && y == 9)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y - 1][x - 1] == 0);
+				else if (x == 7 && y == 2)
+					return (gameView.layer02[1][6] == 0 && gameView.layer02[3][6] == 0);
 				break;
 			case 23:
-				if (x == 10 && y == 4) return (gameView.layer02[y][x-1] == 0 && gameView.layer02[y-1][x-1]==0);
-				else if (x == 10 && y == 5) return (gameView.layer02[y+1][x-1] == 0 && gameView.layer02[y][x-1]==0);
+				if (x == 10 && y == 4)
+					return (gameView.layer02[y][x - 1] == 0 && gameView.layer02[y - 1][x - 1] == 0);
+				else if (x == 10 && y == 5)
+					return (gameView.layer02[y + 1][x - 1] == 0 && gameView.layer02[y][x - 1] == 0);
 				break;
 			case 24:
-				if (x == 8 && y == 7) return (gameView.layer02[y-1][x-1] == 0 && gameView.layer02[y-1][x+1]==0);
-				else if (x == 11 && y == 6) return (gameView.layer02[5][12] == 0 && gameView.layer02[5][13]==0 && gameView.layer02[7][12] == 0 && gameView.layer02[7][13]==0);
+				if (x == 8 && y == 7)
+					return (gameView.layer02[y - 1][x - 1] == 0 && gameView.layer02[y - 1][x + 1] == 0);
+				else if (x == 11 && y == 6)
+					return (gameView.layer02[5][12] == 0 && gameView.layer02[5][13] == 0 && gameView.layer02[7][12] == 0 && gameView.layer02[7][13] == 0);
 				break;
 			case 26:
 				return (gameView.layer02[5][6] == 0 && gameView.layer02[3][6] == 0 && gameView.layer02[1][6] == 0);
 			case 27:
-				if (x == 7 && y == 3) return (gameView.layer02[3][5] != 0 && gameView.layer02[3][4] == 0 && gameView.layer02[3][6] == 0 && gameView.layer02[2][5] == 0 && gameView.layer02[4][5] == 0);
-				else if (x == 10 && y == 7 || x == 11 && y == 7) return (gameView.layer02[3][10] != 0 && gameView.layer02[3][9] == 0 && gameView.layer02[3][11] == 0 && gameView.layer02[2][10] == 0 && gameView.layer02[4][10] == 0);
+				if (x == 7 && y == 3)
+					return (gameView.layer02[3][5] != 0 && gameView.layer02[3][4] == 0 && gameView.layer02[3][6] == 0 && gameView.layer02[2][5] == 0 && gameView.layer02[4][5] == 0);
+				else if (x == 10 && y == 7 || x == 11 && y == 7)
+					return (gameView.layer02[3][10] != 0 && gameView.layer02[3][9] == 0 && gameView.layer02[3][11] == 0 && gameView.layer02[2][10] == 0 && gameView.layer02[4][10] == 0);
 				break;
 			case 29:
-				if (x == 1 && y == 1 || x == 3 && y == 5) return gameView.layer02[8][4] == 0 && gameView.layer02[6][10] == 0 && gameView.layer02[8][10] == 0 && gameView.layer02[10][10] == 0;
-				else if (x == 2 & y == 10) return gameView.layer02[9][1] == 0 && gameView.layer02[11][1] == 0;
+				if (x == 1 && y == 1 || x == 3 && y == 5)
+					return gameView.layer02[8][4] == 0 && gameView.layer02[6][10] == 0 && gameView.layer02[8][10] == 0 && gameView.layer02[10][10] == 0;
+				else if (x == 2 & y == 10)
+					return gameView.layer02[9][1] == 0 && gameView.layer02[11][1] == 0;
 				break;
 			case 30:
 				if (((x == 2 || x == 3 || x == 4 || x == 5) && y == 8) || (x == 1 && (y == 10 || y == 11)))
-					return gameView.layer02[9][2] == 0 && gameView.layer02[9][3] == 0 && gameView.layer02[9][4] == 0  && gameView.layer02[9][5] == 0;
+					return gameView.layer02[9][2] == 0 && gameView.layer02[9][3] == 0 && gameView.layer02[9][4] == 0 && gameView.layer02[9][5] == 0;
 				break;
 			case 31:
-				if (x == 3 && (y == 4 || y == 5 || y == 6) || y == 4 && (x == 4 || x == 5)) return ifAllZero(gameView.layer02);
+				if (x == 3 && (y == 4 || y == 5 || y == 6) || y == 4 && (x == 4 || x == 5))
+					return ifAllZero(gameView.layer02);
 				break;
 			case 32:
 				if (x == 7 && y == 1) return gameView.layer02[5][10] == 0;
-				else if (x == 4 && y == 4) return gameView.layer02[5][10] == 0 && gameView.layer02[4][5] == 0 && gameView.layer02[5][5] == 0 && gameView.layer02[6][5] == 0;
+				else if (x == 4 && y == 4)
+					return gameView.layer02[5][10] == 0 && gameView.layer02[4][5] == 0 && gameView.layer02[5][5] == 0 && gameView.layer02[6][5] == 0;
 				break;
 			case 33:
-				if (x == 3 && y == 5) return gameView.layer02[4][4] == 0 && gameView.layer02[4][2] == 0;
-				else if ((x == 9 && y == 1) || (x == 9 && y == 2) || (x == 9 && y == 3)) return gameView.layer02[1][10] == 0 && gameView.layer02[3][10] == 0 && gameView.layer02[1][12] == 0 && gameView.layer02[3][12] == 0 && gameView.layer02[2][11] == 0;
+				if (x == 3 && y == 5)
+					return gameView.layer02[4][4] == 0 && gameView.layer02[4][2] == 0;
+				else if ((x == 9 && y == 1) || (x == 9 && y == 2) || (x == 9 && y == 3))
+					return gameView.layer02[1][10] == 0 && gameView.layer02[3][10] == 0 && gameView.layer02[1][12] == 0 && gameView.layer02[3][12] == 0 && gameView.layer02[2][11] == 0;
 				break;
 			case 34:
-				if ((x == 11 && y == 10) || (x == 12 && y == 9) || (x == 11 && y == 8)) return gameView.layer02[10][10] == 0 && gameView.layer02[9][10] == 0 && gameView.layer02[8][10] == 0;
+				if ((x == 11 && y == 10) || (x == 12 && y == 9) || (x == 11 && y == 8))
+					return gameView.layer02[10][10] == 0 && gameView.layer02[9][10] == 0 && gameView.layer02[8][10] == 0;
 				break;
 			case 36:
-				if (x == 1 && y == 3) return gameView.layer02[4][2] == 0 && gameView.layer02[3][2] == 0 && gameView.layer02[2][2] == 0;
-				else if (x == 6 && y == 9) return gameView.layer02[8][6] == 0 && gameView.layer02[10][6] == 0;
+				if (x == 1 && y == 3)
+					return gameView.layer02[4][2] == 0 && gameView.layer02[3][2] == 0 && gameView.layer02[2][2] == 0;
+				else if (x == 6 && y == 9)
+					return gameView.layer02[8][6] == 0 && gameView.layer02[10][6] == 0;
 				break;
 			case 37:
-				if ((x == 11 && y == 10) || (x == 11 && y == 8) || (x == 1 && y == 11)) return ifAllZero(gameView.layer02, 12, 6);
+				if ((x == 11 && y == 10) || (x == 11 && y == 8) || (x == 1 && y == 11))
+					return ifAllZero(gameView.layer02, 12, 6);
 				break;
 			case 40:
-				if (((x == 5 || x == 6 || x == 7 || x == 8|| x == 9 || x == 10 || x == 11) && y == 5) || ((x == 5 || x == 11) && (y == 6 || y == 7 || y == 8))) return ifAllZero(gameView.layer02, 7, 4);
+				if (((x == 5 || x == 6 || x == 7 || x == 8 || x == 9 || x == 10 || x == 11) && y == 5) || ((x == 5 || x == 11) && (y == 6 || y == 7 || y == 8)))
+					return ifAllZero(gameView.layer02, 7, 4);
 				break;
 			case 41:
-				if (x == 5 && y == 3) return ifAllZero(gameView.layer02, 6, 3);//if it is the crystal door
-				else return ifAllZeroExcept(gameView.layer02, new Integer[]{170, 182});//170 the pink bat
+				if (x == 5 && y == 3)
+					return ifAllZero(gameView.layer02, 6, 3);//if it is the crystal door
+				else
+					return ifAllZeroExcept(gameView.layer02, new Integer[]{170, 182});//170 the pink bat
 		}
 		return false;
 	}
@@ -336,7 +396,7 @@ public class Door {
 		int N = arr[0].length;//15
 		int M = arr.length;
 		boolean b = true;
-		for (int i = 0; i < M; i ++) {
+		for (int i = 0; i < M; i++) {
 			for (int j = 0; j < N; j++) {
 //				System.out.println("x:"+i+"y:"+j+"arr"+arr[i][j]);
 				if ((i != y || j != x) && arr[i][j] != 0) {//the or here is to judge the coordinates!!!
@@ -368,11 +428,12 @@ public class Door {
 		anInt = 0;
 		if (floor != 0) gameView.layer00[y][x] = getBackgroundCode(floor);
 		else {
-			if (x == 7 && y == 7 && gameView.layer01[y][x] == 52){
+			if (x == 7 && y == 7 && gameView.layer01[y][x] == 52) {
 				gameView.layer00[6][6] = 9; // replace with indoor ground.
 				gameView.layer01[y][x] = 53;// set the angel to be visited.
-				y = 6; x = 6;
-			} else if (x == 10 && y == 3){
+				y = 6;
+				x = 6;
+			} else if (x == 10 && y == 3) {
 				updateBKeyJson(context);
 				gameView.layer00[3][10] = getBackgroundCode(floor);
 			}
@@ -390,29 +451,29 @@ public class Door {
 		gameLiveData.setTreasureJson(json);
 	}
 
-	public boolean canDraw(){
+	public boolean canDraw() {
 		if (anInt >= 7) {
 			gameView.doorAnimating = false;
 			return false;
-		}else {
+		} else {
 			anInt++;
 			return true;
 		}
 	}
 
-	public void draw(Canvas canvas, float xBlockSize, float yBlockSize){
-		canvas.drawBitmap(this.getGraph(anInt/2), null, new RectF(x*xBlockSize, y*yBlockSize, (x+1)*xBlockSize, (y+1)*yBlockSize), null);
+	public void draw(Canvas canvas, float xBlockSize, float yBlockSize) {
+		canvas.drawBitmap(this.getGraph(anInt / 2), null, new RectF(x * xBlockSize, y * yBlockSize, (x + 1) * xBlockSize, (y + 1) * yBlockSize), null);
 	}
 
 	private Bitmap getGraph(int index) {
-		if (ifOpen){
+		if (ifOpen) {
 			return bitmap[index][type - 1];
-		}else return bitmap[3 - index][type - 1];
+		} else return bitmap[3 - index][type - 1];
 	}
 
 	private boolean Open(Context context) {
-		if (canOpen){
-			switch (matrixValue){
+		if (canOpen) {
+			switch (matrixValue) {
 				case 26:// yellow door
 					gameLiveData.setyKey(gameLiveData.getyKey() - 1);
 					break;
@@ -446,7 +507,7 @@ public class Door {
 	}
 
 	private String showHelp(Context context) {
-		switch (type){
+		switch (type) {
 			case 5:
 				return context.getString(R.string.error_no_yellow_key);
 			case 6:
@@ -460,7 +521,7 @@ public class Door {
 	}
 
 	static int getBackgroundCode(int floor) {
-		switch (floor){
+		switch (floor) {
 			case 0:
 			case 1:
 			case 3:

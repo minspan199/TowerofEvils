@@ -24,7 +24,7 @@ import static com.michael.pan.eviltower.data.EvilTowerContract.TAG_LOSE;
 import static com.michael.pan.eviltower.data.EvilTowerContract.TAG_OK;
 import static com.michael.pan.eviltower.data.EvilTowerContract.TAG_WIN;
 
-public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogViewFragment.OnDialogViewClickedListener{
+public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogViewFragment.OnDialogViewClickedListener {
 
 //	Green Slime（绿色史莱姆） 35 18 1 1
 //	Red Slime（红色史莱姆） 45 20 2 2
@@ -65,6 +65,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 	private FragmentManager fragmentManager;
 	private Bundle extras;
 	private EnemyEntry enemyEntry;
+
 	public Enemy(Context context, Bundle extras, TextView popMessage, FragmentManager fragmentManager) {
 
 		popMessage.setVisibility(View.GONE);
@@ -75,10 +76,10 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 		enemyEntry = new EnemyEntry(context, type, floor);
 		Fragment fragment;
 		extras.putString(EXTRA_NPC_TYPE, TAG_ENEMY_BEFORE);
-		if (enemyEntry.npc){
-			fragment = new DialogViewFragment(context,  this);
+		if (enemyEntry.npc) {
+			fragment = new DialogViewFragment(context, this);
 			fragment.setArguments(extras);
-		}else {
+		} else {
 			fragment = new BattleFragment(this, enemyEntry);
 			fragment.setArguments(extras);
 		}
@@ -88,32 +89,32 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 	@Override
 	public void onBattleFinished(Context context, String s, Bundle bundle) {
 		int xTouch = 0, yTouch = 0, type = 0;
-		if (bundle.containsKey(EvilTowerContract.KEY_X_TOUCH)){
-			 xTouch = bundle.getInt(EvilTowerContract.KEY_X_TOUCH);
+		if (bundle.containsKey(EvilTowerContract.KEY_X_TOUCH)) {
+			xTouch = bundle.getInt(EvilTowerContract.KEY_X_TOUCH);
 		}
-		if (bundle.containsKey(EvilTowerContract.KEY_Y_TOUCH)){
+		if (bundle.containsKey(EvilTowerContract.KEY_Y_TOUCH)) {
 			yTouch = bundle.getInt(EvilTowerContract.KEY_Y_TOUCH);
 		}
-		if (bundle.containsKey(EvilTowerContract.KEY_MATRIX_VALUE)){
+		if (bundle.containsKey(EvilTowerContract.KEY_MATRIX_VALUE)) {
 			type = bundle.getInt(EvilTowerContract.KEY_MATRIX_VALUE);
 		}
 		bundle.putString(EXTRA_NPC_TYPE, TAG_ENEMY_AFTER);
 
-		if (s.equals(TAG_WIN)){
+		if (s.equals(TAG_WIN)) {
 			gameLiveData.setCoins(gameLiveData.getCoins() + enemyEntry.coin);// add coins/scores
 			int exp = ((int) (enemyEntry.coin * 0.05f));
-			gameLiveData.setExperience(gameLiveData.getExperience() + (exp == 0?1:exp));//add experience
+			gameLiveData.setExperience(gameLiveData.getExperience() + (exp == 0 ? 1 : exp));//add experience
 			gameLiveData.setEnergy(bundle.getInt(COLUMN_ENERGY));
 			if (type == -100) gameView.layer01[yTouch][xTouch] = 0;
 			else gameView.layer02[yTouch][xTouch] = 0;//remove the enemy if win
 			gameView.layerMerged = gameView.currentFloorData.getMergedLayer();
 			refreshFragment(EvilTowerContract.TAG_BATTLE_VIEW);
-			if (enemyEntry.npc){
-				Fragment fragment = new DialogViewFragment(context,  this);
+			if (enemyEntry.npc) {
+				Fragment fragment = new DialogViewFragment(context, this);
 				fragment.setArguments(bundle);
 				fragmentManager.beginTransaction().replace(R.id.message_view_holder, fragment, refreshFragment(EvilTowerContract.TAG_BATTLE_VIEW)).commit();
 			}
-		} else if (s.equals(TAG_LOSE)){
+		} else if (s.equals(TAG_LOSE)) {
 			gameLiveData.setCoins((int) (gameLiveData.getCoins() * 0.9f));// add coins/scores
 			gameLiveData.setEnergy((int) (gameLiveData.getEnergy() * 0.9f));
 			refreshFragment(EvilTowerContract.TAG_BATTLE_VIEW);
@@ -137,7 +138,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 		gameView.handlingDialogEvents = false;
 	}
 
-	private String refreshFragment(String tag){
+	private String refreshFragment(String tag) {
 		Fragment fragment = fragmentManager.findFragmentByTag(tag);
 		if (fragment != null) {
 			fragmentManager.beginTransaction().remove(fragment).commit();
@@ -146,7 +147,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 		return tag;
 	}
 
-	public static class EnemyEntry{
+	public static class EnemyEntry {
 
 		public int energy, attack, defense, coin, type;
 		boolean npc = false;
@@ -155,7 +156,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 
 		public EnemyEntry(Context context, int enemyType, int floor) {
 			this.type = enemyType;
-			switch (enemyType){
+			switch (enemyType) {
 				case -100:
 					name = context.getString(R.string.wizard_blue_robe);
 					energy = 10200;
@@ -224,21 +225,21 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					break;
 				case 116:
 				case 117:
-					if (floor == 42){
+					if (floor == 42) {
 						name = context.getString(R.string.enemy_evil_spirit_iii);
 						energy = 16500;
-						attack = (int) (gameLiveData.getDefense()*1.25f);
-						defense = (int) (gameLiveData.getAttack()*0.84f);
+						attack = (int) (gameLiveData.getDefense() * 1.25f);
+						defense = (int) (gameLiveData.getAttack() * 0.84f);
 						coin = 200;
 						vampire = true;
-					} else if (floor == 41){
+					} else if (floor == 41) {
 						name = context.getString(R.string.enemy_evil_spirit_iv);
 						energy = 50000;
 						attack = gameLiveData.getDefense() + 250;
 						defense = 4300;
 						coin = 300;
 						vampire = true;
-					} else if (floor >= 25){
+					} else if (floor >= 25) {
 						name = context.getString(R.string.enemy_spirit_ii);
 						energy = 2000;
 						attack = 2200;
@@ -280,7 +281,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				//	Ghost Soldier （鬼战士）220 180 30 35
 				case 124:
 				case 125:
-					if (floor <= 20){
+					if (floor <= 20) {
 						name = context.getString(R.string.enemy_ghost_soldier);
 						energy = 220;
 						attack = 180;
@@ -296,7 +297,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					break;
 				case 126:
 				case 127:
-					if (floor <= 22){
+					if (floor <= 22) {
 						name = context.getString(R.string.enemy_zombie);
 						energy = 260;
 						attack = 85;
@@ -313,7 +314,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				//	Zombie Knight（兽人武士） 320 120 15 30
 				case 128:
 				case 129:
-					if (floor <= 22){
+					if (floor <= 22) {
 						name = context.getString(R.string.enemy_zombie_knight);
 						energy = 320;
 						attack = 120;
@@ -330,9 +331,9 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 130:
 				case 131:
 					name = context.getString(R.string.enemy_rock);
-					energy = (int) (gameLiveData.getEnergy()*0.5f);
+					energy = (int) (gameLiveData.getEnergy() * 0.5f);
 					attack = gameLiveData.getAttack();
-					defense = (int) (gameLiveData.getDefense()*0.8f);
+					defense = (int) (gameLiveData.getDefense() * 0.8f);
 					coin = 28;
 					break;
 				case 132:
@@ -353,7 +354,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					break;
 				case 136:
 				case 137:
-					name= context.getString(R.string.enemy_superior_priest);
+					name = context.getString(R.string.enemy_superior_priest);
 					energy = 100;
 					attack = 95;
 					defense = 30;
@@ -431,7 +432,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				//	Knight （骑士） 160 230 105 65
 				case 154:
 				case 155:
-					if (floor <= 22){
+					if (floor <= 22) {
 						name = context.getString(R.string.enemy_knight);
 						energy = 160;
 						attack = 230;
@@ -455,14 +456,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					coin = 120;
 					break;
 				case 158:
-					if (floor <= 20){
+					if (floor <= 20) {
 						name = context.getString(R.string.enemy_black_wizard_i);
 						energy = 300;
 						attack = 600;
 						defense = 600;
 						coin = 100;
 						break;
-					} else if (floor <= 33){
+					} else if (floor <= 33) {
 						name = context.getString(R.string.enemy_black_wizard_ii);
 						energy = gameLiveData.getEnergy();
 						attack = 6400;
@@ -470,14 +471,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 						coin = 120;
 					} else {
 						name = context.getString(R.string.enemy_black_wizard_iii);
-						energy = (int) (gameLiveData.getEnergy()*2f);
-						attack = (gameLiveData.getDefense()*1.1f) > 6500f? (int) (gameLiveData.getDefense()*1.1f):6500;
-						defense = (int) (gameLiveData.getAttack()*0.75f);
+						energy = (int) (gameLiveData.getEnergy() * 2f);
+						attack = (gameLiveData.getDefense() * 1.1f) > 6500f ? (int) (gameLiveData.getDefense() * 1.1f) : 6500;
+						defense = (int) (gameLiveData.getAttack() * 0.75f);
 						coin = 250;
 					}
 					break;
 				case 160:
-					if (floor <= 20){
+					if (floor <= 20) {
 						name = context.getString(R.string.enemy_yellow_wizard_i);
 						energy = 800;
 						attack = 700;
@@ -486,14 +487,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_yellow_wizard_ii);
 						energy = 2400;
-						attack = (int) (gameLiveData.getDefense()*1.15f);
+						attack = (int) (gameLiveData.getDefense() * 1.15f);
 						defense = 1700;
 						coin = 234;
 					}
 					break;
 				case 162:
 				case 163:
-					if (floor <= 20){
+					if (floor <= 20) {
 						name = context.getString(R.string.enemy_green_wizard_i);
 						energy = 1200;
 						attack = 1500;
@@ -502,7 +503,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_green_wizard_ii);
 						energy = 5600;
-						attack = (int) (gameLiveData.getDefense()*1.1f);
+						attack = (int) (gameLiveData.getDefense() * 1.1f);
 						defense = 2120;
 						coin = 120;
 					}
@@ -512,12 +513,12 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 164:
 					name = context.getString(R.string.enemy_blue_knight);
 					energy = 2000;
-					attack = (int) (gameLiveData.getDefense()*1.15f);
+					attack = (int) (gameLiveData.getDefense() * 1.15f);
 					defense = 555;
 					coin = 115;
 					break;
 				case 166:
-					if (floor < 21){
+					if (floor < 21) {
 						name = context.getString(R.string.enemy_red_eye_slime);
 						energy = 1500;
 						attack = 855;
@@ -526,7 +527,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_red_eye_slime_ii);
 						energy = 3500;
-						attack = (int) (gameLiveData.getDefense()*1.2f);
+						attack = (int) (gameLiveData.getDefense() * 1.2f);
 						defense = 1300;
 						coin = 155;
 						vampire = true;
@@ -535,14 +536,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 168:
 					name = context.getString(R.string.enemy_pink_skeleton);
 					energy = 1100;
-					attack = (int) (gameLiveData.getDefense()*1.1f);
+					attack = (int) (gameLiveData.getDefense() * 1.1f);
 					defense = 800;
 					coin = 150;
 					vampire = true;
 					break;
 				case 170:
 				case 171:
-					if (floor < 24){
+					if (floor < 24) {
 						name = context.getString(R.string.enemy_pink_bat);
 						energy = 300;
 						attack = 1000;
@@ -550,7 +551,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 						coin = 100;
 						vampire = true;
 						break;
-					} else if (floor < 40){
+					} else if (floor < 40) {
 						name = context.getString(R.string.enemy_pink_bat_ii);
 						energy = 3000;
 						attack = 2345;
@@ -561,7 +562,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_pink_bat_iii);
 						energy = 12000;
-						attack = (int) (gameLiveData.getDefense()*1.1f);
+						attack = (int) (gameLiveData.getDefense() * 1.1f);
 						defense = 3021;
 						coin = 200;
 						vampire = true;
@@ -571,7 +572,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					name = context.getString(R.string.enemy_iron_man);
 					energy = 2600;
 					attack = gameLiveData.getAttack() + 100;
-					defense = (int) (gameLiveData.getDefense()*0.5f);
+					defense = (int) (gameLiveData.getDefense() * 0.5f);
 					coin = 100;
 					break;
 				case 174:
@@ -582,14 +583,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					coin = 100;
 					break;
 				case 176:
-					if (floor <25 ){
+					if (floor < 25) {
 						name = context.getString(R.string.enemy_marshall_i);
 						energy = 5000;
 						attack = 2000;
 						defense = 1200;
 						coin = 500;
 						break;
-					} else if (floor <= 36){
+					} else if (floor <= 36) {
 						name = context.getString(R.string.enemy_marshall_ii);
 						energy = 8000;
 						attack = 3800;
@@ -599,9 +600,9 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 						break;
 					} else {
 						name = context.getString(R.string.enemy_marshall_iii);
-						energy = (int) (gameLiveData.getEnergy()*1.7f);
-						attack = (int) (gameLiveData.getDefense()*1.2f);
-						defense = (int) (gameLiveData.getAttack()*0.5f);
+						energy = (int) (gameLiveData.getEnergy() * 1.7f);
+						attack = (int) (gameLiveData.getDefense() * 1.2f);
+						defense = (int) (gameLiveData.getAttack() * 0.5f);
 						coin = 500;
 						break;
 					}
@@ -622,14 +623,14 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 182:
 					name = context.getString(R.string.enemy_evil_head);
 					energy = 50000;
-					attack = (int) (gameLiveData.getDefense()*1.5f);
-					defense= (int) (gameLiveData.getAttack()*0.8f);
+					attack = (int) (gameLiveData.getDefense() * 1.5f);
+					defense = (int) (gameLiveData.getAttack() * 0.8f);
 					coin = 10000;
 					npc = true;
 					vampire = true;
 					break;
 				case 184:
-					if (floor < 40){
+					if (floor < 40) {
 						name = context.getString(R.string.enemy_robber);
 						energy = 4000;
 						attack = 3500;
@@ -637,17 +638,17 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 						coin = 100;
 					} else {
 						name = context.getString(R.string.enemy_robber);
-						energy = (int) (gameLiveData.getEnergy()*1.2f);
-						attack = (int) (gameLiveData.getDefense()*1.2f);
-						defense = (int) (gameLiveData.getAttack()*0.6f);
+						energy = (int) (gameLiveData.getEnergy() * 1.2f);
+						attack = (int) (gameLiveData.getDefense() * 1.2f);
+						defense = (int) (gameLiveData.getAttack() * 0.6f);
 						coin = 300;
 					}
 					break;
 				case 186:
 					name = context.getString(R.string.enemy_monkey_king);
-					energy = (int) (floor*200f);
-					attack = (int) (floor*10f + gameLiveData.getDefense()*1.2f);
-					defense = (int) (gameLiveData.getAttack()*0.75f);
+					energy = (int) (floor * 200f);
+					attack = (int) (floor * 10f + gameLiveData.getDefense() * 1.2f);
+					defense = (int) (gameLiveData.getAttack() * 0.75f);
 					coin = 800;
 					break;
 				case 188:
@@ -660,8 +661,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 190:
 					name = context.getString(R.string.enemy_red_wizard);
 					energy = 10000;
-					attack = (int) (gameLiveData.getAttack()*1.1f);
-					defense = (int) (gameLiveData.getDefense()*0.5f);
+					attack = (int) (gameLiveData.getAttack() * 1.1f);
+					defense = (int) (gameLiveData.getDefense() * 0.5f);
 					coin = 160;
 					break;
 				case 192:
@@ -684,8 +685,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_archmage_i);
 						energy = 12500;
-						attack = (int) (gameLiveData.getDefense()*1.23f);
-						defense = (int) (gameLiveData.getAttack()*0.82f);
+						attack = (int) (gameLiveData.getDefense() * 1.23f);
+						defense = (int) (gameLiveData.getAttack() * 0.82f);
 						coin = 1000;
 						vampire = true;
 					}
@@ -699,25 +700,25 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					break;
 				case 198:
 				case 199:
-					if (floor > 40){
+					if (floor > 40) {
 						name = context.getString(R.string.enemy_blood_knight);
 						energy = 6000;
-						attack = (int) (gameLiveData.getDefense()*(1 + floor/300f));
+						attack = (int) (gameLiveData.getDefense() * (1 + floor / 300f));
 						defense = 2000;
 						coin = 300;
 						vampire = true;
 					} else {
 						name = context.getString(R.string.enemy_blood_knight_ii);
 						energy = gameLiveData.getEnergy();
-						attack = (int) (gameLiveData.getDefense()*(1.2f));
-						defense = (int) (gameLiveData.getAttack()*0.8f);
+						attack = (int) (gameLiveData.getDefense() * (1.2f));
+						defense = (int) (gameLiveData.getAttack() * 0.8f);
 						coin = 300;
 						vampire = true;
 					}
 					if (floor == 29) npc = true;
 					break;
 				case 200:
-					if (floor < 40){
+					if (floor < 40) {
 						name = context.getString(R.string.enemy_skeleton_monster);
 						energy = 5000;
 						attack = 3500;
@@ -726,8 +727,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_skeleton_master);
 						energy = 12345;
-						attack = (int) (gameLiveData.getDefense()*1.2f);
-						defense = (int) (gameLiveData.getAttack()*0.75f);
+						attack = (int) (gameLiveData.getDefense() * 1.2f);
+						defense = (int) (gameLiveData.getAttack() * 0.75f);
 						coin = 345;
 					}
 					break;
@@ -743,8 +744,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 204:
 					name = context.getString(R.string.enemy_bad_angels);
 					energy = 4500;
-					attack = (gameLiveData.getDefense()*1.1f) > 6500f? (int) (gameLiveData.getDefense()*1.1f):6500;
-					defense = (int) (gameLiveData.getAttack()*0.75f);
+					attack = (gameLiveData.getDefense() * 1.1f) > 6500f ? (int) (gameLiveData.getDefense() * 1.1f) : 6500;
+					defense = (int) (gameLiveData.getAttack() * 0.75f);
 					coin = 200;
 					break;
 				case 206:
@@ -757,7 +758,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 208:
 					name = context.getString(R.string.enemy_warrior_ninja);
 					energy = 2000;
-					attack = (int) (2210*(1 + floor*0.015f));
+					attack = (int) (2210 * (1 + floor * 0.015f));
 					defense = 1220;
 					coin = 80;
 					break;
@@ -770,7 +771,7 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					vampire = true;
 					break;
 				case 212:
-					if (floor < 40){
+					if (floor < 40) {
 						name = context.getString(R.string.enemy_green_zombie);
 						energy = 2000;
 						attack = 3400;
@@ -778,8 +779,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_green_zombie_ii);
 						energy = 20000;
-						attack = (int) (gameLiveData.getDefense()*1.22f);
-						defense = (int) (gameLiveData.getAttack()*0.78f);
+						attack = (int) (gameLiveData.getDefense() * 1.22f);
+						defense = (int) (gameLiveData.getAttack() * 0.78f);
 					}
 					coin = 1;
 					break;
@@ -794,20 +795,20 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				case 216:
 					name = context.getString(R.string.enemy_giant_spider);
 					energy = 20000;
-					int att = 100*Math.abs(gameLiveData.getDefense() - gameLiveData.getAttack());
-					attack = att > 7600? att:7600;
-					defense = (int) (gameLiveData.getAttack()*0.8f);
+					int att = 100 * Math.abs(gameLiveData.getDefense() - gameLiveData.getAttack());
+					attack = att > 7600 ? att : 7600;
+					defense = (int) (gameLiveData.getAttack() * 0.8f);
 					vampire = true;
 					npc = true;
 					break;
 				case 220:
-					if (floor >= 40){
+					if (floor >= 40) {
 						name = context.getString(R.string.enemy_green_soldier_iii);
-						energy = (int) (gameLiveData.getEnergy()*2f);
-						defense = (int) (gameLiveData.getAttack()*0.5f);
-						attack = (int) (gameLiveData.getDefense()*1.2f);
+						energy = (int) (gameLiveData.getEnergy() * 2f);
+						defense = (int) (gameLiveData.getAttack() * 0.5f);
+						attack = (int) (gameLiveData.getDefense() * 1.2f);
 						vampire = false;
-					} else if (floor <= 30){
+					} else if (floor <= 30) {
 						name = context.getString(R.string.enemy_green_soldier_i);
 						energy = 1000;
 						defense = 2000;
@@ -815,8 +816,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 					} else {
 						name = context.getString(R.string.enemy_green_soldier_ii);
 						energy = gameLiveData.getEnergy();
-						defense = (int) (gameLiveData.getDefense()*0.7f);
-						attack = (int) (gameLiveData.getAttack()*1.1f);
+						defense = (int) (gameLiveData.getDefense() * 0.7f);
+						attack = (int) (gameLiveData.getAttack() * 1.1f);
 						vampire = true;
 					}
 					coin = 200;
@@ -824,8 +825,8 @@ public class Enemy implements BattleFragment.OnBattleFinishedListener, DialogVie
 				default:
 					name = context.getString(R.string.enemgy_unknown);
 					energy = 1000;
-					attack = (int) (gameLiveData.getDefense()*1.1f);
-					defense = (int) (gameLiveData.getAttack()*0.2f);
+					attack = (int) (gameLiveData.getDefense() * 1.1f);
+					defense = (int) (gameLiveData.getAttack() * 0.2f);
 					coin = 10;
 			}
 		}

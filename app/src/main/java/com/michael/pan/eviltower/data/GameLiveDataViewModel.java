@@ -50,6 +50,7 @@ public class GameLiveDataViewModel extends ViewModel {
 	public MutableLiveData<JSONObject> treasureJsonLiveData;
 	public String userName, userId;
 	public String difficulty;
+
 	public void initialization(Context context, JSONObject userDataJson, JSONObject treasuresJSON) {
 
 		jsonData = userDataJson;
@@ -80,7 +81,8 @@ public class GameLiveDataViewModel extends ViewModel {
 			if (jsonTreasure.isNull(context.getString(R.string.g_key))) gKey = 0;
 			else gKey = Integer.parseInt(jsonTreasure.getString(context.getString(R.string.g_key)));
 			if (jsonTreasure.isNull(context.getString(R.string.coins))) coins = 0;
-			else coins = Integer.parseInt(jsonTreasure.getString(context.getString(R.string.coins)));
+			else
+				coins = Integer.parseInt(jsonTreasure.getString(context.getString(R.string.coins)));
 			//the order below cannot tbe changed!!!
 			gameDataList.add(INDEX_ATTACK_LIVEDATA, attack);
 			gameDataList.add(INDEX_DEFENSE_LIVEDATA, defense);
@@ -127,7 +129,7 @@ public class GameLiveDataViewModel extends ViewModel {
 	}
 
 	public boolean setLevel(int level) {
-		if (level <= 999){
+		if (level <= 999) {
 			this.gameDataList.set(INDEX_LEVEL_LIVEDATA, level);
 			gameLiveData.setValue(gameDataList);
 			return true;

@@ -36,6 +36,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 	Integer[] walls = new Integer[]{26, 22, 15, 14, 13};
 	List<Integer> wallList = Arrays.asList(walls);
 	private TextView message;
+
 	public Equipment(Context context, FragmentManager fragmentManager, TextView popupMessage, String name) {
 		message = popupMessage;
 		this.fragmentManager = fragmentManager;
@@ -46,107 +47,108 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 			e.printStackTrace();
 		}
 
-		if (name.equals(context.getString(R.string.notebook))){
+		if (name.equals(context.getString(R.string.notebook))) {
 			NotePadFragment notePadFragment = new NotePadFragment(context, this, context.getString(R.string.notebook));
 			fragmentManager.beginTransaction().replace(R.id.notebook_view_holder, notePadFragment, renewFragment(fragmentManager, context.getString(R.string.notebook))).commit();
-		} else if (name.equals(context.getString(R.string.smile_coin))){
+		} else if (name.equals(context.getString(R.string.smile_coin))) {
 			NotePadFragment notePadFragment = new NotePadFragment(context, this, context.getString(R.string.smile_coin));
 			fragmentManager.beginTransaction().replace(R.id.notebook_view_holder, notePadFragment, renewFragment(fragmentManager, context.getString(R.string.smile_coin))).commit();
-		} else if (name.equals(context.getString(R.string.fly_wing))){
+		} else if (name.equals(context.getString(R.string.fly_wing))) {
 			NotePadFragment notePadFragment = new NotePadFragment(context, this, context.getString(R.string.fly_wing));
 			fragmentManager.beginTransaction().replace(R.id.notebook_view_holder, notePadFragment, renewFragment(fragmentManager, context.getString(R.string.fly_wing))).commit();
-		} else if (name.equals(context.getString(R.string.upstairs_wing))){
+		} else if (name.equals(context.getString(R.string.upstairs_wing))) {
 			TryFlyTo(context, gameView.floor + 1);
-		} else if (name.equals(context.getString(R.string.downstairs_wing))){
+		} else if (name.equals(context.getString(R.string.downstairs_wing))) {
 			TryFlyTo(context, gameView.floor - 1);
-		} else if (name.equals(context.getString(R.string.book_of_wisdom))){
+		} else if (name.equals(context.getString(R.string.book_of_wisdom))) {
 			EnemyListFragment enemyListFragment = new EnemyListFragment(this);
 			fragmentManager.beginTransaction().replace(R.id.enemy_list_view_holder, enemyListFragment, renewFragment(fragmentManager, context.getString(R.string.enemy_list))).commit();
-		} else if (name.equals(context.getString(R.string.blessing_gift))){
+		} else if (name.equals(context.getString(R.string.blessing_gift))) {
 			NotePadFragment notePadFragment = new NotePadFragment(context, this, context.getString(R.string.blessing_gift));
 			fragmentManager.beginTransaction().replace(R.id.notebook_view_holder, notePadFragment, renewFragment(fragmentManager, context.getString(R.string.blessing_gift))).commit();
-		} else if (name.equals(context.getString(R.string.detonator))){
+		} else if (name.equals(context.getString(R.string.detonator))) {
 			if (UpdateJsonSub(context.getString(R.string.detonator))) exploding(context);
 			gameView.update();
-		} else if (name.equals(context.getString(R.string.pink_energy_pot))){
+		} else if (name.equals(context.getString(R.string.pink_energy_pot))) {
 			if (UpdateJsonSub(context.getString(R.string.pink_energy_pot))) {
-				gameLiveData.setEnergy((int) (gameLiveData.getEnergy()*1.1f));
+				gameLiveData.setEnergy((int) (gameLiveData.getEnergy() * 1.1f));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.energy_increase_10per));
 			}
-		}  else if (name.equals(context.getString(R.string.y_key_box))){
+		} else if (name.equals(context.getString(R.string.y_key_box))) {
 			if (UpdateJsonSub(context.getString(R.string.y_key_box))) {
 				gameLiveData.setyKey(gameLiveData.getyKey() + 3);
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.info_got_3_ykeys));
 			}
-		} else if (name.equals(context.getString(R.string.b_key_box))){
+		} else if (name.equals(context.getString(R.string.b_key_box))) {
 			if (UpdateJsonSub(context.getString(R.string.b_key_box))) {
 				gameLiveData.setbKey(gameLiveData.getbKey() + 3);
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.info_got_3_bkeys));
 			}
-		} else if (name.equals(context.getString(R.string.g_key_box))){
-			if (UpdateJsonSub(context.getString(R.string.g_key_box))){
+		} else if (name.equals(context.getString(R.string.g_key_box))) {
+			if (UpdateJsonSub(context.getString(R.string.g_key_box))) {
 				gameLiveData.setyKey(gameLiveData.getyKey() + 1);
 				gameLiveData.setbKey(gameLiveData.getbKey() + 1);
 				gameLiveData.setrKey(gameLiveData.getrKey() + 1);
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.info_got_ybr_keys));
 			}
-		} else if (name.equals(context.getString(R.string.green_pot))){
+		} else if (name.equals(context.getString(R.string.green_pot))) {
 			if (UpdateJsonSub(context.getString(R.string.green_pot))) {
-				gameLiveData.setExperience((int) (gameLiveData.getExperience()*1.1f));
+				gameLiveData.setExperience((int) (gameLiveData.getExperience() * 1.1f));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.experience_incerease_10per));
 			}
-		} else if (name.equals(context.getString(R.string.blue_defense_pot))){
+		} else if (name.equals(context.getString(R.string.blue_defense_pot))) {
 			if (UpdateJsonSub(context.getString(R.string.blue_defense_pot))) {
-				gameLiveData.setDefense((int) (gameLiveData.getDefense()*1.1f));
+				gameLiveData.setDefense((int) (gameLiveData.getDefense() * 1.1f));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.defense_increase_10per));
 			}
-		} else if (name.equals(context.getString(R.string.cyan_attack_pot))){
+		} else if (name.equals(context.getString(R.string.cyan_attack_pot))) {
 			if (UpdateJsonSub(context.getString(R.string.cyan_attack_pot))) {
-				gameLiveData.setAttack((int) (gameLiveData.getAttack()*1.1f));
+				gameLiveData.setAttack((int) (gameLiveData.getAttack() * 1.1f));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.attack_increase_10per));
 			}
-		} else if (name.equals(context.getString(R.string.ice_plate))){
+		} else if (name.equals(context.getString(R.string.ice_plate))) {
 			extinguishing(context);
 			gameView.update();
-		} else if (name.equals(context.getString(R.string.old_scroll))){
+		} else if (name.equals(context.getString(R.string.old_scroll))) {
 			sendScrollInfo(context);
-		} else if (name.equals(context.getString(R.string.pickax))){
-			if (UpdateJsonSub(context.getString(R.string.pickax))){
+		} else if (name.equals(context.getString(R.string.pickax))) {
+			if (UpdateJsonSub(context.getString(R.string.pickax))) {
 				int x = warrior.getX();
 				int y = warrior.getY();
 				System.out.println(warrior.getStatus());
-				switch (warrior.getStatus()){
+				switch (warrior.getStatus()) {
 					case "up":
 						CheckPickaxThrough(context, x, y + 1);
 						break;
 					case "down":
-						CheckPickaxThrough(context, x, y-1);
+						CheckPickaxThrough(context, x, y - 1);
 						break;
 					case "left":
-						CheckPickaxThrough(context, x-1, y);
+						CheckPickaxThrough(context, x - 1, y);
 						break;
 					case "right":
-						CheckPickaxThrough(context, x+1, y);
+						CheckPickaxThrough(context, x + 1, y);
 						break;
 				}
 			}
-		} else if (name.equals(context.getString(R.string.cross))){
-			if (UpdateJsonSub(context.getString(R.string.cross))){
+		} else if (name.equals(context.getString(R.string.cross))) {
+			if (UpdateJsonSub(context.getString(R.string.cross))) {
 				gameLiveData.setDefense((int) (gameLiveData.getDefense() * 1.1f));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.defense_increase_10per));
 			}
-		} else if (name.equals(context.getString(R.string.book_of_exp))){
-			if (gameLiveData.getEnergy()/2 > 1000) {
-				int energy = gameLiveData.getEnergy()/2;
-				gameLiveData.setEnergy(gameLiveData.getEnergy() - (energy/1000)*1000);
-				gameLiveData.setExperience(gameLiveData.getExperience() + 10*(energy/1000));
+		} else if (name.equals(context.getString(R.string.book_of_exp))) {
+			if (gameLiveData.getEnergy() / 2 > 1000) {
+				int energy = gameLiveData.getEnergy() / 2;
+				gameLiveData.setEnergy(gameLiveData.getEnergy() - (energy / 1000) * 1000);
+				gameLiveData.setExperience(gameLiveData.getExperience() + 10 * (energy / 1000));
 				AnimUtil.sendFlyMessage(message, context.getString(R.string.info_conversion_ene2exp));
-			} else if (gameLiveData.getEnergy() > 1000){
+			} else if (gameLiveData.getEnergy() > 1000) {
 				gameLiveData.setEnergy(gameLiveData.getEnergy() - 1000);
 				gameLiveData.setExperience(gameLiveData.getExperience() + 10);
-			} else AnimUtil.sendFlyMessage(message, context.getString(R.string.error_conversion_ene2exp));
-		} else if (name.equals(context.getString(R.string.spring_shoes))){
-			switch (gameView.floor){
+			} else
+				AnimUtil.sendFlyMessage(message, context.getString(R.string.error_conversion_ene2exp));
+		} else if (name.equals(context.getString(R.string.spring_shoes))) {
+			switch (gameView.floor) {
 				case 25:
 					if (warrior.getX() >= 8) {
 						warrior.setX(5);
@@ -159,8 +161,9 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 				default:
 					AnimUtil.sendFlyMessage(message, context.getString(R.string.error_spring_shoe), Color.RED);
 			}
-		} else if (name.equals(context.getString(R.string.warrior_axe))){
-			if (UpdateJsonSub(context.getString(R.string.warrior_axe))) gameLiveData.setAttack((int) (gameLiveData.getAttack() * 1.2f));
+		} else if (name.equals(context.getString(R.string.warrior_axe))) {
+			if (UpdateJsonSub(context.getString(R.string.warrior_axe)))
+				gameLiveData.setAttack((int) (gameLiveData.getAttack() * 1.2f));
 			AnimUtil.sendFlyMessage(message, context.getString(R.string.info_warrior_ax_equip));
 		}
 //		Log.i(TAG, "The description for item iconClicked " + mAdapter.getItem(position) + " is : " + s);
@@ -188,7 +191,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 	private void extinguishing(Context context) {
 		int x = warrior.getX();
 		int y = warrior.getY();
-		if (x == 0 || y == 0 || x == gameView.xCount - 1|| y == gameView.yCount - 1){
+		if (x == 0 || y == 0 || x == gameView.xCount - 1 || y == gameView.yCount - 1) {
 			AnimUtil.sendFlyMessage(message, context.getString(R.string.error_extinguishing));
 			return;
 		}
@@ -197,7 +200,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		if (gameView.layer00[y - 1][x + 1] == 290) gameView.layer00[y - 1][x + 1] = 362;
 		if (gameView.layer00[y][x - 1] == 290) gameView.layer00[y][x - 1] = 362;
 		if (gameView.layer00[y][x + 1] == 290) gameView.layer00[y][x + 1] = 362;
-		if (gameView.layer00[y + 1][x - 1] ==290) gameView.layer00[y + 1][x - 1] = 362;
+		if (gameView.layer00[y + 1][x - 1] == 290) gameView.layer00[y + 1][x - 1] = 362;
 		if (gameView.layer00[y + 1][x] == 290) gameView.layer00[y + 1][x] = 362;
 		if (gameView.layer00[y + 1][x + 1] == 290) gameView.layer00[y + 1][x + 1] = 362;
 	}
@@ -207,19 +210,23 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		int x = warrior.getX();
 		int y = warrior.getY();
 		int background = Door.getBackgroundCode(gameView.floor);
-		if (x == 0 || y == 0 || x == gameView.xCount - 1 || y == gameView.yCount - 1){
+		if (x == 0 || y == 0 || x == gameView.xCount - 1 || y == gameView.yCount - 1) {
 			AnimUtil.sendFlyMessage(message, context.getString(R.string.error_explosive));
 			UpdateJsonReturn(context.getString(R.string.detonator));
 			return;
 		}
-		if (wallList.contains(gameView.layer00[y - 1][x - 1])) gameView.layer00[y - 1][x - 1] = background;
+		if (wallList.contains(gameView.layer00[y - 1][x - 1]))
+			gameView.layer00[y - 1][x - 1] = background;
 		if (wallList.contains(gameView.layer00[y - 1][x])) gameView.layer00[y - 1][x] = background;
-		if (wallList.contains(gameView.layer00[y - 1][x + 1])) gameView.layer00[y - 1][x + 1] = background;
+		if (wallList.contains(gameView.layer00[y - 1][x + 1]))
+			gameView.layer00[y - 1][x + 1] = background;
 		if (wallList.contains(gameView.layer00[y][x - 1])) gameView.layer00[y][x - 1] = background;
 		if (wallList.contains(gameView.layer00[y][x + 1])) gameView.layer00[y][x + 1] = background;
-		if (wallList.contains(gameView.layer00[y + 1][x - 1])) gameView.layer00[y + 1][x - 1] = background;
+		if (wallList.contains(gameView.layer00[y + 1][x - 1]))
+			gameView.layer00[y + 1][x - 1] = background;
 		if (wallList.contains(gameView.layer00[y + 1][x])) gameView.layer00[y + 1][x] = background;
-		if (wallList.contains(gameView.layer00[y + 1][x + 1])) gameView.layer00[y + 1][x + 1] = background;
+		if (wallList.contains(gameView.layer00[y + 1][x + 1]))
+			gameView.layer00[y + 1][x + 1] = background;
 
 	}
 
@@ -242,8 +249,10 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		if (!json.isNull(type)) {
 			try {
 				count = Integer.parseInt(json.getString(type));
-				if (count-- > 0) gameLiveData.setTreasureJson(gameLiveData.getTreasureJson().put(type, String.valueOf(count)));
-				else gameLiveData.setTreasureJson(gameLiveData.getTreasureJson().put(type, String.valueOf(0)));
+				if (count-- > 0)
+					gameLiveData.setTreasureJson(gameLiveData.getTreasureJson().put(type, String.valueOf(count)));
+				else
+					gameLiveData.setTreasureJson(gameLiveData.getTreasureJson().put(type, String.valueOf(0)));
 			} catch (JSONException e) {
 				e.printStackTrace();
 			}
@@ -252,7 +261,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		return false;
 	}
 
-	private void TryFlyTo(Context context, int floor){
+	private void TryFlyTo(Context context, int floor) {
 		if (floor >= 40 || floor < 0) {
 			AnimUtil.sendFlyMessage(message, context.getString(R.string.error_flywing));
 			return;
@@ -261,7 +270,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		JSONObject jsonObject;
 		try {
 			jsonObject = flyWingData.getJSONObject(floor);
-			if (jsonObject != null){
+			if (jsonObject != null) {
 				gameView.setFloor(floor);
 				x = jsonObject.getInt(COLUMN_POSITION_X);
 				y = jsonObject.getInt(COLUMN_POSITION_Y);
@@ -278,8 +287,7 @@ public class Equipment implements EnemyListFragment.onClickEnemyListClose, NoteP
 		if (tag.equals("")) {
 			for (Fragment fragment : fragmentManager.getFragments())
 				fragmentManager.beginTransaction().remove(fragment).commit();
-		}
-		else {
+		} else {
 			Fragment fragment = fragmentManager.findFragmentByTag(tag);
 			if (fragment != null) {
 				fragmentManager.beginTransaction().remove(fragment).commit();

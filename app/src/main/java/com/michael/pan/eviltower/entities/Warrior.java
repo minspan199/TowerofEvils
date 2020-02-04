@@ -12,7 +12,7 @@ import com.michael.pan.eviltower.utilities.Node;
 
 import java.util.ArrayList;
 
-public class Warrior{
+public class Warrior {
 
 	public String userName;
 	// position
@@ -70,49 +70,53 @@ public class Warrior{
 		this.moving = moving;
 	}
 
-	private Bitmap getGraph(){
+	private Bitmap getGraph() {
 		if (moving) {
 			graphIndex = (graphIndex + 1) % 4;
 		} else graphIndex = 0;
-		switch (status){
-			case "up": return goingUp[graphIndex][0];
-			case "down": return goingDown[graphIndex][0];
-			case "left": return goingLeft[graphIndex][0];
-			case "right": return goingRight[graphIndex][0];
-			default:return goingDown[0][0];
+		switch (status) {
+			case "up":
+				return goingUp[graphIndex][0];
+			case "down":
+				return goingDown[graphIndex][0];
+			case "left":
+				return goingLeft[graphIndex][0];
+			case "right":
+				return goingRight[graphIndex][0];
+			default:
+				return goingDown[0][0];
 		}
 	}
 
 	public void draw(Canvas canvas, float xBlockSize, float yBlockSize) {
-		if (index>=2)	index = 0;
+		if (index >= 2) index = 0;
 		else {
 			index++;
 		}
-		if (pathX!=null&&pathY!=null){// if the path has been planned and the warrior position needs updates
+		if (pathX != null && pathY != null) {// if the path has been planned and the warrior position needs updates
 			if (pathStep < pathX.length - 1) {
-				if (pathX[pathStep + 1]>pathX[pathStep]){
+				if (pathX[pathStep + 1] > pathX[pathStep]) {
 					this.setStatus("right", true);
 					this.setX(pathX[pathStep + 1]);
 //					xShift += xBlockSize/2.0;
-				}else if (pathY[pathStep + 1]>pathY[pathStep]){
+				} else if (pathY[pathStep + 1] > pathY[pathStep]) {
 					this.setStatus("up", true);
 					this.setY(pathY[pathStep + 1]);
 //					yShift += yBlockSize/2.0;
-				}else if (pathX[pathStep + 1]<pathX[pathStep]){
+				} else if (pathX[pathStep + 1] < pathX[pathStep]) {
 					this.setStatus("left", true);
 					this.setX(pathX[pathStep + 1]);
 //					xShift -= xBlockSize/ 2.0;
-				}else if (pathY[pathStep+1]<pathY[pathStep]){
+				} else if (pathY[pathStep + 1] < pathY[pathStep]) {
 					this.setStatus("down", true);
 					this.setY(pathY[pathStep + 1]);
 //					yShift -= yBlockSize/2.0;
 				}
 //				pathStep ++;
-				if (index == 0){
+				if (index == 0) {
 					pathStep++;// set the updateStatesA frequencies of pathStep and pathShift to different values.
 				}
-			}
-			else {
+			} else {
 				pathStep = 0;
 				this.setX(pathX[pathX.length - 1]);
 				this.setY(pathY[pathY.length - 1]);
@@ -124,14 +128,14 @@ public class Warrior{
 			}
 		}
 		//System.out.println("index:"+index);
-		canvas.drawBitmap(this.getGraph(), null, new RectF(x*xBlockSize, y*yBlockSize, (x+1)*xBlockSize, (y+1)*yBlockSize), null);
+		canvas.drawBitmap(this.getGraph(), null, new RectF(x * xBlockSize, y * yBlockSize, (x + 1) * xBlockSize, (y + 1) * yBlockSize), null);
 	}
 
 	public void updateLocation(ArrayList<Node> nodes) {
 		int l = nodes.size();
 		int[] pathX = new int[l], pathY = new int[l];
 		Node node;
-		for (int i = l - 1; i >= 0; i--){
+		for (int i = l - 1; i >= 0; i--) {
 			node = nodes.get(l - 1 - i);
 			pathY[i] = node.x;
 			pathX[i] = node.y;
