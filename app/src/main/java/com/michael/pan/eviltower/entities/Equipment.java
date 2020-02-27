@@ -33,8 +33,8 @@ import static com.michael.pan.eviltower.data.EvilTowerContract.EvilTowerEntry.sc
 public class Equipment implements EnemyListFragment.onClickEnemyListClose, NotePadFragment.NotebookClose {
 
 	private FragmentManager fragmentManager;
-	Integer[] walls = new Integer[]{26, 22, 15, 14, 13};
-	List<Integer> wallList = Arrays.asList(walls);
+	private Integer[] walls = new Integer[]{26, 22, 15, 14, 13};
+	private List<Integer> wallList = Arrays.asList(walls);
 	private TextView message;
 
 	public Equipment(Context context, FragmentManager fragmentManager, TextView popupMessage, String name) {
