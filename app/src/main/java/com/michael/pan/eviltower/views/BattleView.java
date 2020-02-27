@@ -158,11 +158,11 @@ public class BattleView extends View implements Runnable {
 	}
 
 	private boolean inBattle(boolean gamerFirst) {
-		if (gamerFirst)
+		if (gamerFirst) {
 			enemyEnergy -= (warriorAttack > enemyDefense) ? (warriorAttack - enemyDefense) : 1;
-		else warriorEnergy -= (enemyAttack > warriorDefense) ? (enemyAttack - warriorDefense) : 1;
+		} else warriorEnergy -= (enemyAttack > warriorDefense) ? (enemyAttack - warriorDefense) : 1;
 		int energySucked = (int) (warriorEnergy * (1 - Math.random() * 0.85f));
-		if (vampire) warriorEnergy -= energySucked > 1000 ? 1000 : energySucked;
+		if (vampire) warriorEnergy -= Math.min(energySucked, 1000);
 		return warriorEnergy > 0 && enemyEnergy > 0;
 	}
 
