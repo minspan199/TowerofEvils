@@ -183,7 +183,7 @@ public class BattleView extends View implements Runnable {
 				gamerFirst = true;
 			}
 		}
-		new Handler(Looper.getMainLooper()).post(this::invalidate);
+		new Handler(Looper.getMainLooper()).post(this::invalidate); //invalidate the view and run onDraw
 		return warriorEnergy > 0;
 	}
 
